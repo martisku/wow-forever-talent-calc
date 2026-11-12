@@ -1,16 +1,56 @@
-# WoW Forever Talent Calculator
+# WoW Forever Talent Design Sandbox
 
-A fan-made talent calculator for **World of Warcraft: Forever** (Classic+),
-announced at BlizzCon 2026. The talent trees were on stream months before
-anyone could log in, so this site was built from that footage: spend points,
-share a build as a link, and see what changed against Classic Era.
+This fork, **[martisku/wow-forever-talent-calc](https://github.com/martisku/wow-forever-talent-calc)**,
+is a sandbox for alternative WoW Forever talent trees:
+new branches, changed placements and ranks, cross-tree incentives, meaningful
+choices and eventually additional trees. The starting budget stays **51 points**;
+the goal is different investment tradeoffs while preserving WoW class identities.
+Path of Exile's distinct build mechanics and Pathfinder 2e's archetypes and
+opportunity costs are design inspirations.
 
-**[deradon.github.io/wow-forever-talent-calc](https://deradon.github.io/wow-forever-talent-calc/)**
-— static site, no account, no tracking, no backend.
+The calculator assesses legal allocations and investment requirements. It is
+not a combat simulator and cannot prove balance. The current dataset is a
+**reference snapshot**, not a claim about the latest game or approved custom designs.
+
+## Implemented and planned
+
+Today this fork retains the upstream static calculator: reference class trees,
+point allocation, share links, tooltips, Classic comparisons, races and spellbooks.
+Named, revisioned experimental rulesets, switching, custom-change labels and
+revision-specific links are implemented. Start with **Shaman investment study**
+in the Shaman page’s Ruleset selector; its proposed effects and investment costs
+are an exploratory sketch, not validated balance. [Author another design or
+revision in repository files](docs/RULESETS.md). A visual editor, extra trees,
+cross-tree hard prerequisites and mutually exclusive choices remain future work.
+The screenshots and hosted site linked below show the upstream app.
+
+- [Experimental ruleset requirements](docs/briefs/experimental-rulesets.md)
+- [First-release implementation plan and scope](docs/plans/experimental-rulesets-v1.md)
+- [Architecture and validation notes](docs/ARCHITECTURE.md)
+- [Contributor/agent workflow](AGENTS.md): requirements → plan → review/revision →
+  small tested implementation changes. The owner authorized autonomous development,
+  PRs and merging; routine decisions do not need repeated approval.
+
+Reference corrections continue through the upstream override/export workflow in
+[CONTRIBUTING.md](CONTRIBUTING.md). Custom designs live under `data/rulesets/`; do not
+use correction overrides to author experiments. Original briefs and
+[project history](docs/PLAN.md) describe upstream work rather than an approved
+fork roadmap.
+
+## Upstream attribution
+
+Based on **[Deradon/wow-forever-talent-calc](https://github.com/Deradon/wow-forever-talent-calc)**,
+a fan-made World of Warcraft: Forever (Classic+) calculator built from BlizzCon
+2026 footage. The original extraction pipeline, reference data and calculator
+remain the foundation of this fork.
+
+**[Upstream hosted calculator](https://deradon.github.io/wow-forever-talent-calc/)**
+— static site, no account, no tracking, no backend. This is not a deployment of
+the fork's proposed sandbox.
 
 [![The class picker](docs/images/landing.webp)](https://deradon.github.io/wow-forever-talent-calc/)
 
-## What it does
+## Existing reference-calculator functionality
 
 - **All nine classes**, 469 of 470 talents, with the Classic-style rules:
   51 points, five per row, prerequisite arrows, tier gating.
@@ -36,7 +76,7 @@ share a build as a link, and see what changed against Classic Era.
 
 [![The race and class matrix](docs/images/races.webp)](https://deradon.github.io/wow-forever-talent-calc/#/races)
 
-## Where the data comes from
+## Where the reference data comes from
 
 A local vision model read every talent tooltip out of the BlizzCon 2026 demo
 stream, one hovered cell at a time, and OpenCV placed each reading in its grid
@@ -46,7 +86,7 @@ the point rules are assumed to be the Classic ones. Every record keeps the
 video timestamp, the frame and the reader's confidence, and nothing claims to
 be official.
 
-The honest caveats, in order of how much they should worry you:
+The inherited reference snapshot has these caveats:
 
 - **Numbers are the least reliable part.** Rank 1 was read from a screenshot;
   ranks 2+ are arithmetic on a Classic scaling pattern, which is wrong wherever
@@ -59,7 +99,7 @@ The honest caveats, in order of how much they should worry you:
   Nobody has confirmed them for Forever.
 - **The Classic Era comparison is a reference dataset**, not a database dump.
 
-## Report a wrong reading
+## Report or correct a reference reading
 
 Open **[a wrong-reading issue](https://github.com/Deradon/wow-forever-talent-calc/issues/new?template=wrong-reading.yml)**
 with the talent and what it should say. The fastest route is the review page —
@@ -82,22 +122,26 @@ git config core.hooksPath scripts/git-hooks
 
 # the site
 cd web
-npm install
+npm ci               # install from the committed lockfile
 npm run dev          # http://localhost:5173
-npm test             # vitest, 542 unit tests
-npm run e2e          # playwright, 80 browser tests (once: npx playwright install chromium)
+npm test             # Vitest unit/data tests
+npm run e2e          # Playwright (once: npx playwright install chromium)
 npm run build        # static files in web/dist, deployable anywhere
 
 # the data
-cd pipeline
-uv run pytest                                              # 461 tests
+cd ../pipeline
+uv sync --frozen
+uv run --frozen pytest
+uv run --frozen python validate_rulesets.py
 uv run python validate.py --check ../data/talents/*.json   # must exit 0
 uv run stages/08_export.py --help                          # extract / promote
 ```
 
-`data/talents/<class>.json` is the source of truth; the site reads nothing
-else. Stage by stage: `pipeline/README.md`. Web details: `web/README.md`. The
-data contract: `docs/DATA-SCHEMA.md`. Plan and history: `docs/PLAN.md`.
+`data/talents/<class>.json` is the reference talent source of truth; the app
+also reads encoding orders, generated indexes, crops and the race/spell datasets.
+Retained baseline snapshots and complete experimental datasets live under
+`data/rulesets/`; see [authoring](docs/RULESETS.md).
+Stage by stage: `pipeline/README.md`. Web details: `web/README.md`. The data contract: `docs/DATA-SCHEMA.md`. Plan and history: `docs/PLAN.md`.
 Contributor rules, including the commit-message hook: `CONTRIBUTING.md`.
 
 ## License and affiliation

@@ -1,3 +1,8 @@
+> Fork guidance: read [AGENTS.md](AGENTS.md) first. The sandbox requirements and
+> proposed implementation plan linked there govern new fork work; implementation
+> follows the owner’s autonomous-development authorization recorded in AGENTS.md. The dated state and launch guidance below are upstream
+> history, not permission to change reference data or rewrite existing links.
+
 # WoW Forever Talent Calculator
 
 Talent calculator for **World of Warcraft: Forever** (Classic+, announced at
