@@ -78,7 +78,16 @@ export default function App() {
       <div className="app-shell embed-shell px-3 py-3" data-testid="embed-shell">
         <main id="main" tabIndex={-1}>
           <Suspense fallback={<div className="panel p-4 text-[var(--text-dim)]">Loading...</div>}>
-            <ClassPage key={route.classId} classId={route.classId} version={route.version} buildString={route.build} sel={route.sel} embed />
+            <ClassPage
+              key={`${route.classId}|${route.ruleset ?? ''}|${route.revision ?? ''}`}
+              classId={route.classId}
+              ruleset={route.ruleset}
+              revision={route.revision}
+              version={route.version}
+              buildString={route.build}
+              sel={route.sel}
+              embed
+            />
           </Suspense>
         </main>
       </div>
@@ -128,8 +137,8 @@ export default function App() {
       </main>
       <footer className="app-footer mt-8 text-xs text-[var(--text-dim)]">
         Not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft, talent names, descriptions, icons
-        and screenshots are property of Blizzard Entertainment. {SOURCE_LINE} {checkedLine(facts.talents, 'talents')} Code
-        MIT,{' '}
+        and screenshots are property of Blizzard Entertainment. Reference snapshot: {SOURCE_LINE}{' '}
+        {checkedLine(facts.talents, 'talents')} Code MIT,{' '}
         <a href={REPO_URL} target="_blank" rel="noreferrer">
           source on GitHub
         </a>
@@ -150,8 +159,10 @@ function Body({ route }: { route: Route }) {
     case 'class':
       return (
         <ClassPage
-          key={route.classId}
+          key={`${route.classId}|${route.ruleset ?? ''}|${route.revision ?? ''}`}
           classId={route.classId}
+          ruleset={route.ruleset}
+          revision={route.revision}
           version={route.version}
           buildString={route.build}
           sel={route.sel}

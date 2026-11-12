@@ -19,3 +19,7 @@ web/dist/
 .DS_Store
 *.log
 .env
+
+# browser test outputs
+test-results/
+web/playwright-report/

@@ -5,7 +5,7 @@ import type { ClassData, Talent } from '../data/schema'
 import { copyLabel, useCopy } from './copy'
 import { buildOverrideEntry, overrideEntriesText, overrideEntryText, wrongReadingUrl } from './overrideEntry'
 import './review.css'
-import { REPO_URL } from './site'
+import { REPO_URL, UPSTREAM_REPO_URL } from './site'
 import {
   ALL_FLAGS,
   diffWords,
@@ -378,7 +378,7 @@ function RowActions({ cls, row }: { cls: ClassData; row: ReviewRow }) {
         {copyLabel(state, 'Copy override')}
       </button>
       <a
-        href={wrongReadingUrl(row, cls.class, REPO_URL)}
+        href={wrongReadingUrl(row, cls.class, UPSTREAM_REPO_URL)}
         target="_blank"
         rel="noreferrer"
         data-testid={`report-${row.talent.id}`}

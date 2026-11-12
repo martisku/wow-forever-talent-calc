@@ -80,14 +80,17 @@ export const SITE_NAME = 'WoW Forever'
  * talent as `Name rank/max`, then the link. Plain text on purpose - no
  * markdown, so it survives a paste into a forum, a wiki or a code fence.
  */
-export function buildAsText(cls: ClassData, build: Build, link?: string): string {
+export function buildAsText(cls: ClassData, build: Build, link?: string, rulesetName?: string): string {
   const s = summarizeBuild(cls, build)
   const lines: string[] = [`${s.className} ${s.spread} (level ${s.level}) - ${SITE_NAME}`]
+  if (rulesetName) lines.push(`Experimental ruleset: ${rulesetName}`)
   if (s.spentTrees.length === 0) {
     lines.push('No points spent yet.')
   } else {
     for (const tree of s.spentTrees) {
-      lines.push(`${tree.name} (${tree.points}): ${tree.talents.map((t) => `${t.name} ${t.rank}/${t.maxRank}`).join(', ')}`)
+      lines.push(
+        `${tree.name} (${tree.points}): ${tree.talents.map((t) => `${t.name} ${t.rank}/${t.maxRank}`).join(', ')}`,
+      )
     }
   }
   if (s.left > 0 && s.spent > 0) lines.push(`${s.left} point${s.left === 1 ? '' : 's'} left.`)

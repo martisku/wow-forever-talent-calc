@@ -1,10 +1,18 @@
+import { loadRuleset, rulesetLabel, type RulesetIdentity } from '../data/rulesets'
 import { useId, useState } from 'react'
 import { loadClassicIndex } from '../data/classicIndex'
 import { hasClass } from '../data/load'
 import type { ClassData } from '../data/schema'
 import { encode } from '../url/codec'
 import { loadRegistry } from '../data/encoding'
-import { importReport, mapClassicBuild, parseImport, splitWowheadCode, unplacedLine, type ImportOutcome } from '../url/import'
+import {
+  importReport,
+  mapClassicBuild,
+  parseImport,
+  splitWowheadCode,
+  unplacedLine,
+  type ImportOutcome,
+} from '../url/import'
 import { Modal } from './Modal'
 
 /**
@@ -17,12 +25,14 @@ const MAX_UNPLACED = 24
 
 interface Props {
   cls: ClassData
+  identity?: RulesetIdentity
   onClose: () => void
-  onImport: (classId: string, version: number | undefined, build: string) => void
+  onImport: (classId: string, version: number | undefined, build: string, identity?: RulesetIdentity) => void
 }
 
 interface Preview {
   classId: string
+  identity?: RulesetIdentity
   version?: number
   build: string
   report: string
@@ -35,7 +45,7 @@ interface Preview {
  * has read the report, because a Wowhead build rarely survives intact - most of
  * the value is in being told exactly what did not fit.
  */
-export function ImportDialog({ cls, onClose, onImport }: Props) {
+export function ImportDialog({ identity, cls, onClose, onImport }: Props) {
   const [text, setText] = useState('')
   const [error, setError] = useState<string>()
   const [preview, setPreview] = useState<Preview>()
@@ -49,6 +59,11 @@ export function ImportDialog({ cls, onClose, onImport }: Props) {
 
     if (parsed.kind === 'error') return setError(parsed.message)
 
+    if (identity && parsed.kind !== 'link')
+      return setError(
+        'For a selected ruleset, paste a full build link with its ruleset and revision. Bare codes and Wowhead imports are available on the default reference page.',
+      )
+
     if (parsed.kind === 'code') {
       return setPreview({
         classId: cls.class,
@@ -60,12 +75,28 @@ export function ImportDialog({ cls, onClose, onImport }: Props) {
 
     if (parsed.kind === 'link') {
       if (!hasClass(parsed.classId)) return setError(`This site has no class "${parsed.classId}".`)
-      return setPreview({
-        classId: parsed.classId,
-        version: parsed.version,
-        build: parsed.build,
-        report: parsed.build === '' ? `An empty ${parsed.classId} build.` : `A build link for ${parsed.classId}.`,
-      })
+      setBusy(true)
+      try {
+        const context = await loadRuleset(parsed.classId, parsed.identity)
+        if (
+          parsed.identity &&
+          parsed.version !== undefined &&
+          !context.registry.versions[parsed.version]?.classes[parsed.classId]
+        )
+          throw new Error('This ruleset encoding is unavailable.')
+        setPreview({
+          classId: parsed.classId,
+          version: parsed.version,
+          build: parsed.build,
+          identity: parsed.identity,
+          report: `A build link for ${parsed.classId}${parsed.identity ? ` · ${rulesetLabel(context.manifest)}` : ''}.`,
+        })
+      } catch (e) {
+        setError(e instanceof Error ? e.message : String(e))
+      } finally {
+        setBusy(false)
+      }
+      return
     }
 
     // Wowhead: the Classic order is a separate chunk, fetched only here.
@@ -97,7 +128,13 @@ export function ImportDialog({ cls, onClose, onImport }: Props) {
   }
 
   return (
-    <Modal title={`Import a build into ${cls.className}`} titleId="import-title" idBase="import" width="min(640px, 100%)" onClose={onClose}>
+    <Modal
+      title={`Import a build into ${cls.className}`}
+      titleId="import-title"
+      idBase="import"
+      width="min(640px, 100%)"
+      onClose={onClose}
+    >
       <div className="import-box" data-testid="import-box">
         <label className="text-xs text-[var(--text-dim)]" htmlFor={fieldId}>
           Paste a link to this site, a build code like <code>30250-005-32</code>, or a Wowhead Classic talent link.
@@ -116,7 +153,12 @@ export function ImportDialog({ cls, onClose, onImport }: Props) {
           }}
         />
         <div className="import-actions">
-          <button className="btn" data-testid="import-check" onClick={() => void check()} disabled={busy || text.trim() === ''}>
+          <button
+            className="btn"
+            data-testid="import-check"
+            onClick={() => void check()}
+            disabled={busy || text.trim() === ''}
+          >
             {busy ? 'Reading...' : 'Check'}
           </button>
           <button
@@ -125,7 +167,7 @@ export function ImportDialog({ cls, onClose, onImport }: Props) {
             disabled={!preview}
             onClick={() => {
               if (!preview) return
-              onImport(preview.classId, preview.version, preview.build)
+              onImport(preview.classId, preview.version, preview.build, preview.identity)
               onClose()
             }}
           >

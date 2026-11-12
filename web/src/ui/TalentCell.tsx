@@ -1,3 +1,4 @@
+import { useCustomTalent, useExperiment } from './experimentContext'
 import { useCallback, useEffect, useRef, useState, type KeyboardEvent, type MouseEvent } from 'react'
 import {
   autoUpdate,
@@ -115,6 +116,8 @@ export function TalentCell({
   selected,
   onDeselect,
 }: Props) {
+  const custom = useCustomTalent(talent.id)
+  const experimental = useExperiment()
   const [open, setOpen] = useState(false)
   const [sticky, setSticky] = useState(false)
   const [derivationOpen, setDerivationOpen] = useState(false)
@@ -266,8 +269,8 @@ export function TalentCell({
 
   const state = cellState(rank, talent.maxRank, addVerdict)
   const outOfPoints = !addVerdict.ok && addVerdict.reason === 'no-points'
-  const flagged = needsReview(talent)
-  const change = changeOf(cls.class, talent.id)
+  const flagged = !custom && needsReview(talent)
+  const change = experimental ? undefined : changeOf(cls.class, talent.id)
   const marker = changeMarker(change?.status)
   // Unmatched icons render their frame crop; matched ones the fetched icon file.
   const iconUrl =
@@ -311,10 +314,10 @@ export function TalentCell({
         data-icon={iconKind}
         data-match={match === undefined ? undefined : String(match)}
         data-change={change?.status}
-        data-highlight={highlight ? 'true' : undefined}
+        data-highlight={!experimental && highlight ? 'true' : undefined}
         data-selected={selected ? 'true' : undefined}
         tabIndex={tabIndex}
-        aria-label={cellLabel(talent, rank, state, addVerdict, flagged, marker)}
+        aria-label={`${cellLabel(talent, rank, state, addVerdict, flagged, marker)}${custom ? `, custom design: ${custom.kinds.join(', ')}` : ''}`}
         aria-describedby={open ? tooltipId : undefined}
         aria-disabled={state === 'locked' || outOfPoints ? true : undefined}
         onFocus={onGridFocus}
@@ -349,6 +352,11 @@ export function TalentCell({
             <img src={iconUrl} alt="" width={44} height={44} draggable={false} onError={() => setImgFailed(true)} />
           )}
         </span>
+        {custom && (
+          <span className="custom-flag" aria-hidden="true">
+            {custom.kinds.join(' + ')}
+          </span>
+        )}
         <span className="badge">
           {rank}/{talent.maxRank}
         </span>

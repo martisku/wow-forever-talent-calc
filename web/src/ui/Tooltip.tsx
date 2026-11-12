@@ -1,12 +1,5 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-  type ReactNode,
-} from 'react'
+import { useCustomTalent, useExperiment } from './experimentContext'
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import {
   autoUpdate,
   flip,
@@ -111,7 +104,9 @@ export function TooltipContent({
   rankOf,
   derivationOpen = false,
 }: Props) {
-  const manual = talent.ranksSource === 'manual'
+  const custom = useCustomTalent(talent.id)
+  const experimental = useExperiment()
+  const manual = !custom && talent.ranksSource === 'manual'
   const observedMax = highestObserved(talent.ranksObserved)
   const currentRank = Math.max(1, rank)
   const currentKnown = !manual || talent.ranksObserved.includes(currentRank)
@@ -139,14 +134,14 @@ export function TooltipContent({
   // extra appended to it (brief idea 3). When the Classic sentence differs at
   // all - whatever the headline status is - the line becomes a term and opens
   // the card that shows what the talent used to say.
-  const change = changeOf(cls.class, talent.id)
+  const change = experimental ? undefined : changeOf(cls.class, talent.id)
   const changed = changeLine(change, { tree: tree.id, maxRank: talent.maxRank })
   const hasClassicCard = Boolean(change?.textChange)
 
-  const details = detailLines(talent)
-  const trust = fitTrustLine(talent, current, details.length > 0)
-  const rankLines = rankDerivationLines(talent)
-  const flagged = needsReview(talent)
+  const details = custom ? [] : detailLines(talent)
+  const trust = custom ? undefined : fitTrustLine(talent, current, details.length > 0)
+  const rankLines = custom ? [] : rankDerivationLines(talent)
+  const flagged = !custom && needsReview(talent)
   // Terms only on the cell's own card: a nested card is the last level (the
   // spec is one level deep), and the review route renders plain tooltips.
   const nests = depth === 0
@@ -205,6 +200,12 @@ export function TooltipContent({
         )}
         {gameReq && <div className="req-game">{gameReq}</div>}
         <div className="desc">{current}</div>
+        {custom && (
+          <div className="custom-intent">
+            <strong>{custom.kinds.join(' + ')} · custom design</strong>
+            <p>{custom.intent}</p>
+          </div>
+        )}
         {hasNext && (
           <div className={`next${nextObserved ? '' : ' dim'}`}>
             <div className="text-white">Next rank:</div>
@@ -495,7 +496,9 @@ function ReadingTip({ talent, current }: { talent: Talent; current: string }) {
         </div>
       ))}
       {views.length === 1 && <p className="reading-text">{ONE_READING_LINE}</p>}
-      {crop && <img className="reading-crop" src={crop} alt={`The captured tooltip for ${talent.name}`} loading="lazy" />}
+      {crop && (
+        <img className="reading-crop" src={crop} alt={`The captured tooltip for ${talent.name}`} loading="lazy" />
+      )}
     </div>
   )
 }
