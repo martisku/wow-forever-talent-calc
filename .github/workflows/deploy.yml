@@ -2,24 +2,33 @@ name: Deploy to Pages
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
 concurrency:
-  group: pages
+  group: pages-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
       - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
       - run: uv sync --frozen
+        working-directory: pipeline
+      - run: uv run --frozen python validate_rulesets.py
+        working-directory: pipeline
+      - name: Protect retained ruleset revisions
+        if: github.event_name == 'pull_request'
+        env:
+          RULESET_BASE_REF: ${{ github.event.pull_request.base.sha }}
+        run: uv run --frozen python validate_rulesets.py --base "$RULESET_BASE_REF"
         working-directory: pipeline
       - run: uv run pytest -q
         working-directory: pipeline
@@ -55,6 +64,11 @@ jobs:
       - run: npm run e2e
         working-directory: web
   deploy:
+    if: github.event_name != 'pull_request'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     needs: check
     environment:
       name: github-pages

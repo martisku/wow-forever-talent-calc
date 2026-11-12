@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "frozen": true,
+  "classes": {
+    "shaman": {
+      "trees": [
+        "elemental-combat",
+        "enhancement",
+        "restoration"
+      ],
+      "order": {
+        "elemental-combat": [
+          "earths-grasp",
+          "convection",
+          "concussion",
+          "elemental-warding",
+          "reverberation",
+          "call-of-flame",
+          "elemental-devastation",
+          "elemental-focus",
+          "elemental-fury",
+          "totemic-relay",
+          "improved-fire-nova",
+          "eye-of-the-storm",
+          "call-of-thunder",
+          "elemental-reach",
+          "lightning-overload",
+          "earthbound",
+          "elemental-alacrity",
+          "lava-burst"
+        ],
+        "enhancement": [
+          "thundering-strikes",
+          "ancestral-knowledge",
+          "guardian-totems",
+          "mental-dexterity",
+          "improved-ghost-wolf",
+          "improved-lightning-shield",
+          "elemental-weapons",
+          "shamanistic-focus",
+          "anticipation",
+          "toughness",
+          "flurry",
+          "stormstrike",
+          "spirit-weapons",
+          "mental-quickness",
+          "improved-stormstrike",
+          "maelstrom-weapon",
+          "rage-of-the-farseer"
+        ],
+        "restoration": [
+          "improved-healing-wave",
+          "tidal-mastery",
+          "mindfulness",
+          "natural-grace",
+          "tidal-focus",
+          "ancestral-healing",
+          "healing-focus",
+          "water-shield",
+          "totemic-focus",
+          "restorative-totems",
+          "mana-tide-totem",
+          "healing-way",
+          "natures-swiftness",
+          "purification",
+          "riptide"
+        ]
+      }
+    }
+  }
+}

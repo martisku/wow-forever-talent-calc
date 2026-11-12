@@ -13,6 +13,8 @@ export const LAST_BUILD_KEY = 'wft.last'
 
 export interface LastBuild {
   classId: string
+  ruleset?: string
+  revision?: number
   /** Encoding version, as in `?v=`. */
   v: number
   /** Build string, as in `?t=`. Empty means an empty build, which is not stored. */
@@ -43,6 +45,12 @@ function isLastBuild(value: unknown): value is LastBuild {
   if (typeof value !== 'object' || value === null) return false
   const v = value as Record<string, unknown>
   return (
+    ((v.ruleset === undefined && v.revision === undefined) ||
+      (typeof v.ruleset === 'string' &&
+        /^[a-z0-9]+(-[a-z0-9]+)*$/.test(v.ruleset) &&
+        typeof v.revision === 'number' &&
+        Number.isSafeInteger(v.revision) &&
+        v.revision > 0)) &&
     typeof v.classId === 'string' &&
     v.classId !== '' &&
     typeof v.t === 'string' &&
@@ -95,5 +103,5 @@ export function forgetLastBuild(explicit?: StorageLike): void {
 
 /** `Continue: Warrior 31/0/20`. */
 export function continueLabel(entry: LastBuild): string {
-  return `Continue: ${entry.className} ${entry.spread}`
+  return `Continue: ${entry.className} ${entry.spread}${entry.ruleset ? ` · ${entry.ruleset} r${entry.revision}` : ''}`
 }

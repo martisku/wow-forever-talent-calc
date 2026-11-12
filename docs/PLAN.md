@@ -1,3 +1,14 @@
+> Fork status (2026-11-12): first-release ruleset infrastructure and Shaman
+> investment study implemented. Owner authorized autonomous development, PRs and
+> merges. See [authoring](RULESETS.md) and the [release plan](plans/experimental-rulesets-v1.md).
+> Remote PR/merge status and validation are recorded in the latest handover.
+
+> Fork status (2026-11-10): documentation preparation completed; experimental
+> rulesets are not implemented. See [requirements](briefs/experimental-rulesets.md),
+> [proposed first-release plan](plans/experimental-rulesets-v1.md) and
+> [architecture/check results](ARCHITECTURE.md). Implementation awaits owner
+> review and approval. The upstream plan below is retained as historical context.
+
 # Project plan: WoW Forever Talent Calculator
 
 Last updated: 2026-09-13. Owner: Deradon. Read this first; details live in the

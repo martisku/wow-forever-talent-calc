@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react'
 import { loadRegistry } from '../data/encoding'
-import { hasClass, loadClass } from '../data/load'
+import { loadRuleset, type RulesetContext, type RulesetIdentity, rulesetLabel } from '../data/rulesets'
+import { RulesetPanel } from './RulesetPanel'
+import { ExperimentContext } from './experimentContext'
+import { hasClass } from '../data/load'
 import type { ClassData } from '../data/schema'
 import {
   add,
@@ -36,6 +39,8 @@ import { playerNotes, RANKS_LINE } from './trust'
 import { TreePanel } from './TreePanel'
 
 interface Props {
+  ruleset?: string
+  revision?: number
   classId: string
   version?: number
   buildString?: string
@@ -76,10 +81,13 @@ function useCoarsePointer(): boolean {
  * are written back to the hash; an external hash change (back button, pasted
  * link) re-decodes and starts a fresh stack.
  */
-export function ClassPage({ classId, version, buildString, sel: selParam, embed }: Props) {
-  const [cls, setCls] = useState<ClassData>()
+export function ClassPage({ classId, ruleset, revision, version, buildString, sel: selParam, embed }: Props) {
+  const [context, setContext] = useState<RulesetContext>()
+  const cls = context?.cls
+  const identity = ruleset ? { ruleset, revision: revision! } : undefined
+  const experimental = context?.manifest.kind === 'experiment'
   const [error, setError] = useState<string>()
-  const registry = loadRegistry()
+  const registry = context?.registry ?? loadRegistry()
   const coarse = useCoarsePointer()
 
   useEffect(() => {
@@ -88,15 +96,15 @@ export function ClassPage({ classId, version, buildString, sel: selParam, embed 
       setError(`Unknown class "${classId}".`)
       return
     }
-    loadClass(classId)
-      .then((c) => alive && setCls(c))
+    loadRuleset(classId, identity)
+      .then((c) => alive && setContext(c))
       .catch((e: unknown) => alive && setError(e instanceof Error ? e.message : String(e)))
     return () => {
       alive = false
     }
-  }, [classId])
+  }, [classId, ruleset, revision])
 
-  const routeKey = `${classId}|${version ?? ''}|${buildString ?? ''}`
+  const routeKey = `${ruleset ?? ''}|${revision ?? ''}|${classId}|${version ?? ''}|${buildString ?? ''}`
   const decoded = useMemo(() => {
     if (!cls) return undefined
     return decode(cls, buildString ?? '', version ?? cls.dataVersion, registry)
@@ -141,14 +149,18 @@ export function ClassPage({ classId, version, buildString, sel: selParam, embed 
    */
   useEffect(() => {
     if (!cls || !editing) return
-    const nextHash = classHash(classId, cls.dataVersion, encode(cls, edit.present, registry), { sel, embed })
+    const nextHash = classHash(classId, cls.dataVersion, encode(cls, edit.present, registry), {
+      sel,
+      embed,
+      ...identity,
+    })
     if (window.location.hash === nextHash) return
     if (pushedFor.current === routeKey) window.history.replaceState(null, '', nextHash)
     else {
       pushedFor.current = routeKey
       window.history.pushState(null, '', nextHash)
     }
-  }, [cls, editing, edit.present, classId, registry, routeKey, sel, embed])
+  }, [cls, editing, edit.present, classId, registry, routeKey, sel, embed, ruleset, revision])
 
   // Remembering the last build is best effort and never authoritative: it is
   // only ever read where the hash carries no build (idea 8).
@@ -164,9 +176,11 @@ export function ClassPage({ classId, version, buildString, sel: selParam, embed 
       v: cls.dataVersion,
       t,
       className: cls.className,
+      ruleset,
+      revision,
       spread: cls.trees.map((tree) => pointsInTree(build, tree.id)).join('/'),
     })
-  }, [cls, build, classId, registry])
+  }, [cls, build, classId, registry, ruleset, revision])
 
   /**
    * Back and Forward drop the stack. `replaceState` means the route props can
@@ -221,22 +235,29 @@ export function ClassPage({ classId, version, buildString, sel: selParam, embed 
   const last = useMemo(() => (buildString ? undefined : readLastBuild()), [buildString])
 
   useTitle(
-    cls && build ? `${cls.className} ${cls.trees.map((t) => pointsInTree(build, t.id)).join('/')} - ${SITE_TITLE}` : undefined,
+    cls && build
+      ? `${cls.className} ${cls.trees.map((t) => pointsInTree(build, t.id)).join('/')} - ${SITE_TITLE}`
+      : undefined,
   )
 
-  if (error) {
+  const encodingError =
+    ruleset && context && version !== undefined && !registry.versions[version]?.classes[classId]
+      ? 'This ruleset encoding is unavailable. Choose an available revision.'
+      : undefined
+  if (error || encodingError) {
     return (
       <div className="panel p-4">
-        <p className="text-[var(--red)]">{error}</p>
+        <p className="text-[var(--red)]">{error || encodingError}</p>
         <a href="#/">Pick a class</a>
       </div>
     )
   }
-  if (!cls || !decoded || !build) return <div className="panel p-4 text-[var(--text-dim)]">Loading {classId}...</div>
+  if (!context || !cls || !decoded || !build)
+    return <div className="panel p-4 text-[var(--text-dim)]">Loading {classId}...</div>
 
   const notices: Notice[] = dismissed === routeKey || editing ? [] : decoded.notices
   const encoded = encode(cls, build, registry)
-  const hash = classHash(classId, cls.dataVersion, encoded)
+  const hash = classHash(classId, cls.dataVersion, encoded, identity)
   const link = `${window.location.origin}${window.location.pathname}${hash}`
   const spent = totalPoints(build)
   const pointsLeft = cls.rules.maxPoints - spent
@@ -298,8 +319,13 @@ export function ClassPage({ classId, version, buildString, sel: selParam, embed 
   }
 
   /** A deliberate navigation, so it gets its own history entry. */
-  function applyImport(targetClass: string, targetVersion: number | undefined, targetBuild: string) {
-    const next = classHash(targetClass, targetVersion ?? cls!.dataVersion, targetBuild)
+  function applyImport(
+    targetClass: string,
+    targetVersion: number | undefined,
+    targetBuild: string,
+    targetIdentity?: RulesetIdentity,
+  ) {
+    const next = classHash(targetClass, targetVersion, targetBuild, targetIdentity)
     if (window.location.hash === next) return
     window.location.hash = next
   }
@@ -309,98 +335,118 @@ export function ClassPage({ classId, version, buildString, sel: selParam, embed 
   const pageCounts = Object.fromEntries(cls.pages.map((p) => [p.id, pointsInPage(cls, build, p.id)]))
 
   return (
-    <div data-embed={embed ? 'true' : undefined}>
-      {!embed && (
-      <Header
-        cls={cls}
-        classId={classId}
-        build={build}
-        query={query}
-        onQuery={setQuery}
-        onJump={jumpTo}
-        resetUndoAt={resetUndo}
-        onUndoReset={() => {
-          setResetUndo(undefined)
-          undo()
-        }}
-        onReset={() => {
-          commit(resetAll())
-          setResetUndo(Date.now())
-        }}
-      />
-      )}
-      {/* Polite, so a screen reader hears the effect of every point without
+    <ExperimentContext.Provider value={experimental ? context : undefined}>
+      <div data-embed={embed ? 'true' : undefined}>
+        <RulesetPanel context={context} compact={embed} />
+        {!embed && (
+          <Header
+            experimental={experimental}
+            cls={cls}
+            classId={classId}
+            build={build}
+            query={query}
+            onQuery={setQuery}
+            onJump={jumpTo}
+            resetUndoAt={resetUndo}
+            onUndoReset={() => {
+              setResetUndo(undefined)
+              undo()
+            }}
+            onReset={() => {
+              commit(resetAll())
+              setResetUndo(Date.now())
+            }}
+          />
+        )}
+        {/* Polite, so a screen reader hears the effect of every point without
           interrupting; the blocked line is assertive-by-role="alert". */}
-      <p className="sr-only" aria-live="polite" data-testid="live-status">
-        {cls.trees.map((t) => `${t.name} ${pointsInTree(build, t.id)}`).join(', ')}. {pointsLeft} points left. Required
-        level {requiredLevel(spent, cls.rules)}.
-      </p>
-      {blocked && (
-        <p className="blocked-message" role="alert" data-testid="blocked-message">
-          {blocked.message}
+        <p className="sr-only" aria-live="polite" data-testid="live-status">
+          {cls.trees.map((t) => `${t.name} ${pointsInTree(build, t.id)}`).join(', ')}. {pointsLeft} points left.
+          Required level {requiredLevel(spent, cls.rules)}.
         </p>
-      )}
-      {!embed && <Notices notices={notices} onDismiss={() => setDismissed(routeKey)} />}
-      {/* Only while the hash is still bare and nothing has been clicked: once
+        {blocked && (
+          <p className="blocked-message" role="alert" data-testid="blocked-message">
+            {blocked.message}
+          </p>
+        )}
+        {!embed && <Notices notices={notices} onDismiss={() => setDismissed(routeKey)} />}
+        {/* Only while the hash is still bare and nothing has been clicked: once
           there is a build on screen, an older one is noise, not an offer. */}
-      {!embed && last && !editing && last.classId === classId && last.t !== encoded && (
-        <ContinueLine entry={last} version={cls.dataVersion} />
-      )}
-      {embed && <EmbedBar cls={cls} build={build} spent={spent} link={link} />}
-      <div className="class-layout">
-        <div className="class-main">
-          <PageTabs pages={cls.pages} active={activePage} counts={pageCounts} budgets={cls.rules.pointsPerPage} onSelect={setPage} />
-          <div className="tree-columns">
-            {trees.map((tree) => (
-              <TreePanel
-                key={tree.id}
-                cls={cls}
-                tree={tree}
-                build={build}
-                pointsLeft={pointsLeft}
-                coarse={coarse}
-                query={query}
-                blocked={blocked?.treeId === tree.id ? { talentId: blocked.talentId, at: blocked.at } : undefined}
-                onAdd={handleAdd}
-                onRemove={handleRemove}
-                onReset={(treeId) => commit(resetTree(build!, treeId))}
-                sel={sel}
-                onDeselect={deselect}
-              />
-            ))}
-          </div>
-          {!embed && (
-          <div className="class-help mt-3 text-xs text-[var(--text-dim)]">
-            {coarse
-              ? 'Tap a talent for its tooltip, then + to add a point and - to remove one.'
-              : 'Left click adds a point, right click removes one. Ctrl+Z undoes, Ctrl+Shift+Z redoes. With a talent focused: Enter or Space adds, Backspace removes, arrow keys move. Move the pointer into a tooltip to keep it open, or press d to show where its numbers come from.'}
-            {/* The class file's own notes are the pipeline's prose ("rank-0
+        {!embed &&
+          last &&
+          !editing &&
+          last.classId === classId &&
+          last.ruleset === ruleset &&
+          last.revision === revision &&
+          last.t !== encoded && <ContinueLine entry={last} version={cls.dataVersion} />}
+        {embed && <EmbedBar cls={cls} build={build} spent={spent} link={link} />}
+        <div className="class-layout">
+          <div className="class-main">
+            <PageTabs
+              pages={cls.pages}
+              active={activePage}
+              counts={pageCounts}
+              budgets={cls.rules.pointsPerPage}
+              onSelect={setPage}
+            />
+            <div className="tree-columns">
+              {trees.map((tree) => (
+                <TreePanel
+                  key={tree.id}
+                  cls={cls}
+                  tree={tree}
+                  build={build}
+                  pointsLeft={pointsLeft}
+                  coarse={coarse}
+                  query={query}
+                  blocked={blocked?.treeId === tree.id ? { talentId: blocked.talentId, at: blocked.at } : undefined}
+                  onAdd={handleAdd}
+                  onRemove={handleRemove}
+                  onReset={(treeId) => commit(resetTree(build!, treeId))}
+                  sel={sel}
+                  onDeselect={deselect}
+                />
+              ))}
+            </div>
+            {!embed && (
+              <div className="class-help mt-3 text-xs text-[var(--text-dim)]">
+                {coarse
+                  ? 'Tap a talent for its tooltip, then + to add a point and - to remove one.'
+                  : 'Left click adds a point, right click removes one. Ctrl+Z undoes, Ctrl+Shift+Z redoes. With a talent focused: Enter or Space adds, Backspace removes, arrow keys move. Move the pointer into a tooltip to keep it open, or press d to show where its numbers come from.'}
+                {/* The class file's own notes are the pipeline's prose ("rank-0
                 tooltips only; ranks 2+ are anticipated"), so the page states
                 the fact in a player's words and prints only the notes that
                 survive the guard (UX review round two, finding 6). */}
-            <div data-testid="class-ranks-line">{RANKS_LINE}</div>
-            {playerNotes(cls.notes).map((n) => (
-              <div key={n}>{n}</div>
-            ))}
+                <div data-testid="class-ranks-line">
+                  {experimental
+                    ? 'Custom designs are authored proposals. Rank effects and tradeoffs are not balance predictions.'
+                    : RANKS_LINE}
+                </div>
+                {(!experimental ? playerNotes(cls.notes) : []).map((n) => (
+                  <div key={n}>{n}</div>
+                ))}
+              </div>
+            )}
           </div>
+          {!embed && (
+            <BuildSummary
+              cls={cls}
+              identity={identity}
+              rulesetName={experimental ? rulesetLabel(context.manifest) : undefined}
+              build={build}
+              link={link}
+              code={encoded}
+              canUndo={editing && canUndo(edit)}
+              canRedo={editing && canRedo(edit)}
+              onUndo={undo}
+              onRedo={redo}
+              onJump={jumpTo}
+              onImport={applyImport}
+            />
           )}
         </div>
-        {!embed && (
-          <BuildSummary
-            cls={cls}
-            build={build}
-            link={link}
-            code={encoded}
-            canUndo={editing && canUndo(edit)}
-            canRedo={editing && canRedo(edit)}
-            onUndo={undo}
-            onRedo={redo}
-            onJump={jumpTo}
-            onImport={applyImport}
-          />
-        )}
       </div>
-    </div>
+    </ExperimentContext.Provider>
   )
 }
 
@@ -409,7 +455,7 @@ function ContinueLine({ entry, version }: { entry: LastBuild; version: number })
   const summary = `${continueLabel(entry)}`
   return (
     <p className="continue-line" data-testid="continue-line">
-      <a href={classHash(entry.classId, entry.v || version, entry.t)} data-testid="continue-link">
+      <a href={classHash(entry.classId, entry.v || version, entry.t, entry)} data-testid="continue-link">
         {summary}
       </a>
       <span className="text-[var(--text-dim)]"> - your last build on this browser.</span>

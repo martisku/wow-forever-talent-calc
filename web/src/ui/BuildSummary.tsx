@@ -1,3 +1,4 @@
+import type { RulesetIdentity } from '../data/rulesets'
 import { useEffect, useState } from 'react'
 import type { ClassData } from '../data/schema'
 import { levelLine, levelRange, standingAtLevel, type Build } from '../rules'
@@ -6,6 +7,8 @@ import { summarizeBuild, summaryTitle, buildAsText } from './summaryText'
 
 interface Props {
   cls: ClassData
+  identity?: RulesetIdentity
+  rulesetName?: string
   build: Build
   /** Full shareable URL of the current build. */
   link: string
@@ -17,7 +20,7 @@ interface Props {
   onRedo: () => void
   /** Scrolls to a talent and focuses its cell; shared with the search results. */
   onJump: (treeId: string, talentId: string) => void
-  onImport: (classId: string, version: number | undefined, build: string) => void
+  onImport: (classId: string, version: number | undefined, build: string, identity?: RulesetIdentity) => void
 }
 
 type CopyState = 'idle' | 'copied' | 'failed'
@@ -57,7 +60,20 @@ function label(state: CopyState, idle: string): string {
  * It is also what finally fills the 360-400 px of empty container beside the
  * trees (idea 5), so the two were designed together.
  */
-export function BuildSummary({ cls, build, link, code, canUndo, canRedo, onUndo, onRedo, onJump, onImport }: Props) {
+export function BuildSummary({
+  identity,
+  rulesetName,
+  cls,
+  build,
+  link,
+  code,
+  canUndo,
+  canRedo,
+  onUndo,
+  onRedo,
+  onJump,
+  onImport,
+}: Props) {
   const summary = summarizeBuild(cls, build)
   const [linkCopy, copyLink] = useCopy()
   const [codeCopy, copyCode] = useCopy()
@@ -71,6 +87,7 @@ export function BuildSummary({ cls, build, link, code, canUndo, canRedo, onUndo,
       <div className="summary-head" data-print-link={link}>
         <h2 className="serif text-base text-[var(--gold)]" id="build-summary-title" data-testid="summary-title">
           {summaryTitle(summary)}
+          {rulesetName && <span className="block text-sm">{rulesetName}</span>}
         </h2>
         <p className="text-xs text-[var(--text-dim)]">
           {summary.spent} of {summary.maxPoints} spent
@@ -101,17 +118,21 @@ export function BuildSummary({ cls, build, link, code, canUndo, canRedo, onUndo,
             <li>
               <kbd>/</kbd> jumps to the search box, <kbd>Esc</kbd> clears it.
             </li>
-            <li>
-              <kbd>d</kbd> opens, inside a tooltip, where its numbers were read from.
-            </li>
+            {!rulesetName && (
+              <li>
+                <kbd>d</kbd> opens, inside a tooltip, where its numbers were read from.
+              </li>
+            )}
             <li>
               <kbd>Ctrl</kbd>+<kbd>Z</kbd> undoes and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd> redoes - a Reset
               too.
             </li>
-            <li>
-              <strong className="text-[var(--text)]">Highlight changes</strong> in the header dims everything Classic
-              already had.
-            </li>
+            {!rulesetName && (
+              <li>
+                <strong className="text-[var(--text)]">Highlight changes</strong> in the header dims everything Classic
+                already had.
+              </li>
+            )}
           </ul>
         </div>
       ) : (
@@ -153,13 +174,20 @@ export function BuildSummary({ cls, build, link, code, canUndo, canRedo, onUndo,
         <button className="btn" data-testid="copy-link" data-link={link} onClick={() => copyLink(link)}>
           {label(linkCopy, 'Copy link')}
         </button>
-        <button className="btn" data-testid="copy-code" data-code={code} onClick={() => copyCode(code)} disabled={code === ''}>
+        <button
+          className="btn"
+          data-testid="copy-code"
+          data-code={code}
+          onClick={() => copyCode(code)}
+          disabled={code === '' || Boolean(rulesetName)}
+          title={rulesetName ? 'Use a full link to preserve the ruleset revision.' : undefined}
+        >
           {label(codeCopy, 'Copy build code')}
         </button>
         <button
           className="btn"
           data-testid="copy-text"
-          onClick={() => copyText(buildAsText(cls, build, link))}
+          onClick={() => copyText(buildAsText(cls, build, link, rulesetName))}
         >
           {label(textCopy, 'Copy as text')}
         </button>
@@ -186,7 +214,9 @@ export function BuildSummary({ cls, build, link, code, canUndo, canRedo, onUndo,
           readOnly
           rows={3}
           data-testid="copy-fallback"
-          value={textCopy === 'failed' ? buildAsText(cls, build, link) : codeCopy === 'failed' ? code : link}
+          value={
+            textCopy === 'failed' ? buildAsText(cls, build, link, rulesetName) : codeCopy === 'failed' ? code : link
+          }
           onFocus={(e) => e.currentTarget.select()}
         />
       )}
@@ -201,7 +231,9 @@ export function BuildSummary({ cls, build, link, code, canUndo, canRedo, onUndo,
         <span className="text-xs text-[var(--text-dim)]">Ctrl+Z / Ctrl+Shift+Z</span>
       </div>
 
-      {importing && <ImportDialog cls={cls} onClose={() => setImporting(false)} onImport={onImport} />}
+      {importing && (
+        <ImportDialog identity={identity} cls={cls} onClose={() => setImporting(false)} onImport={onImport} />
+      )}
     </aside>
   )
 }

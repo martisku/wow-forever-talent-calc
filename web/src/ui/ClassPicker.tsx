@@ -42,7 +42,11 @@ export function ClassPicker() {
     <div>
       {last && (
         <div className="continue-card" data-testid="continue-card">
-          <a className="serif text-base" href={classHash(last.classId, last.v, last.t)} data-testid="continue-link">
+          <a
+            className="serif text-base"
+            href={classHash(last.classId, last.v, last.t, last)}
+            data-testid="continue-link"
+          >
             {continueLabel(last)}
           </a>
           <span className="text-xs text-[var(--text-dim)]">your last build on this browser, not shared anywhere</span>
@@ -60,6 +64,10 @@ export function ClassPicker() {
         </div>
       )}
       <div className="panel p-5">
+        <p className="mb-2 text-sm">
+          Talent design sandbox · choose a class, then select a ruleset. Custom experiments share the same 51-point
+          budget.
+        </p>
         <h1 className="serif mb-2 text-lg text-[var(--gold)]">Choose a class</h1>
         {/* The one place the caveat is stated: tooltips and class pages must not repeat it. */}
         <p className="mb-2 text-sm text-[var(--text-dim)]" data-testid="landing-caveat">
@@ -70,7 +78,10 @@ export function ClassPicker() {
           <a href={changesHash()} data-testid="landing-changes-link">
             What changed against Classic Era
           </a>
-          <span className="text-[var(--text-dim)]"> - every new, moved, re-ranked and reworded talent, class by class.</span>
+          <span className="text-[var(--text-dim)]">
+            {' '}
+            - every new, moved, re-ranked and reworded talent, class by class.
+          </span>
         </p>
         {/* Phase 2b: the racials and the race/class matrix, the other half of
             "what is different this time". */}
@@ -98,8 +109,10 @@ export function ClassPicker() {
         </p>
         <p className="mb-4 text-sm text-[var(--text-dim)]">
           <a href={REPO_URL} target="_blank" rel="noreferrer">
-            github.com/Deradon/wow-forever-talent-calc
+            github.com/martisku/wow-forever-talent-calc
           </a>
+          {' · Based on '}
+          <a href="https://github.com/Deradon/wow-forever-talent-calc">the upstream calculator</a>
         </p>
         {classes.length === 0 ? (
           <p className="text-[var(--text-dim)]">

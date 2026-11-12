@@ -1,3 +1,4 @@
+import type { RulesetIdentity } from '../data/rulesets'
 /**
  * Hash routing: `#/`, `#/<class>?v=<N>&t=<build>`, `#/changes[/<class>]`,
  * `#/races[/<race>][?variant=<id>]`, `#/spells[/<class>]`, `#/about`,
@@ -14,7 +15,16 @@
  */
 export type Route =
   | { kind: 'picker' }
-  | { kind: 'class'; classId: string; version?: number; build?: string; sel?: string; embed?: true }
+  | {
+      kind: 'class'
+      classId: string
+      version?: number
+      build?: string
+      sel?: string
+      embed?: true
+      ruleset?: string
+      revision?: number
+    }
   | { kind: 'changes'; classId?: string }
   /**
    * `#/races` is the race/class matrix, `#/races/<race>` one race. `variant`
@@ -73,11 +83,26 @@ export function parseHash(hash: string): Route {
     const t = params.get('t')
     const sel = params.get('sel')
     const version = v === null ? undefined : Number(v)
+    const ruleset = params.get('ruleset')
+    const revision = params.get('rev')
+    if (params.has('ruleset') || params.has('rev')) {
+      if (
+        !ruleset ||
+        !SLUG.test(ruleset) ||
+        !revision ||
+        !/^[1-9][0-9]*$/.test(revision) ||
+        !Number.isSafeInteger(Number(revision)) ||
+        params.getAll('ruleset').length !== 1 ||
+        params.getAll('rev').length !== 1
+      )
+        return { kind: 'unknown', hash }
+    }
     return {
       kind: 'class',
       classId: segments[0],
       version: version !== undefined && Number.isFinite(version) ? version : v === null ? undefined : NaN,
       build: t ?? undefined,
+      ...(ruleset ? { ruleset, revision: Number(revision) } : {}),
       sel: sel && SLUG.test(sel) ? sel : undefined,
       embed: params.get('embed') === '1' ? true : undefined,
     }
@@ -105,6 +130,10 @@ export function buildHash(route: Route): string {
     }
     case 'class': {
       const params = new URLSearchParams()
+      if (route.ruleset) {
+        params.set('ruleset', route.ruleset)
+        params.set('rev', String(route.revision))
+      }
       if (route.build) {
         if (route.version !== undefined) params.set('v', String(route.version))
         params.set('t', route.build)
@@ -122,7 +151,7 @@ export function buildHash(route: Route): string {
 }
 
 /** View state that rides along on a class hash without touching the build. */
-export interface ClassView {
+export interface ClassView extends Partial<RulesetIdentity> {
   /** Talent whose tooltip is pinned open. */
   sel?: string
   /** Chromeless embed. */
@@ -130,11 +159,13 @@ export interface ClassView {
 }
 
 /** Hash for a class build: `#/warrior?v=3&t=30502-05-3`, or `#/warrior` when empty. */
-export function classHash(classId: string, version: number, build: string, view: ClassView = {}): string {
+export function classHash(classId: string, version: number | undefined, build: string, view: ClassView = {}): string {
   return buildHash({
     kind: 'class',
     classId,
     version,
+    ruleset: view.ruleset,
+    revision: view.revision,
     build: build || undefined,
     sel: view.sel,
     embed: view.embed ? true : undefined,

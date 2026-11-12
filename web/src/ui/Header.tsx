@@ -7,6 +7,7 @@ import { matchesTalent } from './interaction'
 
 interface Props {
   cls: ClassData
+  experimental?: boolean
   classId: string
   build: Build
   query: string
@@ -22,7 +23,18 @@ const MAX_RESULTS = 8
 
 import { HighlightNewToggle } from './HighlightNewToggle'
 
-export function Header({ cls, classId, build, query, onQuery, onJump, onReset, resetUndoAt, onUndoReset }: Props) {
+export function Header({
+  experimental,
+  cls,
+  classId,
+  build,
+  query,
+  onQuery,
+  onJump,
+  onReset,
+  resetUndoAt,
+  onUndoReset,
+}: Props) {
   const total = totalPoints(build)
   const left = cls.rules.maxPoints - total
   const level = requiredLevel(total, cls.rules)
@@ -80,7 +92,7 @@ export function Header({ cls, classId, build, query, onQuery, onJump, onReset, r
         </div>
       </div>
 
-      <ClassSwitcher current={classId} />
+      {experimental ? <a href="#/">Choose another reference class</a> : <ClassSwitcher current={classId} />}
 
       {/* One class-level control row, left to right: search, What's new, Reset
           - all three act on the whole class, all three are the same height, and
@@ -109,12 +121,14 @@ export function Header({ cls, classId, build, query, onQuery, onJump, onReset, r
             {query.trim() ? `${results.length} match${results.length === 1 ? '' : 'es'}` : ''}
           </span>
         </div>
-        <HighlightNewToggle classId={classId} />
+        {!experimental && <HighlightNewToggle classId={classId} />}
         {/* The switch dims what Classic already had; this is the same question
             answered as a list, with the old wording beside the new. */}
-        <a className="btn" href={changesHash(classId)} data-testid="changes-link">
-          What changed vs Classic
-        </a>
+        {!experimental && (
+          <a className="btn" href={changesHash(classId)} data-testid="changes-link">
+            What changed vs Classic
+          </a>
+        )}
         {/* A Reset used to destroy a 51-point build silently (usability 10). It
             is an ordinary commit now, so Ctrl+Z takes it back - and for the
             eight seconds after the click, so does the button itself. */}
@@ -131,20 +145,22 @@ export function Header({ cls, classId, build, query, onQuery, onJump, onReset, r
             diamond are the two most frequent glyphs on the grid - 21 stars on
             paladin alone - and neither was in the legend (UX review round two,
             finding 10). */}
-        <p className="control-legend" data-testid="badge-legend">
-          <span className="legend-flag" aria-hidden="true">
-            ?
-          </span>{' '}
-          = uncertain reading, check it.{' '}
-          <span className="legend-new" aria-hidden="true">
-            &#9733;
-          </span>{' '}
-          = new in Forever.{' '}
-          <span className="legend-changed" aria-hidden="true">
-            &#9670;
-          </span>{' '}
-          = reworked in Forever. The corner number is rank / max rank.
-        </p>
+        {!experimental && (
+          <p className="control-legend" data-testid="badge-legend">
+            <span className="legend-flag" aria-hidden="true">
+              ?
+            </span>{' '}
+            = uncertain reading, check it.{' '}
+            <span className="legend-new" aria-hidden="true">
+              &#9733;
+            </span>{' '}
+            = new in Forever.{' '}
+            <span className="legend-changed" aria-hidden="true">
+              &#9670;
+            </span>{' '}
+            = reworked in Forever. The corner number is rank / max rank.
+          </p>
+        )}
       </div>
 
       {query.trim() !== '' && (

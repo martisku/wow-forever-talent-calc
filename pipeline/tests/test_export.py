@@ -427,9 +427,9 @@ def test_forking_a_frozen_version_refuses_to_clobber_an_existing_next(tmp_path):
     assert json.loads(v1.read_text())["frozen"] is True
 
 
-def test_the_repos_encoding_v1_is_unfrozen_and_says_so():
+def test_the_repos_encoding_v1_is_frozen_for_legacy_links():
     enc = json.loads((REPO / "data" / "encoding" / "v1.json").read_text(encoding="utf-8"))
-    assert enc["frozen"] is False           # owner decision 2026-09-13: mutable until launch
+    assert enc["frozen"] is True            # sandbox retains the captured legacy link meaning
     assert "frozen" in enc["note"]
 
 

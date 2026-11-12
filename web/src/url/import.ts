@@ -11,13 +11,14 @@
  * Nothing here touches our own `t=` encoding, so it is unaffected by the
  * encoding-freeze decision. Pure: no DOM, no globals.
  */
+import type { RulesetIdentity } from '../data/rulesets'
 import type { ClassicClass } from '../data/classicIndex'
 import type { ClassData } from '../data/schema'
 import { add, canAdd, rankOf, totalPoints, type Build } from '../rules'
 import { parseHash } from './route'
 
 export type ImportSource =
-  | { kind: 'link'; classId: string; version?: number; build: string }
+  | { kind: 'link'; classId: string; version?: number; build: string; identity?: RulesetIdentity }
   | { kind: 'code'; build: string }
   | { kind: 'wowhead'; classId: string; code: string }
   | { kind: 'error'; message: string }
@@ -44,7 +45,8 @@ const WOWHEAD_CLASSES = new Set([
  */
 export function parseImport(input: string): ImportSource {
   const text = input.trim()
-  if (text === '') return { kind: 'error', message: 'Paste a build link, a build code, or a Wowhead Classic talent link.' }
+  if (text === '')
+    return { kind: 'error', message: 'Paste a build link, a build code, or a Wowhead Classic talent link.' }
 
   // Our own hash comes first: this site's own path contains "talent-calc"
   // (the repository is wow-forever-talent-calc), so the Wowhead test would
@@ -53,7 +55,13 @@ export function parseImport(input: string): ImportSource {
   if (hash !== -1) {
     const route = parseHash(text.slice(hash))
     if (route.kind === 'class') {
-      return { kind: 'link', classId: route.classId, version: route.version, build: route.build ?? '' }
+      return {
+        kind: 'link',
+        classId: route.classId,
+        version: route.version,
+        build: route.build ?? '',
+        ...(route.ruleset ? { identity: { ruleset: route.ruleset, revision: route.revision! } } : {}),
+      }
     }
     if (route.kind === 'review') return { kind: 'link', classId: route.classId, build: '' }
     return { kind: 'error', message: 'That link does not point at a class page.' }
@@ -64,7 +72,10 @@ export function parseImport(input: string): ImportSource {
   if (CODE.test(text) && /[0-9]/.test(text)) return { kind: 'code', build: text }
 
   if (/^https?:\/\//i.test(text)) {
-    return { kind: 'error', message: 'That link is not a build link for this site or for the Wowhead Classic calculator.' }
+    return {
+      kind: 'error',
+      message: 'That link is not a build link for this site or for the Wowhead Classic calculator.',
+    }
   }
   return { kind: 'error', message: 'Not a build link, a build code, or a Wowhead Classic talent link.' }
 }
@@ -80,13 +91,15 @@ function parseWowhead(text: string): ImportSource {
   if (!WOWHEAD_CLASSES.has(classId)) {
     return { kind: 'error', message: `"${classId}" is not one of the nine Classic classes.` }
   }
-  if (code === '') return { kind: 'error', message: 'That Wowhead link carries no build - open a build and copy the URL again.' }
+  if (code === '')
+    return { kind: 'error', message: 'That Wowhead link carries no build - open a build and copy the URL again.' }
   if (!/^[0-9-]+$/.test(code)) {
     // wowhead.com/talent#<letters> is the old retail calculator, a different
     // alphabet entirely; /talent-calc/ has always been decimal digits.
     return {
       kind: 'error',
-      message: 'That looks like an old Wowhead talent string. Open the build on the current Classic calculator and copy the URL again.',
+      message:
+        'That looks like an old Wowhead talent string. Open the build on the current Classic calculator and copy the URL again.',
     }
   }
   return { kind: 'wowhead', classId, code }
@@ -170,7 +183,8 @@ function foreverByName(cls: ClassData): Map<string, ForeverTalent> {
   for (const tree of cls.trees) {
     for (const talent of tree.talents) {
       const key = normalizeName(talent.name)
-      if (!map.has(key)) map.set(key, { treeId: tree.id, talentId: talent.id, name: talent.name, maxRank: talent.maxRank })
+      if (!map.has(key))
+        map.set(key, { treeId: tree.id, talentId: talent.id, name: talent.name, maxRank: talent.maxRank })
     }
   }
   return map
