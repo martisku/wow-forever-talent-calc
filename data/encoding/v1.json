@@ -1,8 +1,8 @@
 {
   "version": 1,
   "createdAt": "2026-09-13T01:00:00Z",
-  "frozen": false,
-  "note": "Covers the fictional tinker example class (data/examples/tinker.json) and the nine real classes. frozen:false means 08_export --update-encoding may still rewrite this file: v1 stays mutable until launch is declared, at which point set frozen:true and every later id or order change forks v2 (data/encoding/README.md rule 1).",
+  "frozen": true,
+  "note": "Encoding v1 is frozen for legacy baseline links. Talent digit positions retain their meaning from the captured reference. New reference orders require a new version; experiments use isolated revision registries.",
   "classes": {
     "tinker": {
       "trees": [

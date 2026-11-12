@@ -34,10 +34,15 @@ normative description is `docs/DATA-SCHEMA.md` section 8.
    only warns (`ENCODING-ORDER`) when the encoding order is no longer
    row-major. The next version bump re-sorts.
 
-## Current state
+## Current state (fork)
 
 - `v1.json` (2026-09-13): the `tinker` example class plus all nine real classes,
-  `frozen: false`. Owner decision of 2026-09-13: v1 stays mutable until launch
+  **`frozen: true` as of 2026-11-12**, retaining existing digit positions. The
+  sandbox captures these positions in `data/rulesets/reference-2026-11-10/r1/`.
+  Experiments use separate per-revision registries; their local version numbers
+  never join this global reference registry. See [ruleset authoring](../../docs/RULESETS.md).
+
+Historical upstream policy (superseded for this fork): Owner decision of 2026-09-13: v1 stays mutable until launch
   is declared, because the data is still being corrected and no link is
   promised yet. It was in fact rewritten in place four times before the flag
   existed (see `docs/reviews/2026-09-13-code-and-docs.md` A1), which is exactly
