@@ -1,0 +1,1913 @@
+{
+  "$schema": "../../../../schema/class.schema.json",
+  "schemaVersion": 1,
+  "class": "druid",
+  "className": "Druid",
+  "dataVersion": 1,
+  "dataSource": "wowhead",
+  "generatedAt": "2026-11-13T14:42:00Z",
+  "rules": {
+    "pointsPerRow": 5,
+    "maxPoints": 51,
+    "firstPointLevel": 10,
+    "maxLevel": 60,
+    "rulesSource": "assumed"
+  },
+  "pages": [
+    {
+      "id": "primary",
+      "name": "Talents"
+    }
+  ],
+  "trees": [
+    {
+      "id": "balance",
+      "name": "Balance",
+      "page": "primary",
+      "order": 0,
+      "icon": "spell_nature_abolishmagic",
+      "rows": 7,
+      "cols": 4,
+      "talents": [
+        {
+          "id": "wh-104923",
+          "name": "Improved Wrath",
+          "row": 0,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "spell_nature_abolishmagic",
+          "iconSource": "wowhead",
+          "description": "Reduces the cast time of your Wrath spell by 0.1 sec and its Mana cost by 10%.",
+          "ranks": [
+            "Reduces the cast time of your Wrath spell by 0.1 sec and its Mana cost by 10%.",
+            "Reduces the cast time of your Wrath spell by 0.2 sec and its Mana cost by 20%.",
+            "Reduces the cast time of your Wrath spell by 0.3 sec and its Mana cost by 30%.",
+            "Reduces the cast time of your Wrath spell by 0.4 sec and its Mana cost by 40%.",
+            "Reduces the cast time of your Wrath spell by 0.5 sec and its Mana cost by 50%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16814,
+            16814,
+            16814,
+            16814,
+            16814
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104923
+          }
+        },
+        {
+          "id": "wh-104924",
+          "name": "Genesis",
+          "row": 0,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_arcane_arcane03",
+          "iconSource": "wowhead",
+          "description": "Increases the periodic damage and healing done by your spells and abilities by 2%.",
+          "ranks": [
+            "Increases the periodic damage and healing done by your spells and abilities by 2%.",
+            "Increases the periodic damage and healing done by your spells and abilities by 4%.",
+            "Increases the periodic damage and healing done by your spells and abilities by 6%.",
+            "Increases the periodic damage and healing done by your spells and abilities by 8%.",
+            "Increases the periodic damage and healing done by your spells and abilities by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1223081,
+            1223081,
+            1223081,
+            1223081,
+            1223081
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104924
+          }
+        },
+        {
+          "id": "wh-104925",
+          "name": "Moonglow",
+          "row": 1,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "spell_nature_sentinal",
+          "iconSource": "wowhead",
+          "description": "Reduces the Mana cost of your damaging spells by 8%.",
+          "ranks": [
+            "Reduces the Mana cost of your damaging spells by 8%.",
+            "Reduces the Mana cost of your damaging spells by 17%.",
+            "Reduces the Mana cost of your damaging spells by 25%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16845,
+            16845,
+            16845
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104925
+          }
+        },
+        {
+          "id": "wh-104931",
+          "name": "Improved Moonfire",
+          "row": 1,
+          "col": 1,
+          "maxRank": 2,
+          "icon": "spell_nature_starfall",
+          "iconSource": "wowhead",
+          "description": "Increases the damage and critical strike chance of your Moonfire spell by 5%.",
+          "ranks": [
+            "Increases the damage and critical strike chance of your Moonfire spell by 5%.",
+            "Increases the damage and critical strike chance of your Moonfire spell by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16821,
+            16821
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104931
+          }
+        },
+        {
+          "id": "wh-104927",
+          "name": "Nature's Majesty",
+          "row": 1,
+          "col": 2,
+          "maxRank": 2,
+          "icon": "inv_staff_01",
+          "iconSource": "wowhead",
+          "description": "Increases your critical strike chance with spells and melee attacks by 2%.",
+          "ranks": [
+            "Increases your critical strike chance with spells and melee attacks by 2%.",
+            "Increases your critical strike chance with spells and melee attacks by 4%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1223082,
+            1223082
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104927
+          }
+        },
+        {
+          "id": "wh-104929",
+          "name": "Nature's Reach",
+          "row": 1,
+          "col": 3,
+          "maxRank": 2,
+          "icon": "spell_nature_naturetouchgrow",
+          "iconSource": "wowhead",
+          "description": "Increases the range of your offensive Balance spells by 10% and improves your chance to hit by 2%.",
+          "ranks": [
+            "Increases the range of your offensive Balance spells by 10% and improves your chance to hit by 2%.",
+            "Increases the range of your offensive Balance spells by 20% and improves your chance to hit by 4%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16819,
+            16819
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104929
+          }
+        },
+        {
+          "id": "wh-104926",
+          "name": "Improved Entangling Roots",
+          "row": 2,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "spell_nature_stranglevines",
+          "iconSource": "wowhead",
+          "description": "Increases the damage done by your Entangling Roots spell by 25%, and its victims can take up to 25% more damage without interrupting the effect.",
+          "ranks": [
+            "Increases the damage done by your Entangling Roots spell by 25%, and its victims can take up to 25% more damage without interrupting the effect.",
+            "Increases the damage done by your Entangling Roots spell by 50%, and its victims can take up to 50% more damage without interrupting the effect.",
+            "Increases the damage done by your Entangling Roots spell by 75%, and its victims can take up to 75% more damage without interrupting the effect."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16918,
+            16918,
+            16918
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104926
+          }
+        },
+        {
+          "id": "wh-104928",
+          "name": "Nature's Splendor",
+          "row": 2,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "spell_nature_natureresistancetotem",
+          "iconSource": "wowhead",
+          "description": "Increases the duration of your Moonfire and Rejuvenation spells by 3 sec, your Regrowth spell by 6 sec, and your Insect Swarm spell by 2 sec.",
+          "ranks": [
+            "Increases the duration of your Moonfire and Rejuvenation spells by 3 sec, your Regrowth spell by 6 sec, and your Insect Swarm spell by 2 sec."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1223083
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104928
+          },
+          "requires": [
+            {
+              "talent": "wh-104927",
+              "rank": 2
+            }
+          ]
+        },
+        {
+          "id": "wh-104930",
+          "name": "Insect Swarm",
+          "row": 3,
+          "col": 0,
+          "maxRank": 1,
+          "icon": "spell_nature_insectswarm",
+          "iconSource": "wowhead",
+          "description": "The enemy target is swarmed by insects, decreasing their chance to hit with attacks by 2% and causing 48 Nature damage over 12 sec.",
+          "ranks": [
+            "The enemy target is swarmed by insects, decreasing their chance to hit with attacks by 2% and causing 48 Nature damage over 12 sec."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            5570
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104930
+          }
+        },
+        {
+          "id": "wh-104932",
+          "name": "Vengeance",
+          "row": 3,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "spell_nature_purge",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike damage bonus of your Arcane and Nature spells by 20%.",
+          "ranks": [
+            "Increases the critical strike damage bonus of your Arcane and Nature spells by 20%.",
+            "Increases the critical strike damage bonus of your Arcane and Nature spells by 40%.",
+            "Increases the critical strike damage bonus of your Arcane and Nature spells by 60%.",
+            "Increases the critical strike damage bonus of your Arcane and Nature spells by 80%.",
+            "Increases the critical strike damage bonus of your Arcane and Nature spells by 100%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16909,
+            16909,
+            16909,
+            16909,
+            16909
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104932
+          },
+          "requires": [
+            {
+              "talent": "wh-104931",
+              "rank": 2
+            }
+          ]
+        },
+        {
+          "id": "wh-104933",
+          "name": "Improved Starfire",
+          "row": 3,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_arcane_starfire",
+          "iconSource": "wowhead",
+          "description": "Reduces the cast time of Starfire by 0.1 sec and Starfire has a 3% chance to stun its target for 3 sec.",
+          "ranks": [
+            "Reduces the cast time of Starfire by 0.1 sec and Starfire has a 3% chance to stun its target for 3 sec.",
+            "Reduces the cast time of Starfire by 0.2 sec and Starfire has a 6% chance to stun its target for 3 sec.",
+            "Reduces the cast time of Starfire by 0.3 sec and Starfire has a 9% chance to stun its target for 3 sec.",
+            "Reduces the cast time of Starfire by 0.4 sec and Starfire has a 12% chance to stun its target for 3 sec.",
+            "Reduces the cast time of Starfire by 0.5 sec and Starfire has a 15% chance to stun its target for 3 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16850,
+            16850,
+            16850,
+            16850,
+            16850
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104933
+          }
+        },
+        {
+          "id": "wh-110844",
+          "name": "Overgrowth",
+          "row": 4,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "inv_misc_herb_15",
+          "iconSource": "wowhead",
+          "description": "Increases the maximum number of targets you may have affected by Entangling Roots by 1.",
+          "ranks": [
+            "Increases the maximum number of targets you may have affected by Entangling Roots by 1.",
+            "Increases the maximum number of targets you may have affected by Entangling Roots by 2."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17245,
+            17245
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 110844
+          }
+        },
+        {
+          "id": "wh-104934",
+          "name": "Nature's Grace",
+          "row": 4,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_nature_naturesblessing",
+          "iconSource": "wowhead",
+          "description": "All non-periodic spell criticals grace you with a blessing of nature, increasing your spellcasting speed and reducing your global cooldown by 10% for 3 sec.",
+          "ranks": [
+            "All non-periodic spell criticals grace you with a blessing of nature, increasing your spellcasting speed and reducing your global cooldown by 10% for 3 sec."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16880
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104934
+          }
+        },
+        {
+          "id": "wh-104935",
+          "name": "Eclipse",
+          "row": 4,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "ability_druid_eclipse",
+          "iconSource": "wowhead",
+          "description": "Your Wrath spell reduces the cast time of your next 2 Starfire spells by 0.17 sec. Stores up to 4 charges. Lasts 15 sec.",
+          "ranks": [
+            "Your Wrath spell reduces the cast time of your next 2 Starfire spells by 0.17 sec. Stores up to 4 charges. Lasts 15 sec.",
+            "Your Wrath spell reduces the cast time of your next 2 Starfire spells by 0.33 sec. Stores up to 4 charges. Lasts 15 sec.",
+            "Your Wrath spell reduces the cast time of your next 2 Starfire spells by 0.50 sec. Stores up to 4 charges. Lasts 15 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            408248,
+            408248,
+            408248
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104935
+          }
+        },
+        {
+          "id": "wh-104936",
+          "name": "Moonfury",
+          "row": 5,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "spell_nature_moonglow",
+          "iconSource": "wowhead",
+          "description": "Increases the damage done by your Arcane and Nature spells by 2%.",
+          "ranks": [
+            "Increases the damage done by your Arcane and Nature spells by 2%.",
+            "Increases the damage done by your Arcane and Nature spells by 4%.",
+            "Increases the damage done by your Arcane and Nature spells by 6%.",
+            "Increases the damage done by your Arcane and Nature spells by 8%.",
+            "Increases the damage done by your Arcane and Nature spells by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16896,
+            16896,
+            16896,
+            16896,
+            16896
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104936
+          }
+        },
+        {
+          "id": "wh-104937",
+          "name": "Moonkin Form",
+          "row": 6,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_nature_forceofnature",
+          "iconSource": "wowhead",
+          "description": "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party or raid members within 45 yards have their Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells. The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+          "ranks": [
+            "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party or raid members within 45 yards have their Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells. The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            24858
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104937
+          }
+        }
+      ]
+    },
+    {
+      "id": "feral-combat",
+      "name": "Feral Combat",
+      "page": "primary",
+      "order": 1,
+      "icon": "ability_hunter_pet_hyena",
+      "rows": 7,
+      "cols": 4,
+      "talents": [
+        {
+          "id": "wh-104938",
+          "name": "Ferocity",
+          "row": 0,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "ability_hunter_pet_hyena",
+          "iconSource": "wowhead",
+          "description": "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 1 Rage or Energy.",
+          "ranks": [
+            "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 1 Rage or Energy.",
+            "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 2 Rage or Energy.",
+            "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 3 Rage or Energy.",
+            "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 4 Rage or Energy.",
+            "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 5 Rage or Energy."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16934,
+            16934,
+            16934,
+            16934,
+            16934
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104938
+          }
+        },
+        {
+          "id": "wh-104939",
+          "name": "Furor",
+          "row": 0,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_holy_blessingofstamina",
+          "iconSource": "wowhead",
+          "description": "Gives you a 20% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 20% of the Energy you had when last in Cat Form, plus 2 Energy per second spent outside Bear Form or Dire Bear Form, up to 20 Energy.",
+          "ranks": [
+            "Gives you a 20% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 20% of the Energy you had when last in Cat Form, plus 2 Energy per second spent outside Bear Form or Dire Bear Form, up to 20 Energy.",
+            "Gives you a 40% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 40% of the Energy you had when last in Cat Form, plus 4 Energy per second spent outside Bear Form or Dire Bear Form, up to 40 Energy.",
+            "Gives you a 60% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 60% of the Energy you had when last in Cat Form, plus 6 Energy per second spent outside Bear Form or Dire Bear Form, up to 60 Energy.",
+            "Gives you a 80% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 80% of the Energy you had when last in Cat Form, plus 8 Energy per second spent outside Bear Form or Dire Bear Form, up to 80 Energy.",
+            "Gives you a 100% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 100% of the Energy you had when last in Cat Form, plus 10 Energy per second spent outside Bear Form or Dire Bear Form, up to 100 Energy."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17056,
+            17056,
+            17056,
+            17056,
+            17056
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104939
+          }
+        },
+        {
+          "id": "wh-104943",
+          "name": "Feral Swiftness",
+          "row": 1,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_nature_spiritwolf",
+          "iconSource": "wowhead",
+          "description": "Increases your movement speed while in Cat Form by 15%, and increases your chance to Dodge by 2%.",
+          "ranks": [
+            "Increases your movement speed while in Cat Form by 15%, and increases your chance to Dodge by 2%.",
+            "Increases your movement speed while in Cat Form by 30%, and increases your chance to Dodge by 4%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17002,
+            17002
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104943
+          }
+        },
+        {
+          "id": "wh-104940",
+          "name": "Feral Instinct",
+          "row": 1,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "ability_ambush",
+          "iconSource": "wowhead",
+          "description": "Increases damage done by your Swipe ability by 10% and reduces the chance enemies have to detect you while Prowling as if you were 1 levels higher.",
+          "ranks": [
+            "Increases damage done by your Swipe ability by 10% and reduces the chance enemies have to detect you while Prowling as if you were 1 levels higher.",
+            "Increases damage done by your Swipe ability by 20% and reduces the chance enemies have to detect you while Prowling as if you were 2 levels higher.",
+            "Increases damage done by your Swipe ability by 30% and reduces the chance enemies have to detect you while Prowling as if you were 3 levels higher."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16947,
+            16947,
+            16947
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104940
+          }
+        },
+        {
+          "id": "wh-104941",
+          "name": "Brutal Impact",
+          "row": 1,
+          "col": 2,
+          "maxRank": 2,
+          "icon": "ability_druid_bash",
+          "iconSource": "wowhead",
+          "description": "Increases the stun duration of your Bash and Pounce abilities by 0.5 sec and reduces the cooldown of Bash by 15 sec.",
+          "ranks": [
+            "Increases the stun duration of your Bash and Pounce abilities by 0.5 sec and reduces the cooldown of Bash by 15 sec.",
+            "Increases the stun duration of your Bash and Pounce abilities by 1 sec and reduces the cooldown of Bash by 30 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16940,
+            16940
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104941
+          }
+        },
+        {
+          "id": "wh-104942",
+          "name": "Thick Hide",
+          "row": 1,
+          "col": 3,
+          "maxRank": 3,
+          "icon": "inv_misc_pelt_bear_03",
+          "iconSource": "wowhead",
+          "description": "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 180 additional base Armor per level and another 0.67 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms.",
+          "ranks": [
+            "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 180 additional base Armor per level and another 0.67 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms.",
+            "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 180 additional base Armor per level and another 1.33 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms.",
+            "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 180 additional base Armor per level and another 2.00 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16929,
+            16929,
+            16929
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104942
+          }
+        },
+        {
+          "id": "wh-104945",
+          "name": "Shredding Attacks",
+          "row": 2,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "spell_shadow_vampiricaura",
+          "iconSource": "wowhead",
+          "description": "Reduces the Energy cost of your Shred ability by 6 and reduces the Rage cost of your Lacerate ability by 1.",
+          "ranks": [
+            "Reduces the Energy cost of your Shred ability by 6 and reduces the Rage cost of your Lacerate ability by 1.",
+            "Reduces the Energy cost of your Shred ability by 12 and reduces the Rage cost of your Lacerate ability by 2.",
+            "Reduces the Energy cost of your Shred ability by 18 and reduces the Rage cost of your Lacerate ability by 3."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16966,
+            16966,
+            16966
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104945
+          }
+        },
+        {
+          "id": "wh-104948",
+          "name": "Savage Fury",
+          "row": 2,
+          "col": 1,
+          "maxRank": 2,
+          "icon": "ability_druid_ravage",
+          "iconSource": "wowhead",
+          "description": "Increases the damage caused by your Claw, Rake, Shred, Maul, and Swipe abilities by 5%.",
+          "ranks": [
+            "Increases the damage caused by your Claw, Rake, Shred, Maul, and Swipe abilities by 5%.",
+            "Increases the damage caused by your Claw, Rake, Shred, Maul, and Swipe abilities by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16998,
+            16998
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104948
+          }
+        },
+        {
+          "id": "wh-104944",
+          "name": "Feral Charge",
+          "row": 2,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "ability_hunter_pet_bear",
+          "iconSource": "wowhead",
+          "description": "Requires Bear Form, Dire Bear Form Charge an enemy, immobilizing them and interrupting any spell they are casting for 4 sec. Feral Charge (Cat) 8 - 25 yd range Instant 30 sec cooldownRequires Druid Requires level 1 Requires Cat Form Leap behind an enemy.",
+          "ranks": [
+            "Requires Bear Form, Dire Bear Form Charge an enemy, immobilizing them and interrupting any spell they are casting for 4 sec. Feral Charge (Cat) 8 - 25 yd range Instant 30 sec cooldownRequires Druid Requires level 1 Requires Cat Form Leap behind an enemy."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1238122
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104944
+          }
+        },
+        {
+          "id": "wh-104946",
+          "name": "Sharpened Claws",
+          "row": 2,
+          "col": 3,
+          "maxRank": 2,
+          "icon": "inv_misc_monsterclaw_04",
+          "iconSource": "wowhead",
+          "description": "Increases your critical strike chance while in Bear Form, Dire Bear Form, or Cat Form by 3%.",
+          "ranks": [
+            "Increases your critical strike chance while in Bear Form, Dire Bear Form, or Cat Form by 3%.",
+            "Increases your critical strike chance while in Bear Form, Dire Bear Form, or Cat Form by 6%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16942,
+            16942
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104946
+          }
+        },
+        {
+          "id": "wh-104952",
+          "name": "Predatory Strikes",
+          "row": 3,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "ability_hunter_pet_cat",
+          "iconSource": "wowhead",
+          "description": "Increases your melee Attack Power in Cat Form, Bear Form, and Dire Bear Form by 50% of your level.",
+          "ranks": [
+            "Increases your melee Attack Power in Cat Form, Bear Form, and Dire Bear Form by 50% of your level.",
+            "Increases your melee Attack Power in Cat Form, Bear Form, and Dire Bear Form by 100% of your level.",
+            "Increases your melee Attack Power in Cat Form, Bear Form, and Dire Bear Form by 150% of your level."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16972,
+            16972,
+            16972
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104952
+          }
+        },
+        {
+          "id": "wh-104949",
+          "name": "Lacerate",
+          "row": 3,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "ability_druid_lacerate",
+          "iconSource": "wowhead",
+          "description": "Lacerates the enemy target, making them bleed for 20 damage over 15 sec plus 10% weapon damage per existing application of Lacerate on the target. Causes a high amount of threat. This effect stacks up to 5 times on the same target.",
+          "ranks": [
+            "Lacerates the enemy target, making them bleed for 20 damage over 15 sec plus 10% weapon damage per existing application of Lacerate on the target. Causes a high amount of threat. This effect stacks up to 5 times on the same target."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1328617
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104949
+          },
+          "requires": [
+            {
+              "talent": "wh-104948",
+              "rank": 2
+            }
+          ]
+        },
+        {
+          "id": "wh-104951",
+          "name": "Predatory Discipline",
+          "row": 3,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "spell_druid_savagery",
+          "iconSource": "wowhead",
+          "description": "Your Ferocious Bite ability no longer converts extra Energy into damage, but still deals extra damage based on your excess Energy.",
+          "ranks": [
+            "Your Ferocious Bite ability no longer converts extra Energy into damage, but still deals extra damage based on your excess Energy."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1328613
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104951
+          }
+        },
+        {
+          "id": "wh-104947",
+          "name": "Blood Frenzy",
+          "row": 3,
+          "col": 3,
+          "maxRank": 2,
+          "icon": "ability_ghoulfrenzy",
+          "iconSource": "wowhead",
+          "description": "Gives you a 50% chance to gain an additional 5 Rage any time you get a critical strike while in Bear Form or Dire Bear Form. In addition, your non-periodic critical strikes from Cat Form abilities that generate Combo Points have a 50% chance to add an additional Combo Point.",
+          "ranks": [
+            "Gives you a 50% chance to gain an additional 5 Rage any time you get a critical strike while in Bear Form or Dire Bear Form. In addition, your non-periodic critical strikes from Cat Form abilities that generate Combo Points have a 50% chance to add an additional Combo Point.",
+            "Gives you a 100% chance to gain an additional 5 Rage any time you get a critical strike while in Bear Form or Dire Bear Form. In addition, your non-periodic critical strikes from Cat Form abilities that generate Combo Points have a 100% chance to add an additional Combo Point."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16958,
+            16958
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104947
+          },
+          "requires": [
+            {
+              "talent": "wh-104946",
+              "rank": 2
+            }
+          ]
+        },
+        {
+          "id": "wh-104955",
+          "name": "Leader of the Pack",
+          "row": 4,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_nature_unyeildingstamina",
+          "iconSource": "wowhead",
+          "description": "While in Cat Form, Bear Form, or Dire Bear Form, the Leader of the Pack increases the Critical Strike chance of all party or raid members within 45 yards by 3%.",
+          "ranks": [
+            "While in Cat Form, Bear Form, or Dire Bear Form, the Leader of the Pack increases the Critical Strike chance of all party or raid members within 45 yards by 3%."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17007
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104955
+          }
+        },
+        {
+          "id": "wh-104950",
+          "name": "Natural Instinct",
+          "row": 4,
+          "col": 3,
+          "maxRank": 2,
+          "icon": "ability_druid_predatoryinstincts",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike damage bonus of your melee abilities by 10% and increases your spell healing by 12% of your Intellect.",
+          "ranks": [
+            "Increases the critical strike damage bonus of your melee abilities by 10% and increases your spell healing by 12% of your Intellect.",
+            "Increases the critical strike damage bonus of your melee abilities by 20% and increases your spell healing by 25% of your Intellect."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1223242,
+            1223242
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104950
+          }
+        },
+        {
+          "id": "wh-104953",
+          "name": "Rend and Tear",
+          "row": 5,
+          "col": 0,
+          "maxRank": 5,
+          "icon": "ability_druid_primalagression",
+          "iconSource": "wowhead",
+          "description": "Increases damage done by your melee abilities on Bleeding targets by 3%.",
+          "ranks": [
+            "Increases damage done by your melee abilities on Bleeding targets by 3%.",
+            "Increases damage done by your melee abilities on Bleeding targets by 6%.",
+            "Increases damage done by your melee abilities on Bleeding targets by 9%.",
+            "Increases damage done by your melee abilities on Bleeding targets by 12%.",
+            "Increases damage done by your melee abilities on Bleeding targets by 15%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1223246,
+            1223246,
+            1223246,
+            1223246,
+            1223246
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104953
+          },
+          "requires": [
+            {
+              "talent": "wh-104952",
+              "rank": 3
+            }
+          ]
+        },
+        {
+          "id": "wh-104954",
+          "name": "Natural Reaction",
+          "row": 5,
+          "col": 3,
+          "maxRank": 5,
+          "icon": "ability_bullrush",
+          "iconSource": "wowhead",
+          "description": "Increases your dodge chance by 1%, and gives you a 20% chance to gain 5 Rage each time you dodge.",
+          "ranks": [
+            "Increases your dodge chance by 1%, and gives you a 20% chance to gain 5 Rage each time you dodge.",
+            "Increases your dodge chance by 2%, and gives you a 40% chance to gain 5 Rage each time you dodge.",
+            "Increases your dodge chance by 3%, and gives you a 60% chance to gain 5 Rage each time you dodge.",
+            "Increases your dodge chance by 4%, and gives you a 80% chance to gain 5 Rage each time you dodge.",
+            "Increases your dodge chance by 5%, and gives you a 100% chance to gain 5 Rage each time you dodge."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            417051,
+            417051,
+            417051,
+            417051,
+            417051
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104954
+          }
+        },
+        {
+          "id": "wh-104956",
+          "name": "Primal Bite",
+          "row": 6,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "ability_racial_cannibalize",
+          "iconSource": "wowhead",
+          "description": "Bite the target, dealing 100% normal damage plus 42 and generating a high amount of threat.",
+          "ranks": [
+            "Bite the target, dealing 100% normal damage plus 42 and generating a high amount of threat."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            407995
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104956
+          },
+          "requires": [
+            {
+              "talent": "wh-104955",
+              "rank": 1
+            }
+          ]
+        },
+        {
+          "id": "wh-113563",
+          "name": "Shifting Power",
+          "row": 6,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "spell_druid_displacement",
+          "iconSource": "wowhead",
+          "description": "Instantly convert 0 Mana into 40 Energy. Shifting Power's cost is reduced by effects that reduce the cost of Shapeshifting.",
+          "ranks": [
+            "Instantly convert 0 Mana into 40 Energy. Shifting Power's cost is reduced by effects that reduce the cost of Shapeshifting."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1322605
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 113563
+          },
+          "requires": [
+            {
+              "talent": "wh-104951",
+              "rank": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "restoration",
+      "name": "Restoration",
+      "page": "primary",
+      "order": 2,
+      "icon": "spell_nature_healingwavegreater",
+      "rows": 7,
+      "cols": 4,
+      "talents": [
+        {
+          "id": "wh-104957",
+          "name": "Nature's Focus",
+          "row": 0,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "spell_nature_healingwavegreater",
+          "iconSource": "wowhead",
+          "description": "Gives your Arcane and Nature spells a 14% chance to not lose casting time when you take damage.",
+          "ranks": [
+            "Gives your Arcane and Nature spells a 14% chance to not lose casting time when you take damage.",
+            "Gives your Arcane and Nature spells a 28% chance to not lose casting time when you take damage.",
+            "Gives your Arcane and Nature spells a 42% chance to not lose casting time when you take damage.",
+            "Gives your Arcane and Nature spells a 56% chance to not lose casting time when you take damage.",
+            "Gives your Arcane and Nature spells a 70% chance to not lose casting time when you take damage."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17063,
+            17063,
+            17063,
+            17063,
+            17063
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104957
+          }
+        },
+        {
+          "id": "wh-104958",
+          "name": "Heart of the Wild",
+          "row": 0,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_holy_blessingofagility",
+          "iconSource": "wowhead",
+          "description": "Increases your Intellect by 2%. In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 4% and while in Cat Form your Strength is increased by 2%.",
+          "ranks": [
+            "Increases your Intellect by 2%. In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 4% and while in Cat Form your Strength is increased by 2%.",
+            "Increases your Intellect by 4%. In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 8% and while in Cat Form your Strength is increased by 4%.",
+            "Increases your Intellect by 6%. In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 12% and while in Cat Form your Strength is increased by 6%.",
+            "Increases your Intellect by 8%. In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 16% and while in Cat Form your Strength is increased by 8%.",
+            "Increases your Intellect by 10%. In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 20% and while in Cat Form your Strength is increased by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17003,
+            17003,
+            17003,
+            17003,
+            17003
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104958
+          }
+        },
+        {
+          "id": "wh-104922",
+          "name": "Naturalist",
+          "row": 1,
+          "col": 0,
+          "maxRank": 5,
+          "icon": "spell_nature_healingtouch",
+          "iconSource": "wowhead",
+          "description": "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.1 sec and increases all damage you deal by 2%.",
+          "ranks": [
+            "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.1 sec and increases all damage you deal by 2%.",
+            "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.2 sec and increases all damage you deal by 4%.",
+            "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.3 sec and increases all damage you deal by 6%.",
+            "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.4 sec and increases all damage you deal by 8%.",
+            "Reduces the cast time of your Healing Touch and Wild Growth spells by 0.5 sec and increases all damage you deal by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17069,
+            17069,
+            17069,
+            17069,
+            17069
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104922
+          }
+        },
+        {
+          "id": "wh-104920",
+          "name": "Reflection",
+          "row": 1,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_frost_windwalkon",
+          "iconSource": "wowhead",
+          "description": "Allows 17% of your Mana regeneration to continue while casting.",
+          "ranks": [
+            "Allows 17% of your Mana regeneration to continue while casting.",
+            "Allows 33% of your Mana regeneration to continue while casting.",
+            "Allows 50% of your Mana regeneration to continue while casting."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17106,
+            17106,
+            17106
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104920
+          }
+        },
+        {
+          "id": "wh-104919",
+          "name": "Natural Shapeshifter",
+          "row": 1,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_nature_wispsplode",
+          "iconSource": "wowhead",
+          "description": "Reduces the mana cost of all shapeshifting by 10%.",
+          "ranks": [
+            "Reduces the mana cost of all shapeshifting by 10%.",
+            "Reduces the mana cost of all shapeshifting by 20%.",
+            "Reduces the mana cost of all shapeshifting by 30%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16833,
+            16833,
+            16833
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104919
+          }
+        },
+        {
+          "id": "wh-104917",
+          "name": "Subtlety",
+          "row": 2,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "ability_eyeoftheowl",
+          "iconSource": "wowhead",
+          "description": "Reduces the threat generated by your Nature and Arcane spells by 10%.",
+          "ranks": [
+            "Reduces the threat generated by your Nature and Arcane spells by 10%.",
+            "Reduces the threat generated by your Nature and Arcane spells by 20%.",
+            "Reduces the threat generated by your Nature and Arcane spells by 30%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17118,
+            17118,
+            17118
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104917
+          }
+        },
+        {
+          "id": "wh-104916",
+          "name": "Gift of Nature",
+          "row": 2,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_nature_protectionformnature",
+          "iconSource": "wowhead",
+          "description": "Increases the effect of all your healing spells by 2%.",
+          "ranks": [
+            "Increases the effect of all your healing spells by 2%.",
+            "Increases the effect of all your healing spells by 4%.",
+            "Increases the effect of all your healing spells by 6%.",
+            "Increases the effect of all your healing spells by 8%.",
+            "Increases the effect of all your healing spells by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17104,
+            17104,
+            17104,
+            17104,
+            17104
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104916
+          }
+        },
+        {
+          "id": "wh-104918",
+          "name": "Bloom",
+          "row": 2,
+          "col": 3,
+          "maxRank": 1,
+          "icon": "inv_misc_herb_felblossom",
+          "iconSource": "wowhead",
+          "description": "When your Rejuvenation or Regrowth spell expires due to its duration, the target is instantly healed for an amount equal to 100% of your Spirit. If either spell expires due to being dispelled, the target is healed for 50% of your Spirit instead.",
+          "ranks": [
+            "When your Rejuvenation or Regrowth spell expires due to its duration, the target is instantly healed for an amount equal to 100% of your Spirit. If either spell expires due to being dispelled, the target is healed for 50% of your Spirit instead."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1328621
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104918
+          }
+        },
+        {
+          "id": "wh-104915",
+          "name": "Tranquil Spirit",
+          "row": 3,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "spell_holy_elunesgrace",
+          "iconSource": "wowhead",
+          "description": "Reduces the mana cost of your Healing Touch and Tranquility spells by 2%.",
+          "ranks": [
+            "Reduces the mana cost of your Healing Touch and Tranquility spells by 2%.",
+            "Reduces the mana cost of your Healing Touch and Tranquility spells by 4%.",
+            "Reduces the mana cost of your Healing Touch and Tranquility spells by 6%.",
+            "Reduces the mana cost of your Healing Touch and Tranquility spells by 8%.",
+            "Reduces the mana cost of your Healing Touch and Tranquility spells by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            24968,
+            24968,
+            24968,
+            24968,
+            24968
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104915
+          }
+        },
+        {
+          "id": "wh-104914",
+          "name": "Improved Rejuvenation",
+          "row": 3,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_nature_rejuvenation",
+          "iconSource": "wowhead",
+          "description": "Increases the effect of your Rejuvenation spell by 5%.",
+          "ranks": [
+            "Increases the effect of your Rejuvenation spell by 5%.",
+            "Increases the effect of your Rejuvenation spell by 10%.",
+            "Increases the effect of your Rejuvenation spell by 15%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17111,
+            17111,
+            17111
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104914
+          }
+        },
+        {
+          "id": "wh-104912",
+          "name": "Swiftmend",
+          "row": 3,
+          "col": 3,
+          "maxRank": 1,
+          "icon": "inv_relics_idolofrejuvenation",
+          "iconSource": "wowhead",
+          "description": "Instantly heals a target with your active Rejuvenation or Regrowth effect for an amount equal to the full duration of the periodic effect.",
+          "ranks": [
+            "Instantly heals a target with your active Rejuvenation or Regrowth effect for an amount equal to the full duration of the periodic effect."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18562
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104912
+          }
+        },
+        {
+          "id": "wh-104921",
+          "name": "Nature's Swiftness",
+          "row": 4,
+          "col": 0,
+          "maxRank": 1,
+          "icon": "spell_nature_ravenform",
+          "iconSource": "wowhead",
+          "description": "When activated, your next Nature spell becomes an instant cast spell.",
+          "ranks": [
+            "When activated, your next Nature spell becomes an instant cast spell."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17116
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104921
+          },
+          "requires": [
+            {
+              "talent": "wh-104922",
+              "rank": 5
+            }
+          ]
+        },
+        {
+          "id": "wh-104911",
+          "name": "Living Spirit",
+          "row": 4,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_nature_giftofthewaterspirit",
+          "iconSource": "wowhead",
+          "description": "Increases your Spirit by 5%.",
+          "ranks": [
+            "Increases your Spirit by 5%.",
+            "Increases your Spirit by 10%.",
+            "Increases your Spirit by 15%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1309631,
+            1309631,
+            1309631
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104911
+          }
+        },
+        {
+          "id": "wh-104909",
+          "name": "Improved Tranquility",
+          "row": 4,
+          "col": 3,
+          "maxRank": 2,
+          "icon": "spell_nature_tranquility",
+          "iconSource": "wowhead",
+          "description": "Reduces threat caused by Tranquility by 50% and its cooldown by 30%.",
+          "ranks": [
+            "Reduces threat caused by Tranquility by 50% and its cooldown by 30%.",
+            "Reduces threat caused by Tranquility by 100% and its cooldown by 60%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17123,
+            17123
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104909
+          }
+        },
+        {
+          "id": "wh-104913",
+          "name": "Improved Regrowth",
+          "row": 5,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_nature_resistnature",
+          "iconSource": "wowhead",
+          "description": "Increases the critical effect chance of your Regrowth spell by 10%.",
+          "ranks": [
+            "Increases the critical effect chance of your Regrowth spell by 10%.",
+            "Increases the critical effect chance of your Regrowth spell by 20%.",
+            "Increases the critical effect chance of your Regrowth spell by 30%.",
+            "Increases the critical effect chance of your Regrowth spell by 40%.",
+            "Increases the critical effect chance of your Regrowth spell by 50%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17074,
+            17074,
+            17074,
+            17074,
+            17074
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104913
+          },
+          "requires": [
+            {
+              "talent": "wh-104914",
+              "rank": 3
+            }
+          ]
+        },
+        {
+          "id": "wh-104910",
+          "name": "Wild Growth",
+          "row": 6,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "ability_druid_flourish",
+          "iconSource": "wowhead",
+          "description": "Heals the target and their party for 336 over 7 sec. Party members must be within 43.5 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration.",
+          "ranks": [
+            "Heals the target and their party for 336 over 7 sec. Party members must be within 43.5 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            408120
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104910
+          },
+          "requires": [
+            {
+              "talent": "wh-104911",
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Published by Wowhead for Forever. May lag hotfixes; not independently verified in game."
+  ]
+}

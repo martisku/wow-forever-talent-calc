@@ -1,0 +1,1897 @@
+{
+  "$schema": "../../../../schema/class.schema.json",
+  "schemaVersion": 1,
+  "class": "mage",
+  "className": "Mage",
+  "dataVersion": 1,
+  "dataSource": "wowhead",
+  "generatedAt": "2026-11-13T14:42:00Z",
+  "rules": {
+    "pointsPerRow": 5,
+    "maxPoints": 51,
+    "firstPointLevel": 10,
+    "maxLevel": 60,
+    "rulesSource": "assumed"
+  },
+  "pages": [
+    {
+      "id": "primary",
+      "name": "Talents"
+    }
+  ],
+  "trees": [
+    {
+      "id": "arcane",
+      "name": "Arcane",
+      "page": "primary",
+      "order": 0,
+      "icon": "inv_wand_01",
+      "rows": 7,
+      "cols": 4,
+      "talents": [
+        {
+          "id": "wh-105815",
+          "name": "Wand Specialization",
+          "row": 0,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "inv_wand_01",
+          "iconSource": "wowhead",
+          "description": "Increases your damage with Wands by 13%.",
+          "ranks": [
+            "Increases your damage with Wands by 13%.",
+            "Increases your damage with Wands by 25%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            6057,
+            6057
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105815
+          }
+        },
+        {
+          "id": "wh-105813",
+          "name": "Improved Channeling",
+          "row": 0,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "spell_nature_starfall",
+          "iconSource": "wowhead",
+          "description": "Gives your Arcane Missiles spell a 20% chance and your Arcane Blast and Arcane Wrath spells a 14% chance to not lose casting time when you take damage.",
+          "ranks": [
+            "Gives your Arcane Missiles spell a 20% chance and your Arcane Blast and Arcane Wrath spells a 14% chance to not lose casting time when you take damage.",
+            "Gives your Arcane Missiles spell a 40% chance and your Arcane Blast and Arcane Wrath spells a 28% chance to not lose casting time when you take damage.",
+            "Gives your Arcane Missiles spell a 60% chance and your Arcane Blast and Arcane Wrath spells a 42% chance to not lose casting time when you take damage.",
+            "Gives your Arcane Missiles spell a 80% chance and your Arcane Blast and Arcane Wrath spells a 56% chance to not lose casting time when you take damage.",
+            "Gives your Arcane Missiles spell a 100% chance and your Arcane Blast and Arcane Wrath spells a 70% chance to not lose casting time when you take damage."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11237,
+            11237,
+            11237,
+            11237,
+            11237
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105813
+          }
+        },
+        {
+          "id": "wh-105802",
+          "name": "Arcane Resilience",
+          "row": 0,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_arcane_arcaneresilience",
+          "iconSource": "wowhead",
+          "description": "Increases your Armor by an amount equal to 25% of your Intellect.",
+          "ranks": [
+            "Increases your Armor by an amount equal to 25% of your Intellect.",
+            "Increases your Armor by an amount equal to 50% of your Intellect.",
+            "Increases your Armor by an amount equal to 75% of your Intellect."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            28574,
+            28574,
+            28574
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105802
+          }
+        },
+        {
+          "id": "wh-105812",
+          "name": "Arcane Subtlety",
+          "row": 1,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_holy_dispelmagic",
+          "iconSource": "wowhead",
+          "description": "Reduces your target's resistance to all your spells by 8 and reduces the threat caused by your Arcane spells by 15%.",
+          "ranks": [
+            "Reduces your target's resistance to all your spells by 8 and reduces the threat caused by your Arcane spells by 15%.",
+            "Reduces your target's resistance to all your spells by 15 and reduces the threat caused by your Arcane spells by 30%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11210,
+            11210
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105812
+          }
+        },
+        {
+          "id": "wh-105811",
+          "name": "Magic Absorption",
+          "row": 1,
+          "col": 1,
+          "maxRank": 2,
+          "icon": "spell_nature_astralrecalgroup",
+          "iconSource": "wowhead",
+          "description": "Increases all your resistances by 5 and causes all spells you fully resist to restore 1% of your total mana. Cannot trigger more often than 1 time per sec.",
+          "ranks": [
+            "Increases all your resistances by 5 and causes all spells you fully resist to restore 1% of your total mana. Cannot trigger more often than 1 time per sec.",
+            "Increases all your resistances by 10 and causes all spells you fully resist to restore 2% of your total mana. Cannot trigger more often than 1 time per sec."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            29441,
+            29441
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105811
+          }
+        },
+        {
+          "id": "wh-105810",
+          "name": "Arcane Concentration",
+          "row": 1,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_shadow_manaburn",
+          "iconSource": "wowhead",
+          "description": "Gives you a 2% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+          "ranks": [
+            "Gives you a 2% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+            "Gives you a 4% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+            "Gives you a 6% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+            "Gives you a 8% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+            "Gives you a 10% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11213,
+            11213,
+            11213,
+            11213,
+            11213
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105810
+          }
+        },
+        {
+          "id": "wh-105809",
+          "name": "Missile Barrage",
+          "row": 1,
+          "col": 3,
+          "maxRank": 2,
+          "icon": "ability_mage_missilebarrage",
+          "iconSource": "wowhead",
+          "description": "Gives your Arcane Blast spell a 20% chance, and your Arcane Wrath, Fireball, Frostbolt, and Frostfire Bolt spells a 10% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec.",
+          "ranks": [
+            "Gives your Arcane Blast spell a 20% chance, and your Arcane Wrath, Fireball, Frostbolt, and Frostfire Bolt spells a 10% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec.",
+            "Gives your Arcane Blast spell a 40% chance, and your Arcane Wrath, Fireball, Frostbolt, and Frostfire Bolt spells a 20% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            400588,
+            400588
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105809
+          }
+        },
+        {
+          "id": "wh-105808",
+          "name": "Arcane Geometry",
+          "row": 2,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "inv_ability_mage_radiantspark",
+          "iconSource": "wowhead",
+          "description": "Increases the range of your Arcane spells by 3 yards.",
+          "ranks": [
+            "Increases the range of your Arcane spells by 3 yards.",
+            "Increases the range of your Arcane spells by 6 yards."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11247,
+            11247
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105808
+          }
+        },
+        {
+          "id": "wh-105807",
+          "name": "Arcane Impact",
+          "row": 2,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_nature_wispsplode",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike chance of your Arcane spells by 2%.",
+          "ranks": [
+            "Increases the critical strike chance of your Arcane spells by 2%.",
+            "Increases the critical strike chance of your Arcane spells by 4%.",
+            "Increases the critical strike chance of your Arcane spells by 6%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11242,
+            11242,
+            11242
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105807
+          }
+        },
+        {
+          "id": "wh-105806",
+          "name": "Arcane Blast",
+          "row": 2,
+          "col": 3,
+          "maxRank": 1,
+          "icon": "spell_arcane_blast",
+          "iconSource": "wowhead",
+          "description": "Blasts the target with energy, dealing 34 to 38 Arcane damage. Each time you cast Arcane Blast, you gain 12% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 100%. Effect stacks up to 4 times and lasts 18 sec from time of initial application.",
+          "ranks": [
+            "Blasts the target with energy, dealing 34 to 38 Arcane damage. Each time you cast Arcane Blast, you gain 12% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 100%. Effect stacks up to 4 times and lasts 18 sec from time of initial application."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            400574
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105806
+          }
+        },
+        {
+          "id": "wh-105805",
+          "name": "Arcane Shielding",
+          "row": 3,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_shadow_detectlesserinvisibility",
+          "iconSource": "wowhead",
+          "description": "Decreases the Mana lost per point of damage taken when your Mana Shield spell is active by 17% and increases the resistances granted by your Mage Armor spell by 25%.",
+          "ranks": [
+            "Decreases the Mana lost per point of damage taken when your Mana Shield spell is active by 17% and increases the resistances granted by your Mage Armor spell by 25%.",
+            "Decreases the Mana lost per point of damage taken when your Mana Shield spell is active by 33% and increases the resistances granted by your Mage Armor spell by 50%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11252,
+            11252
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105805
+          }
+        },
+        {
+          "id": "wh-105804",
+          "name": "Improved Counterspell",
+          "row": 3,
+          "col": 1,
+          "maxRank": 2,
+          "icon": "spell_frost_iceshock",
+          "iconSource": "wowhead",
+          "description": "Your Counterspell also Silences the target for 2 sec.",
+          "ranks": [
+            "Your Counterspell also Silences the target for 2 sec.",
+            "Your Counterspell also Silences the target for 4 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11255,
+            11255
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105804
+          }
+        },
+        {
+          "id": "wh-105803",
+          "name": "Arcane Meditation",
+          "row": 3,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_shadow_siphonmana",
+          "iconSource": "wowhead",
+          "description": "Allows 17% of your Mana regeneration to continue while casting.",
+          "ranks": [
+            "Allows 17% of your Mana regeneration to continue while casting.",
+            "Allows 33% of your Mana regeneration to continue while casting.",
+            "Allows 50% of your Mana regeneration to continue while casting."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18462,
+            18462,
+            18462
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105803
+          },
+          "requires": [
+            {
+              "talent": "wh-105810",
+              "rank": 5
+            }
+          ]
+        },
+        {
+          "id": "wh-113627",
+          "name": "Arcane Wrath",
+          "row": 3,
+          "col": 3,
+          "maxRank": 1,
+          "icon": "ability_mage_netherwindpresence",
+          "iconSource": "wowhead",
+          "description": "Launches a projectile of pure Arcane energy at the enemy target, causing 122 to 146 Arcane damage. This spell gains additional Spell Damage equal to 5% of your maximum Mana.",
+          "ranks": [
+            "Launches a projectile of pure Arcane energy at the enemy target, causing 122 to 146 Arcane damage. This spell gains additional Spell Damage equal to 5% of your maximum Mana."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1326079
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 113627
+          },
+          "requires": [
+            {
+              "talent": "wh-105806",
+              "rank": 1
+            }
+          ]
+        },
+        {
+          "id": "wh-105801",
+          "name": "Presence of Mind",
+          "row": 4,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_nature_enchantarmor",
+          "iconSource": "wowhead",
+          "description": "When activated, your next Mage spell with a casting time less than 10 sec becomes an instant cast spell.",
+          "ranks": [
+            "When activated, your next Mage spell with a casting time less than 10 sec becomes an instant cast spell."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            12043
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105801
+          }
+        },
+        {
+          "id": "wh-105800",
+          "name": "Arcane Mind",
+          "row": 4,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_shadow_charm",
+          "iconSource": "wowhead",
+          "description": "Increases your Intellect by 2% and increases the critical strike damage bonus of your Arcane spells by 20%.",
+          "ranks": [
+            "Increases your Intellect by 2% and increases the critical strike damage bonus of your Arcane spells by 20%.",
+            "Increases your Intellect by 4% and increases the critical strike damage bonus of your Arcane spells by 40%.",
+            "Increases your Intellect by 6% and increases the critical strike damage bonus of your Arcane spells by 60%.",
+            "Increases your Intellect by 8% and increases the critical strike damage bonus of your Arcane spells by 80%.",
+            "Increases your Intellect by 10% and increases the critical strike damage bonus of your Arcane spells by 100%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11232,
+            11232,
+            11232,
+            11232,
+            11232
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105800
+          }
+        },
+        {
+          "id": "wh-105799",
+          "name": "Arcane Instability",
+          "row": 5,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_shadow_teleport",
+          "iconSource": "wowhead",
+          "description": "Increases the damage done by your spells by 1% and your critical strike chance by 1%.",
+          "ranks": [
+            "Increases the damage done by your spells by 1% and your critical strike chance by 1%.",
+            "Increases the damage done by your spells by 2% and your critical strike chance by 2%.",
+            "Increases the damage done by your spells by 3% and your critical strike chance by 3%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            15058,
+            15058,
+            15058
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105799
+          }
+        },
+        {
+          "id": "wh-105798",
+          "name": "Arcane Power",
+          "row": 6,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_nature_lightning",
+          "iconSource": "wowhead",
+          "description": "For the next 15 sec, your spells deal 30% more damage while costing 30% more mana to cast.",
+          "ranks": [
+            "For the next 15 sec, your spells deal 30% more damage while costing 30% more mana to cast."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            12042
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105798
+          },
+          "requires": [
+            {
+              "talent": "wh-105801",
+              "rank": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fire",
+      "name": "Fire",
+      "page": "primary",
+      "order": 1,
+      "icon": "spell_fire_flameshock",
+      "rows": 7,
+      "cols": 4,
+      "talents": [
+        {
+          "id": "wh-105796",
+          "name": "Incineration",
+          "row": 0,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "spell_fire_flameshock",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 2%.",
+          "ranks": [
+            "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 2%.",
+            "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 4%.",
+            "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 6%.",
+            "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 8%.",
+            "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18459,
+            18459,
+            18459,
+            18459,
+            18459
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105796
+          }
+        },
+        {
+          "id": "wh-105795",
+          "name": "Accelerant",
+          "row": 0,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_fire_flamebolt",
+          "iconSource": "wowhead",
+          "description": "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.1 sec.",
+          "ranks": [
+            "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.1 sec.",
+            "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.2 sec.",
+            "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.3 sec.",
+            "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.4 sec.",
+            "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.5 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11069,
+            11069,
+            11069,
+            11069,
+            11069
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105795
+          }
+        },
+        {
+          "id": "wh-105794",
+          "name": "Ignite",
+          "row": 1,
+          "col": 0,
+          "maxRank": 5,
+          "icon": "spell_fire_incinerate",
+          "iconSource": "wowhead",
+          "description": "Your critical strikes from Fire damage spells cause the target to burn for an additional 8% of your spell's damage over 4 sec.",
+          "ranks": [
+            "Your critical strikes from Fire damage spells cause the target to burn for an additional 8% of your spell's damage over 4 sec.",
+            "Your critical strikes from Fire damage spells cause the target to burn for an additional 16% of your spell's damage over 4 sec.",
+            "Your critical strikes from Fire damage spells cause the target to burn for an additional 24% of your spell's damage over 4 sec.",
+            "Your critical strikes from Fire damage spells cause the target to burn for an additional 32% of your spell's damage over 4 sec.",
+            "Your critical strikes from Fire damage spells cause the target to burn for an additional 40% of your spell's damage over 4 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11119,
+            11119,
+            11119,
+            11119,
+            11119
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105794
+          }
+        },
+        {
+          "id": "wh-105793",
+          "name": "Flame Throwing",
+          "row": 1,
+          "col": 1,
+          "maxRank": 2,
+          "icon": "spell_fire_flare",
+          "iconSource": "wowhead",
+          "description": "Increases the range of your Fire spells by 3 yards.",
+          "ranks": [
+            "Increases the range of your Fire spells by 3 yards.",
+            "Increases the range of your Fire spells by 6 yards."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11100,
+            11100
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105793
+          }
+        },
+        {
+          "id": "wh-105792",
+          "name": "Impact",
+          "row": 1,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_fire_meteorstorm",
+          "iconSource": "wowhead",
+          "description": "Gives your Fire spells a 3% chance to stun the target for 2 sec.",
+          "ranks": [
+            "Gives your Fire spells a 3% chance to stun the target for 2 sec.",
+            "Gives your Fire spells a 7% chance to stun the target for 2 sec.",
+            "Gives your Fire spells a 10% chance to stun the target for 2 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11103,
+            11103,
+            11103
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105792
+          }
+        },
+        {
+          "id": "wh-105789",
+          "name": "Burning Soul",
+          "row": 2,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "spell_fire_fire",
+          "iconSource": "wowhead",
+          "description": "Gives your Fire spells a 23% chance to not lose casting time when you take damage and reduces the threat caused by your Fire spells by 10%.",
+          "ranks": [
+            "Gives your Fire spells a 23% chance to not lose casting time when you take damage and reduces the threat caused by your Fire spells by 10%.",
+            "Gives your Fire spells a 47% chance to not lose casting time when you take damage and reduces the threat caused by your Fire spells by 20%.",
+            "Gives your Fire spells a 70% chance to not lose casting time when you take damage and reduces the threat caused by your Fire spells by 30%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11083,
+            11083,
+            11083
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105789
+          }
+        },
+        {
+          "id": "wh-105791",
+          "name": "Improved Flamestrike",
+          "row": 2,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_fire_selfdestruct",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike chance of your Flamestrike spell by 5%.",
+          "ranks": [
+            "Increases the critical strike chance of your Flamestrike spell by 5%.",
+            "Increases the critical strike chance of your Flamestrike spell by 10%.",
+            "Increases the critical strike chance of your Flamestrike spell by 15%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11108,
+            11108,
+            11108
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105791
+          }
+        },
+        {
+          "id": "wh-105790",
+          "name": "Pyroblast",
+          "row": 2,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "spell_fire_fireball02",
+          "iconSource": "wowhead",
+          "description": "Hurls an immense fiery boulder that causes 101 to 131 Fire damage and an additional 44 Fire damage over 12 sec.",
+          "ranks": [
+            "Hurls an immense fiery boulder that causes 101 to 131 Fire damage and an additional 44 Fire damage over 12 sec."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11366
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105790
+          }
+        },
+        {
+          "id": "wh-105797",
+          "name": "Improved Fire Blast",
+          "row": 2,
+          "col": 3,
+          "maxRank": 2,
+          "icon": "spell_fire_lavaspawn",
+          "iconSource": "wowhead",
+          "description": "Reduces the cooldown of your Fire Blast spell by 1 sec and increases its range by 8 yards.",
+          "ranks": [
+            "Reduces the cooldown of your Fire Blast spell by 1 sec and increases its range by 8 yards.",
+            "Reduces the cooldown of your Fire Blast spell by 2 sec and increases its range by 15 yards."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11078,
+            11078
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105797
+          }
+        },
+        {
+          "id": "wh-105788",
+          "name": "Improved Scorch",
+          "row": 3,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "spell_fire_soulburn",
+          "iconSource": "wowhead",
+          "description": "Your Scorch spell has a 33% chance to cause your target to be vulnerable to Fire damage. This vulnerability increases all Fire damage you deal to your target by 3% and lasts 30 sec, stacking up to 5 times.",
+          "ranks": [
+            "Your Scorch spell has a 33% chance to cause your target to be vulnerable to Fire damage. This vulnerability increases all Fire damage you deal to your target by 3% and lasts 30 sec, stacking up to 5 times.",
+            "Your Scorch spell has a 67% chance to cause your target to be vulnerable to Fire damage. This vulnerability increases all Fire damage you deal to your target by 3% and lasts 30 sec, stacking up to 5 times.",
+            "Your Scorch spell has a 100% chance to cause your target to be vulnerable to Fire damage. This vulnerability increases all Fire damage you deal to your target by 3% and lasts 30 sec, stacking up to 5 times."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11095,
+            11095,
+            11095
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105788
+          }
+        },
+        {
+          "id": "wh-105787",
+          "name": "Improved Fire Ward",
+          "row": 3,
+          "col": 1,
+          "maxRank": 2,
+          "icon": "spell_fire_firearmor",
+          "iconSource": "wowhead",
+          "description": "Causes your Fire Ward to have a 10% chance to reflect Fire spells while active.",
+          "ranks": [
+            "Causes your Fire Ward to have a 10% chance to reflect Fire spells while active.",
+            "Causes your Fire Ward to have a 20% chance to reflect Fire spells while active."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11094,
+            11094
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105787
+          }
+        },
+        {
+          "id": "wh-105786",
+          "name": "Heating Up",
+          "row": 3,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "spell_fire_firebolt",
+          "iconSource": "wowhead",
+          "description": "Non-periodic critical strikes with Fireball, Frostfire Bolt, Fire Blast, and Scorch reduce the cast time of your next Pyroblast cast within 20 sec by 25%, stacking up to 3 times. Fire Blast grants an additional stack every time it deals damage.",
+          "ranks": [
+            "Non-periodic critical strikes with Fireball, Frostfire Bolt, Fire Blast, and Scorch reduce the cast time of your next Pyroblast cast within 20 sec by 25%, stacking up to 3 times. Fire Blast grants an additional stack every time it deals damage."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            400624
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105786
+          },
+          "requires": [
+            {
+              "talent": "wh-105790",
+              "rank": 1
+            }
+          ]
+        },
+        {
+          "id": "wh-105785",
+          "name": "Master of Elements",
+          "row": 3,
+          "col": 3,
+          "maxRank": 3,
+          "icon": "spell_fire_masterofelements",
+          "iconSource": "wowhead",
+          "description": "Your Fire and Frost critical strikes will refund 10% of their base mana cost.",
+          "ranks": [
+            "Your Fire and Frost critical strikes will refund 10% of their base mana cost.",
+            "Your Fire and Frost critical strikes will refund 20% of their base mana cost.",
+            "Your Fire and Frost critical strikes will refund 30% of their base mana cost."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            29074,
+            29074,
+            29074
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105785
+          }
+        },
+        {
+          "id": "wh-105784",
+          "name": "Critical Mass",
+          "row": 4,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_nature_wispheal",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike chance of your Fire spells by 2%.",
+          "ranks": [
+            "Increases the critical strike chance of your Fire spells by 2%.",
+            "Increases the critical strike chance of your Fire spells by 4%.",
+            "Increases the critical strike chance of your Fire spells by 6%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11115,
+            11115,
+            11115
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105784
+          }
+        },
+        {
+          "id": "wh-105783",
+          "name": "Blast Wave",
+          "row": 4,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "spell_holy_excorcism_02",
+          "iconSource": "wowhead",
+          "description": "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for 154 to 184 Fire damage, and Dazing them for 50% reduced movement speed for 6 sec.",
+          "ranks": [
+            "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for 154 to 184 Fire damage, and Dazing them for 50% reduced movement speed for 6 sec."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11113
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105783
+          }
+        },
+        {
+          "id": "wh-105782",
+          "name": "Fire Power",
+          "row": 5,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_fire_immolation",
+          "iconSource": "wowhead",
+          "description": "Increases the damage done by your Fire spells by 1% per your Fire effects on the target, up to a maximum increase of 4%. Effects which mix multiple schools of magic do not qualify.",
+          "ranks": [
+            "Increases the damage done by your Fire spells by 1% per your Fire effects on the target, up to a maximum increase of 4%. Effects which mix multiple schools of magic do not qualify.",
+            "Increases the damage done by your Fire spells by 2% per your Fire effects on the target, up to a maximum increase of 8%. Effects which mix multiple schools of magic do not qualify.",
+            "Increases the damage done by your Fire spells by 3% per your Fire effects on the target, up to a maximum increase of 12%. Effects which mix multiple schools of magic do not qualify."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11124,
+            11124,
+            11124
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105782
+          }
+        },
+        {
+          "id": "wh-105781",
+          "name": "Combustion",
+          "row": 6,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_fire_sealoffire",
+          "iconSource": "wowhead",
+          "description": "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%. This effect lasts until you have caused 3 non-periodic critical strikes with Fire spells.",
+          "ranks": [
+            "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%. This effect lasts until you have caused 3 non-periodic critical strikes with Fire spells."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11129
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105781
+          },
+          "requires": [
+            {
+              "talent": "wh-105784",
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frost",
+      "name": "Frost",
+      "page": "primary",
+      "order": 2,
+      "icon": "spell_frost_frostward",
+      "rows": 7,
+      "cols": 4,
+      "talents": [
+        {
+          "id": "wh-105780",
+          "name": "Frost Warding",
+          "row": 0,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_frost_frostward",
+          "iconSource": "wowhead",
+          "description": "Increases the Armor and resistances granted by your Frost Armor and Ice Armor spells by 15%, gives your Frost Ward a 10% chance to negate the warded damage spell, and increases the amount absorbed by your Ice Barrier and Frost Ward by 10%.",
+          "ranks": [
+            "Increases the Armor and resistances granted by your Frost Armor and Ice Armor spells by 15%, gives your Frost Ward a 10% chance to negate the warded damage spell, and increases the amount absorbed by your Ice Barrier and Frost Ward by 10%.",
+            "Increases the Armor and resistances granted by your Frost Armor and Ice Armor spells by 30%, gives your Frost Ward a 20% chance to negate the warded damage spell, and increases the amount absorbed by your Ice Barrier and Frost Ward by 20%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11189,
+            11189
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105780
+          }
+        },
+        {
+          "id": "wh-105779",
+          "name": "Improved Frostbolt",
+          "row": 0,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "spell_frost_frostbolt02",
+          "iconSource": "wowhead",
+          "description": "Reduces the casting time of your Frostbolt spell by 0.1 sec.",
+          "ranks": [
+            "Reduces the casting time of your Frostbolt spell by 0.1 sec.",
+            "Reduces the casting time of your Frostbolt spell by 0.2 sec.",
+            "Reduces the casting time of your Frostbolt spell by 0.3 sec.",
+            "Reduces the casting time of your Frostbolt spell by 0.4 sec.",
+            "Reduces the casting time of your Frostbolt spell by 0.5 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11070,
+            11070,
+            11070,
+            11070,
+            11070
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105779
+          }
+        },
+        {
+          "id": "wh-105778",
+          "name": "Precision",
+          "row": 0,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_ice_magicdamage",
+          "iconSource": "wowhead",
+          "description": "Improves your chance to hit with all spells by 2%.",
+          "ranks": [
+            "Improves your chance to hit with all spells by 2%.",
+            "Improves your chance to hit with all spells by 4%.",
+            "Improves your chance to hit with all spells by 6%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            29438,
+            29438,
+            29438
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105778
+          }
+        },
+        {
+          "id": "wh-105777",
+          "name": "Ice Shards",
+          "row": 1,
+          "col": 0,
+          "maxRank": 5,
+          "icon": "spell_frost_iceshard",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike damage bonus of your Frost spells by 20%.",
+          "ranks": [
+            "Increases the critical strike damage bonus of your Frost spells by 20%.",
+            "Increases the critical strike damage bonus of your Frost spells by 40%.",
+            "Increases the critical strike damage bonus of your Frost spells by 60%.",
+            "Increases the critical strike damage bonus of your Frost spells by 80%.",
+            "Increases the critical strike damage bonus of your Frost spells by 100%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11207,
+            11207,
+            11207,
+            11207,
+            11207
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105777
+          }
+        },
+        {
+          "id": "wh-105774",
+          "name": "Frostbite",
+          "row": 1,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_frost_frostarmor",
+          "iconSource": "wowhead",
+          "description": "Gives your Chill effects a 5% chance to Freeze the target for 5 sec.",
+          "ranks": [
+            "Gives your Chill effects a 5% chance to Freeze the target for 5 sec.",
+            "Gives your Chill effects a 10% chance to Freeze the target for 5 sec.",
+            "Gives your Chill effects a 15% chance to Freeze the target for 5 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11071,
+            11071,
+            11071
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105774
+          }
+        },
+        {
+          "id": "wh-105775",
+          "name": "Improved Frost Nova",
+          "row": 1,
+          "col": 2,
+          "maxRank": 2,
+          "icon": "spell_frost_freezingbreath",
+          "iconSource": "wowhead",
+          "description": "Reduces the cooldown of your Frost Nova spell by 2 sec.",
+          "ranks": [
+            "Reduces the cooldown of your Frost Nova spell by 2 sec.",
+            "Reduces the cooldown of your Frost Nova spell by 4 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11165,
+            11165
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105775
+          }
+        },
+        {
+          "id": "wh-105776",
+          "name": "Permafrost",
+          "row": 1,
+          "col": 3,
+          "maxRank": 3,
+          "icon": "spell_frost_wisp",
+          "iconSource": "wowhead",
+          "description": "Increases the duration of your Chill effects by 11% and reduces the target's speed by an additional 3%.",
+          "ranks": [
+            "Increases the duration of your Chill effects by 11% and reduces the target's speed by an additional 3%.",
+            "Increases the duration of your Chill effects by 22% and reduces the target's speed by an additional 7%.",
+            "Increases the duration of your Chill effects by 33% and reduces the target's speed by an additional 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11175,
+            11175,
+            11175
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105776
+          }
+        },
+        {
+          "id": "wh-105772",
+          "name": "Frost Channeling",
+          "row": 2,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "spell_frost_stun",
+          "iconSource": "wowhead",
+          "description": "Reduces the mana cost of your Frost spells by 5% and reduces the threat caused by your Frost spells by 10%.",
+          "ranks": [
+            "Reduces the mana cost of your Frost spells by 5% and reduces the threat caused by your Frost spells by 10%.",
+            "Reduces the mana cost of your Frost spells by 10% and reduces the threat caused by your Frost spells by 20%.",
+            "Reduces the mana cost of your Frost spells by 15% and reduces the threat caused by your Frost spells by 30%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11160,
+            11160,
+            11160
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105772
+          }
+        },
+        {
+          "id": "wh-105771",
+          "name": "Improved Blizzard",
+          "row": 2,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_frost_icestorm",
+          "iconSource": "wowhead",
+          "description": "Adds a Chill effect to your Blizzard spell. This effect lowers the target's movement speed by 15% for 1.5 sec.",
+          "ranks": [
+            "Adds a Chill effect to your Blizzard spell. This effect lowers the target's movement speed by 15% for 1.5 sec.",
+            "Adds a Chill effect to your Blizzard spell. This effect lowers the target's movement speed by 25% for 1.5 sec.",
+            "Adds a Chill effect to your Blizzard spell. This effect lowers the target's movement speed by 40% for 1.5 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11185,
+            11185,
+            11185
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105771
+          }
+        },
+        {
+          "id": "wh-105767",
+          "name": "Ice Lance",
+          "row": 2,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "spell_frost_frostblast",
+          "iconSource": "wowhead",
+          "description": "Deals 28 to 32 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets.",
+          "ranks": [
+            "Deals 28 to 32 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1312002
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105767
+          }
+        },
+        {
+          "id": "wh-105770",
+          "name": "Arctic Reach",
+          "row": 3,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_shadow_darkritual",
+          "iconSource": "wowhead",
+          "description": "Increases the range of your Frostbolt, Ice Lance, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 10%.",
+          "ranks": [
+            "Increases the range of your Frostbolt, Ice Lance, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 10%.",
+            "Increases the range of your Frostbolt, Ice Lance, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 20%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16757,
+            16757
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105770
+          }
+        },
+        {
+          "id": "wh-105769",
+          "name": "Ice Block",
+          "row": 3,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_frost_frost",
+          "iconSource": "wowhead",
+          "description": "You become encased in a block of ice, protecting you from all physical attacks and spells for 10 sec, but during that time you cannot attack, move, or cast spells.",
+          "ranks": [
+            "You become encased in a block of ice, protecting you from all physical attacks and spells for 10 sec, but during that time you cannot attack, move, or cast spells."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11958
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105769
+          }
+        },
+        {
+          "id": "wh-105768",
+          "name": "Shatter",
+          "row": 3,
+          "col": 3,
+          "maxRank": 3,
+          "icon": "spell_frost_frostshock",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike chance of all your spells against Frozen targets by 17%.",
+          "ranks": [
+            "Increases the critical strike chance of all your spells against Frozen targets by 17%.",
+            "Increases the critical strike chance of all your spells against Frozen targets by 33%.",
+            "Increases the critical strike chance of all your spells against Frozen targets by 50%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11170,
+            11170,
+            11170
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105768
+          }
+        },
+        {
+          "id": "wh-105765",
+          "name": "Improved Cone of Cold",
+          "row": 4,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "spell_frost_glacier",
+          "iconSource": "wowhead",
+          "description": "Increases the damage dealt by your Cone of Cold spell by 12%.",
+          "ranks": [
+            "Increases the damage dealt by your Cone of Cold spell by 12%.",
+            "Increases the damage dealt by your Cone of Cold spell by 23%.",
+            "Increases the damage dealt by your Cone of Cold spell by 35%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11190,
+            11190,
+            11190
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105765
+          }
+        },
+        {
+          "id": "wh-105766",
+          "name": "Cold Snap",
+          "row": 4,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_frost_wizardmark",
+          "iconSource": "wowhead",
+          "description": "Finishes the remaining cooldown on all your other Frost spells.",
+          "ranks": [
+            "Finishes the remaining cooldown on all your other Frost spells."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            12472
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105766
+          }
+        },
+        {
+          "id": "wh-105764",
+          "name": "Fingers of Frost",
+          "row": 4,
+          "col": 2,
+          "maxRank": 2,
+          "icon": "ability_mage_wintersgrasp",
+          "iconSource": "wowhead",
+          "description": "Gives your Chill effects a 15% chance to grant you the Fingers of Frost effect, which treats your next 1 spell cast as if the target were Frozen. Lasts 15 sec.",
+          "ranks": [
+            "Gives your Chill effects a 15% chance to grant you the Fingers of Frost effect, which treats your next 1 spell cast as if the target were Frozen. Lasts 15 sec.",
+            "Gives your Chill effects a 15% chance to grant you the Fingers of Frost effect, which treats your next 2 spells cast as if the target were Frozen. Lasts 15 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            400647,
+            400647
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105764
+          },
+          "requires": [
+            {
+              "talent": "wh-105767",
+              "rank": 1
+            }
+          ]
+        },
+        {
+          "id": "wh-105763",
+          "name": "Winter's Chill",
+          "row": 5,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_frost_chillingblast",
+          "iconSource": "wowhead",
+          "description": "Gives your Frostbolt and Fingers of Frost empowered Ice Lance spells a 20% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+          "ranks": [
+            "Gives your Frostbolt and Fingers of Frost empowered Ice Lance spells a 20% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+            "Gives your Frostbolt and Fingers of Frost empowered Ice Lance spells a 40% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+            "Gives your Frostbolt and Fingers of Frost empowered Ice Lance spells a 60% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+            "Gives your Frostbolt and Fingers of Frost empowered Ice Lance spells a 80% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+            "Gives your Frostbolt and Fingers of Frost empowered Ice Lance spells a 100% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11180,
+            11180,
+            11180,
+            11180,
+            11180
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105763
+          }
+        },
+        {
+          "id": "wh-105762",
+          "name": "Ice Barrier",
+          "row": 6,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_ice_lament",
+          "iconSource": "wowhead",
+          "description": "Shield yourself, absorbing [448 + (Frost spell power * 0.1) * (1)] damage and increasing your Frost damage by 15% for 1 min. While shielded, your Frost damage is increased by an additional 5% and you do not lose casting time when you take damage.",
+          "ranks": [
+            "Shield yourself, absorbing [448 + (Frost spell power * 0.1) * (1)] damage and increasing your Frost damage by 15% for 1 min. While shielded, your Frost damage is increased by an additional 5% and you do not lose casting time when you take damage."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            11426
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105762
+          },
+          "requires": [
+            {
+              "talent": "wh-105766",
+              "rank": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Published by Wowhead for Forever. May lag hotfixes; not independently verified in game."
+  ]
+}

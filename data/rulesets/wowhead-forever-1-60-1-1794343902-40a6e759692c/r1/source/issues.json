@@ -1,0 +1,9 @@
+[
+  {
+    "class": "rogue",
+    "talent": "Death Mark",
+    "tokens": [
+      "$mcrit"
+    ]
+  }
+]

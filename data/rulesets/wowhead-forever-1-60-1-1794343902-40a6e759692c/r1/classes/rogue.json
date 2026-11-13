@@ -1,0 +1,1927 @@
+{
+  "$schema": "../../../../schema/class.schema.json",
+  "schemaVersion": 1,
+  "class": "rogue",
+  "className": "Rogue",
+  "dataVersion": 1,
+  "dataSource": "wowhead",
+  "generatedAt": "2026-11-13T14:42:00Z",
+  "rules": {
+    "pointsPerRow": 5,
+    "maxPoints": 51,
+    "firstPointLevel": 10,
+    "maxLevel": 60,
+    "rulesSource": "assumed"
+  },
+  "pages": [
+    {
+      "id": "primary",
+      "name": "Talents"
+    }
+  ],
+  "trees": [
+    {
+      "id": "assassination",
+      "name": "Assassination",
+      "page": "primary",
+      "order": 0,
+      "icon": "ability_gouge",
+      "rows": 7,
+      "cols": 4,
+      "talents": [
+        {
+          "id": "wh-105742",
+          "name": "Improved Gouge",
+          "row": 0,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "ability_gouge",
+          "iconSource": "wowhead",
+          "description": "Increases the duration of your Gouge ability by 0.5 sec.",
+          "ranks": [
+            "Increases the duration of your Gouge ability by 0.5 sec.",
+            "Increases the duration of your Gouge ability by 1 sec.",
+            "Increases the duration of your Gouge ability by 1.5 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13741,
+            13741,
+            13741
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105742
+          }
+        },
+        {
+          "id": "wh-105723",
+          "name": "Remorseless Attacks",
+          "row": 0,
+          "col": 1,
+          "maxRank": 2,
+          "icon": "ability_fiegndead",
+          "iconSource": "wowhead",
+          "description": "After killing a non-trivial enemy, gives you a 20% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, Mutilate, or Ghostly Strike. Lasts 20 sec.",
+          "ranks": [
+            "After killing a non-trivial enemy, gives you a 20% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, Mutilate, or Ghostly Strike. Lasts 20 sec.",
+            "After killing a non-trivial enemy, gives you a 40% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, Mutilate, or Ghostly Strike. Lasts 20 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14144,
+            14144
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105723
+          }
+        },
+        {
+          "id": "wh-105722",
+          "name": "Malice",
+          "row": 0,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "ability_racial_bloodrage",
+          "iconSource": "wowhead",
+          "description": "Increases your critical strike chance with all attacks and Poisons by 1%.",
+          "ranks": [
+            "Increases your critical strike chance with all attacks and Poisons by 1%.",
+            "Increases your critical strike chance with all attacks and Poisons by 2%.",
+            "Increases your critical strike chance with all attacks and Poisons by 3%.",
+            "Increases your critical strike chance with all attacks and Poisons by 4%.",
+            "Increases your critical strike chance with all attacks and Poisons by 5%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14138,
+            14138,
+            14138,
+            14138,
+            14138
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105722
+          }
+        },
+        {
+          "id": "wh-105721",
+          "name": "Ruthlessness",
+          "row": 1,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "ability_druid_disembowel",
+          "iconSource": "wowhead",
+          "description": "Gives your finishing moves a 20% chance to add a Combo Point to your target.",
+          "ranks": [
+            "Gives your finishing moves a 20% chance to add a Combo Point to your target.",
+            "Gives your finishing moves a 40% chance to add a Combo Point to your target.",
+            "Gives your finishing moves a 60% chance to add a Combo Point to your target."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14156,
+            14156,
+            14156
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105721
+          }
+        },
+        {
+          "id": "wh-105717",
+          "name": "Improved Expose Armor",
+          "row": 1,
+          "col": 1,
+          "maxRank": 2,
+          "icon": "ability_warrior_riposte",
+          "iconSource": "wowhead",
+          "description": "Reduces the Energy cost of your Expose Armor ability by 5, and refunds 1 Combo Point when cast with 5 Combo Points.",
+          "ranks": [
+            "Reduces the Energy cost of your Expose Armor ability by 5, and refunds 1 Combo Point when cast with 5 Combo Points.",
+            "Reduces the Energy cost of your Expose Armor ability by 10, and refunds 2 Combo Points when cast with 5 Combo Points."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14168,
+            14168
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105717
+          }
+        },
+        {
+          "id": "wh-105739",
+          "name": "Improved Slice and Dice",
+          "row": 1,
+          "col": 3,
+          "maxRank": 3,
+          "icon": "ability_rogue_slicedice",
+          "iconSource": "wowhead",
+          "description": "Increases the duration of your Slice and Dice ability by 15%.",
+          "ranks": [
+            "Increases the duration of your Slice and Dice ability by 15%.",
+            "Increases the duration of your Slice and Dice ability by 30%.",
+            "Increases the duration of your Slice and Dice ability by 45%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14165,
+            14165,
+            14165
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105739
+          }
+        },
+        {
+          "id": "wh-105720",
+          "name": "Vigor",
+          "row": 2,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_nature_earthbindtotem",
+          "iconSource": "wowhead",
+          "description": "Increases your maximum Energy by 5.",
+          "ranks": [
+            "Increases your maximum Energy by 5.",
+            "Increases your maximum Energy by 10."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14983,
+            14983
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105720
+          }
+        },
+        {
+          "id": "wh-105718",
+          "name": "Blood Splatter",
+          "row": 2,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "ability_rogue_rupture",
+          "iconSource": "wowhead",
+          "description": "Increases the duration of your Rupture ability by 6 sec and your Garrote ability by 9 sec.",
+          "ranks": [
+            "Increases the duration of your Rupture ability by 6 sec and your Garrote ability by 9 sec."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1329256
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105718
+          }
+        },
+        {
+          "id": "wh-105716",
+          "name": "Lethality",
+          "row": 2,
+          "col": 2,
+          "maxRank": 2,
+          "icon": "ability_criticalstrike",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike, and Hemorrhage abilities by 10%.",
+          "ranks": [
+            "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike, and Hemorrhage abilities by 10%.",
+            "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike, and Hemorrhage abilities by 20%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14128,
+            14128
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105716
+          },
+          "requires": [
+            {
+              "talent": "wh-105722",
+              "rank": 5
+            }
+          ]
+        },
+        {
+          "id": "wh-105714",
+          "name": "Vile Poisons",
+          "row": 3,
+          "col": 0,
+          "maxRank": 5,
+          "icon": "ability_rogue_feigndeath",
+          "iconSource": "wowhead",
+          "description": "Increases the damage dealt by your poisons by 4% and gives your poisons an additional 8% chance to resist dispel effects.",
+          "ranks": [
+            "Increases the damage dealt by your poisons by 4% and gives your poisons an additional 8% chance to resist dispel effects.",
+            "Increases the damage dealt by your poisons by 8% and gives your poisons an additional 16% chance to resist dispel effects.",
+            "Increases the damage dealt by your poisons by 12% and gives your poisons an additional 24% chance to resist dispel effects.",
+            "Increases the damage dealt by your poisons by 16% and gives your poisons an additional 32% chance to resist dispel effects.",
+            "Increases the damage dealt by your poisons by 20% and gives your poisons an additional 40% chance to resist dispel effects."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16513,
+            16513,
+            16513,
+            16513,
+            16513
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105714
+          }
+        },
+        {
+          "id": "wh-105715",
+          "name": "Cold Blood",
+          "row": 3,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_ice_lament",
+          "iconSource": "wowhead",
+          "description": "When activated, increases the critical strike chance of your next Sinister Strike, Backstab, Ambush, Eviscerate, or Mutilate by 100%.",
+          "ranks": [
+            "When activated, increases the critical strike chance of your next Sinister Strike, Backstab, Ambush, Eviscerate, or Mutilate by 100%."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14177
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105715
+          }
+        },
+        {
+          "id": "wh-105713",
+          "name": "Improved Poisons",
+          "row": 3,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "ability_poisons",
+          "iconSource": "wowhead",
+          "description": "Increases the chance to apply Poisons to your target by 2%, and gives Poison applications a 10% chance to not consume a charge.",
+          "ranks": [
+            "Increases the chance to apply Poisons to your target by 2%, and gives Poison applications a 10% chance to not consume a charge.",
+            "Increases the chance to apply Poisons to your target by 4%, and gives Poison applications a 20% chance to not consume a charge.",
+            "Increases the chance to apply Poisons to your target by 6%, and gives Poison applications a 30% chance to not consume a charge.",
+            "Increases the chance to apply Poisons to your target by 8%, and gives Poison applications a 40% chance to not consume a charge.",
+            "Increases the chance to apply Poisons to your target by 10%, and gives Poison applications a 50% chance to not consume a charge."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14113,
+            14113,
+            14113,
+            14113,
+            14113
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105713
+          }
+        },
+        {
+          "id": "wh-113633",
+          "name": "Relentless Strikes",
+          "row": 4,
+          "col": 0,
+          "maxRank": 5,
+          "icon": "ability_warrior_decisivestrike",
+          "iconSource": "wowhead",
+          "description": "Your finishing moves have a 4% chance per Combo Point to restore 25 Energy.",
+          "ranks": [
+            "Your finishing moves have a 4% chance per Combo Point to restore 25 Energy.",
+            "Your finishing moves have a 8% chance per Combo Point to restore 25 Energy.",
+            "Your finishing moves have a 12% chance per Combo Point to restore 25 Energy.",
+            "Your finishing moves have a 16% chance per Combo Point to restore 25 Energy.",
+            "Your finishing moves have a 20% chance per Combo Point to restore 25 Energy."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14179,
+            14179,
+            14179,
+            14179,
+            14179
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 113633
+          }
+        },
+        {
+          "id": "wh-105712",
+          "name": "Venom",
+          "row": 4,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "inv_sword_31",
+          "iconSource": "wowhead",
+          "description": "Causes your Shank ability to increase your Poison damage by 30% and your chance to apply Poisons by 20% for 6 sec.",
+          "ranks": [
+            "Causes your Shank ability to increase your Poison damage by 30% and your chance to apply Poisons by 20% for 6 sec."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1329328
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105712
+          }
+        },
+        {
+          "id": "wh-105711",
+          "name": "Improved Kidney Shot",
+          "row": 4,
+          "col": 2,
+          "maxRank": 2,
+          "icon": "ability_rogue_kidneyshot",
+          "iconSource": "wowhead",
+          "description": "Enemies Stunned by your Kidney Shot ability take 5% increased damage from your poisons and attacks.",
+          "ranks": [
+            "Enemies Stunned by your Kidney Shot ability take 5% increased damage from your poisons and attacks.",
+            "Enemies Stunned by your Kidney Shot ability take 10% increased damage from your poisons and attacks."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14174,
+            14174
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105711
+          }
+        },
+        {
+          "id": "wh-105710",
+          "name": "Seal Fate",
+          "row": 5,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_shadow_chilltouch",
+          "iconSource": "wowhead",
+          "description": "Your critical strikes from abilities that add Combo Points have a 33% chance to add an additional Combo Point.",
+          "ranks": [
+            "Your critical strikes from abilities that add Combo Points have a 33% chance to add an additional Combo Point.",
+            "Your critical strikes from abilities that add Combo Points have a 66% chance to add an additional Combo Point.",
+            "Your critical strikes from abilities that add Combo Points have a 100% chance to add an additional Combo Point."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14186,
+            14186,
+            14186
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105710
+          }
+        },
+        {
+          "id": "wh-105709",
+          "name": "Mutilate",
+          "row": 6,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "ability_rogue_deadlybrew",
+          "iconSource": "wowhead",
+          "description": "Instantly attacks with both weapons for 90% weapon damage plus an additional 40 with each weapon. Damage increased by 20% against Poisoned targets. Awards 2 Combo Points.",
+          "ranks": [
+            "Instantly attacks with both weapons for 90% weapon damage plus an additional 40 with each weapon. Damage increased by 20% against Poisoned targets. Awards 2 Combo Points."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            399956
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105709
+          },
+          "requires": [
+            {
+              "talent": "wh-105712",
+              "rank": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "combat",
+      "name": "Combat",
+      "page": "primary",
+      "order": 1,
+      "icon": "ability_rogue_eviscerate",
+      "rows": 7,
+      "cols": 4,
+      "talents": [
+        {
+          "id": "wh-105708",
+          "name": "Coup de Grace",
+          "row": 0,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "ability_rogue_eviscerate",
+          "iconSource": "wowhead",
+          "description": "Increases the damage done by your Eviscerate ability by 7%, and the damage and storage rate of your Death Mark ability by 7%.",
+          "ranks": [
+            "Increases the damage done by your Eviscerate ability by 7%, and the damage and storage rate of your Death Mark ability by 7%.",
+            "Increases the damage done by your Eviscerate ability by 13%, and the damage and storage rate of your Death Mark ability by 13%.",
+            "Increases the damage done by your Eviscerate ability by 20%, and the damage and storage rate of your Death Mark ability by 20%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14162,
+            14162,
+            14162
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105708
+          }
+        },
+        {
+          "id": "wh-105741",
+          "name": "Efficient Strikes",
+          "row": 0,
+          "col": 1,
+          "maxRank": 2,
+          "icon": "spell_shadow_ritualofsacrifice",
+          "iconSource": "wowhead",
+          "description": "Reduces the Energy cost of your Sinister Strike and Hemorrhage abilities by 3.",
+          "ranks": [
+            "Reduces the Energy cost of your Sinister Strike and Hemorrhage abilities by 3.",
+            "Reduces the Energy cost of your Sinister Strike and Hemorrhage abilities by 5."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13732,
+            13732
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105741
+          }
+        },
+        {
+          "id": "wh-113398",
+          "name": "Lightning Reflexes",
+          "row": 0,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_nature_invisibilty",
+          "iconSource": "wowhead",
+          "description": "Increases your Dodge chance by 1%.",
+          "ranks": [
+            "Increases your Dodge chance by 1%.",
+            "Increases your Dodge chance by 2%.",
+            "Increases your Dodge chance by 3%.",
+            "Increases your Dodge chance by 4%.",
+            "Increases your Dodge chance by 5%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13712,
+            13712,
+            13712,
+            13712,
+            13712
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 113398
+          }
+        },
+        {
+          "id": "wh-105719",
+          "name": "Puncturing Wounds",
+          "row": 1,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "ability_backstab",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike chance of your Backstab by 10% and your Mutilate by 5%, and gives Backstab a 15% chance to add an additional Combo Point.",
+          "ranks": [
+            "Increases the critical strike chance of your Backstab by 10% and your Mutilate by 5%, and gives Backstab a 15% chance to add an additional Combo Point.",
+            "Increases the critical strike chance of your Backstab by 20% and your Mutilate by 10%, and gives Backstab a 30% chance to add an additional Combo Point.",
+            "Increases the critical strike chance of your Backstab by 30% and your Mutilate by 15%, and gives Backstab a 45% chance to add an additional Combo Point."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1224716,
+            1224716,
+            1224716
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105719
+          }
+        },
+        {
+          "id": "wh-105738",
+          "name": "Deflection",
+          "row": 1,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "ability_parry",
+          "iconSource": "wowhead",
+          "description": "Increases your Parry chance by 2%.",
+          "ranks": [
+            "Increases your Parry chance by 2%.",
+            "Increases your Parry chance by 4%.",
+            "Increases your Parry chance by 6%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13713,
+            13713,
+            13713
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105738
+          }
+        },
+        {
+          "id": "wh-105737",
+          "name": "Precision",
+          "row": 1,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "ability_marksmanship",
+          "iconSource": "wowhead",
+          "description": "Improves your chance to hit by 1%.",
+          "ranks": [
+            "Improves your chance to hit by 1%.",
+            "Improves your chance to hit by 2%.",
+            "Improves your chance to hit by 3%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13705,
+            13705,
+            13705
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105737
+          }
+        },
+        {
+          "id": "wh-105732",
+          "name": "Improved Sprint",
+          "row": 1,
+          "col": 3,
+          "maxRank": 2,
+          "icon": "ability_rogue_sprint",
+          "iconSource": "wowhead",
+          "description": "Gives a 50% chance to remove all movement impairing effects when you activate your Sprint ability.",
+          "ranks": [
+            "Gives a 50% chance to remove all movement impairing effects when you activate your Sprint ability.",
+            "Gives a 100% chance to remove all movement impairing effects when you activate your Sprint ability."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13743,
+            13743
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105732
+          }
+        },
+        {
+          "id": "wh-105736",
+          "name": "Endurance",
+          "row": 2,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_shadow_shadowward",
+          "iconSource": "wowhead",
+          "description": "Reduces the cooldown of your Sprint and Evasion abilities by 30%.",
+          "ranks": [
+            "Reduces the cooldown of your Sprint and Evasion abilities by 30%.",
+            "Reduces the cooldown of your Sprint and Evasion abilities by 60%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13742,
+            13742
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105736
+          }
+        },
+        {
+          "id": "wh-105735",
+          "name": "Riposte",
+          "row": 2,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "ability_warrior_challange",
+          "iconSource": "wowhead",
+          "description": "A strike that becomes active after parrying an opponent's attack. This attack deals 150% weapon damage and disarms the target for 6 sec.",
+          "ranks": [
+            "A strike that becomes active after parrying an opponent's attack. This attack deals 150% weapon damage and disarms the target for 6 sec."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14251
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105735
+          },
+          "requires": [
+            {
+              "talent": "wh-105738",
+              "rank": 3
+            }
+          ]
+        },
+        {
+          "id": "wh-105759",
+          "name": "Composure",
+          "row": 2,
+          "col": 3,
+          "maxRank": 2,
+          "icon": "ability_rogue_fleetfooted",
+          "iconSource": "wowhead",
+          "description": "Increases the Energy cost reduction of your Poised ability by 5.",
+          "ranks": [
+            "Increases the Energy cost reduction of your Poised ability by 5.",
+            "Increases the Energy cost reduction of your Poised ability by 10."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1329265,
+            1329265
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105759
+          }
+        },
+        {
+          "id": "wh-105733",
+          "name": "Improved Kick",
+          "row": 3,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "ability_kick",
+          "iconSource": "wowhead",
+          "description": "Gives your Kick ability a 50% chance to Silence the target for 2 sec.",
+          "ranks": [
+            "Gives your Kick ability a 50% chance to Silence the target for 2 sec.",
+            "Gives your Kick ability a 100% chance to Silence the target for 2 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13754,
+            13754
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105733
+          }
+        },
+        {
+          "id": "wh-108100",
+          "name": "Flawless Execution",
+          "row": 3,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "inv_sword_35",
+          "iconSource": "wowhead",
+          "description": "Reduces the Energy cost of your Eviscerate ability by 15.",
+          "ranks": [
+            "Reduces the Energy cost of your Eviscerate ability by 15."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1310711
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 108100
+          }
+        },
+        {
+          "id": "wh-105726",
+          "name": "Weapon Expertise",
+          "row": 3,
+          "col": 2,
+          "maxRank": 2,
+          "icon": "spell_holy_blessingofstrength",
+          "iconSource": "wowhead",
+          "description": "Reduces the chance for your attacks to be Dodged or Parried by 1%.",
+          "ranks": [
+            "Reduces the chance for your attacks to be Dodged or Parried by 1%.",
+            "Reduces the chance for your attacks to be Dodged or Parried by 2%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            30919,
+            30919
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105726
+          },
+          "requires": [
+            {
+              "talent": "wh-105737",
+              "rank": 3
+            }
+          ]
+        },
+        {
+          "id": "wh-105730",
+          "name": "Aggression",
+          "row": 3,
+          "col": 3,
+          "maxRank": 3,
+          "icon": "ability_racial_avatar",
+          "iconSource": "wowhead",
+          "description": "Increases the damage of your Sinister Strike and Eviscerate abilities by 5%.",
+          "ranks": [
+            "Increases the damage of your Sinister Strike and Eviscerate abilities by 5%.",
+            "Increases the damage of your Sinister Strike and Eviscerate abilities by 10%.",
+            "Increases the damage of your Sinister Strike and Eviscerate abilities by 15%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18427,
+            18427,
+            18427
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105730
+          }
+        },
+        {
+          "id": "wh-113635",
+          "name": "Dual Wield Specialization",
+          "row": 4,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "ability_dualwield",
+          "iconSource": "wowhead",
+          "description": "Increases the damage done by your off-hand weapon by 25%.",
+          "ranks": [
+            "Increases the damage done by your off-hand weapon by 25%.",
+            "Increases the damage done by your off-hand weapon by 50%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13715,
+            13715
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 113635
+          }
+        },
+        {
+          "id": "wh-105728",
+          "name": "Blade Flurry",
+          "row": 4,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "ability_warrior_punishingblow",
+          "iconSource": "wowhead",
+          "description": "Increases your melee attack speed by 20% and your melee attacks strike an additional nearby opponent. Lasts 15 sec.",
+          "ranks": [
+            "Increases your melee attack speed by 20% and your melee attacks strike an additional nearby opponent. Lasts 15 sec."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13877
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105728
+          }
+        },
+        {
+          "id": "wh-105727",
+          "name": "Hack and Slash",
+          "row": 4,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "inv_sword_27",
+          "iconSource": "wowhead",
+          "description": "Gives your melee weapon attacks a benefit depending on the weapon. Axe/Sword: Your successful melee attacks have a 1% chance to trigger an extra attack on the target. Dagger/Fist: Increases your critical strike chance by 1%. Mace: Your attacks ignore 3% of your target's armor.",
+          "ranks": [
+            "Gives your melee weapon attacks a benefit depending on the weapon. Axe/Sword: Your successful melee attacks have a 1% chance to trigger an extra attack on the target. Dagger/Fist: Increases your critical strike chance by 1%. Mace: Your attacks ignore 3% of your target's armor.",
+            "Gives your melee weapon attacks a benefit depending on the weapon. Axe/Sword: Your successful melee attacks have a 2% chance to trigger an extra attack on the target. Dagger/Fist: Increases your critical strike chance by 2%. Mace: Your attacks ignore 6% of your target's armor.",
+            "Gives your melee weapon attacks a benefit depending on the weapon. Axe/Sword: Your successful melee attacks have a 3% chance to trigger an extra attack on the target. Dagger/Fist: Increases your critical strike chance by 3%. Mace: Your attacks ignore 9% of your target's armor.",
+            "Gives your melee weapon attacks a benefit depending on the weapon. Axe/Sword: Your successful melee attacks have a 4% chance to trigger an extra attack on the target. Dagger/Fist: Increases your critical strike chance by 4%. Mace: Your attacks ignore 12% of your target's armor.",
+            "Gives your melee weapon attacks a benefit depending on the weapon. Axe/Sword: Your successful melee attacks have a 5% chance to trigger an extra attack on the target. Dagger/Fist: Increases your critical strike chance by 5%. Mace: Your attacks ignore 15% of your target's armor."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13960,
+            13960,
+            13960,
+            13960,
+            13960
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105727
+          }
+        },
+        {
+          "id": "wh-105740",
+          "name": "Flash of Steel",
+          "row": 5,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "ability_rogue_restlessblades",
+          "iconSource": "wowhead",
+          "description": "Increases the Energy generated by your Shank ability by 3 and reduces its cooldown by 0.4 sec.",
+          "ranks": [
+            "Increases the Energy generated by your Shank ability by 3 and reduces its cooldown by 0.4 sec.",
+            "Increases the Energy generated by your Shank ability by 6 and reduces its cooldown by 0.8 sec.",
+            "Increases the Energy generated by your Shank ability by 9 and reduces its cooldown by 1.2 sec.",
+            "Increases the Energy generated by your Shank ability by 12 and reduces its cooldown by 1.6 sec.",
+            "Increases the Energy generated by your Shank ability by 15 and reduces its cooldown by 2.0 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1329284,
+            1329284,
+            1329284,
+            1329284,
+            1329284
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105740
+          }
+        },
+        {
+          "id": "wh-105724",
+          "name": "Adrenaline Rush",
+          "row": 6,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_shadow_shadowworddominate",
+          "iconSource": "wowhead",
+          "description": "Increases your Energy regeneration rate by 100% for 15 sec.",
+          "ranks": [
+            "Increases your Energy regeneration rate by 100% for 15 sec."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13750
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105724
+          },
+          "requires": [
+            {
+              "talent": "wh-105728",
+              "rank": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subtlety",
+      "name": "Subtlety",
+      "page": "primary",
+      "order": 2,
+      "icon": "spell_nature_mirrorimage",
+      "rows": 7,
+      "cols": 4,
+      "talents": [
+        {
+          "id": "wh-105751",
+          "name": "Setup",
+          "row": 0,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "spell_nature_mirrorimage",
+          "iconSource": "wowhead",
+          "description": "Gives you a 15% chance to add a Combo Point to your target after Dodging their attack or fully resisting one of their spells.",
+          "ranks": [
+            "Gives you a 15% chance to add a Combo Point to your target after Dodging their attack or fully resisting one of their spells.",
+            "Gives you a 30% chance to add a Combo Point to your target after Dodging their attack or fully resisting one of their spells.",
+            "Gives you a 45% chance to add a Combo Point to your target after Dodging their attack or fully resisting one of their spells."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13983,
+            13983,
+            13983
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105751
+          }
+        },
+        {
+          "id": "wh-105761",
+          "name": "Master of Deception",
+          "row": 0,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_shadow_charm",
+          "iconSource": "wowhead",
+          "description": "Reduces the chance enemies have to detect you while in Stealth mode as if you were 1 levels higher.",
+          "ranks": [
+            "Reduces the chance enemies have to detect you while in Stealth mode as if you were 1 levels higher.",
+            "Reduces the chance enemies have to detect you while in Stealth mode as if you were 2 levels higher.",
+            "Reduces the chance enemies have to detect you while in Stealth mode as if you were 3 levels higher."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13958,
+            13958,
+            13958
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105761
+          }
+        },
+        {
+          "id": "wh-105760",
+          "name": "Opportunity",
+          "row": 0,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "ability_warrior_warcry",
+          "iconSource": "wowhead",
+          "description": "Increases the damage dealt by your Backstab, Garrote, Ambush, and Mutilate abilities by 4%.",
+          "ranks": [
+            "Increases the damage dealt by your Backstab, Garrote, Ambush, and Mutilate abilities by 4%.",
+            "Increases the damage dealt by your Backstab, Garrote, Ambush, and Mutilate abilities by 8%.",
+            "Increases the damage dealt by your Backstab, Garrote, Ambush, and Mutilate abilities by 12%.",
+            "Increases the damage dealt by your Backstab, Garrote, Ambush, and Mutilate abilities by 16%.",
+            "Increases the damage dealt by your Backstab, Garrote, Ambush, and Mutilate abilities by 20%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14057,
+            14057,
+            14057,
+            14057,
+            14057
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105760
+          }
+        },
+        {
+          "id": "wh-105745",
+          "name": "Dirty Deeds",
+          "row": 1,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_shadow_summonsuccubus",
+          "iconSource": "wowhead",
+          "description": "Reduces the Energy cost of your Cheap Shot and Garrote abilities by 10, and your Garrote ability no longer requires you to be behind your target.",
+          "ranks": [
+            "Reduces the Energy cost of your Cheap Shot and Garrote abilities by 10, and your Garrote ability no longer requires you to be behind your target.",
+            "Reduces the Energy cost of your Cheap Shot and Garrote abilities by 20, and your Garrote ability no longer requires you to be behind your target."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14082,
+            14082
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105745
+          }
+        },
+        {
+          "id": "wh-105756",
+          "name": "Camouflage",
+          "row": 1,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "ability_stealth",
+          "iconSource": "wowhead",
+          "description": "Reduces your speed penalty from your Stealth ability by 5% and reduces its cooldown by 2 sec.",
+          "ranks": [
+            "Reduces your speed penalty from your Stealth ability by 5% and reduces its cooldown by 2 sec.",
+            "Reduces your speed penalty from your Stealth ability by 10% and reduces its cooldown by 4 sec.",
+            "Reduces your speed penalty from your Stealth ability by 15% and reduces its cooldown by 6 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13975,
+            13975,
+            13975
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105756
+          }
+        },
+        {
+          "id": "wh-105749",
+          "name": "Improved Ambush",
+          "row": 1,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "ability_rogue_ambush",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike chance of your Ambush ability by 15%.",
+          "ranks": [
+            "Increases the critical strike chance of your Ambush ability by 15%.",
+            "Increases the critical strike chance of your Ambush ability by 30%.",
+            "Increases the critical strike chance of your Ambush ability by 45%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14079,
+            14079,
+            14079
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105749
+          }
+        },
+        {
+          "id": "wh-105757",
+          "name": "Dirty Tricks",
+          "row": 1,
+          "col": 3,
+          "maxRank": 2,
+          "icon": "ability_sap",
+          "iconSource": "wowhead",
+          "description": "Reduces the Energy cost of your Sap and Blind abilities by 25%.",
+          "ranks": [
+            "Reduces the Energy cost of your Sap and Blind abilities by 25%.",
+            "Reduces the Energy cost of your Sap and Blind abilities by 50%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1224782,
+            1224782
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105757
+          }
+        },
+        {
+          "id": "wh-105755",
+          "name": "Initiative",
+          "row": 2,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "spell_shadow_fumble",
+          "iconSource": "wowhead",
+          "description": "Gives you a 33% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability.",
+          "ranks": [
+            "Gives you a 33% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability.",
+            "Gives you a 67% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability.",
+            "Gives you a 100% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13976,
+            13976,
+            13976
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105755
+          }
+        },
+        {
+          "id": "wh-105743",
+          "name": "Premeditation",
+          "row": 2,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_shadow_possession",
+          "iconSource": "wowhead",
+          "description": "Adds 2 Combo Points to your target. You must add to or use those combo points within 20 sec or the combo points are lost.",
+          "ranks": [
+            "Adds 2 Combo Points to your target. You must add to or use those combo points within 20 sec or the combo points are lost."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14183
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105743
+          }
+        },
+        {
+          "id": "wh-105752",
+          "name": "Serrated Blades",
+          "row": 2,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "inv_sword_17",
+          "iconSource": "wowhead",
+          "description": "Causes your attacks to ignore 3% of your target's Armor and increases the damage dealt by your Rupture ability by 10%.",
+          "ranks": [
+            "Causes your attacks to ignore 3% of your target's Armor and increases the damage dealt by your Rupture ability by 10%.",
+            "Causes your attacks to ignore 6% of your target's Armor and increases the damage dealt by your Rupture ability by 20%.",
+            "Causes your attacks to ignore 9% of your target's Armor and increases the damage dealt by your Rupture ability by 30%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14171,
+            14171,
+            14171
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105752
+          }
+        },
+        {
+          "id": "wh-105753",
+          "name": "Elusiveness",
+          "row": 3,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_magic_lesserinvisibilty",
+          "iconSource": "wowhead",
+          "description": "Reduces the cooldown of your Vanish and Blind abilities by 45 sec.",
+          "ranks": [
+            "Reduces the cooldown of your Vanish and Blind abilities by 45 sec.",
+            "Reduces the cooldown of your Vanish and Blind abilities by 90 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            13981,
+            13981
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105753
+          }
+        },
+        {
+          "id": "wh-105754",
+          "name": "Ghostly Strike",
+          "row": 3,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_shadow_curse",
+          "iconSource": "wowhead",
+          "description": "A strike that deals 125% (180% if a Dagger is equipped in your Main Hand) weapon damage, increases your chance to dodge by 15% for 7 sec, and causes your next Ambush or Garrote cast within 7 sec to not require Stealth. Awards 1 combo point.",
+          "ranks": [
+            "A strike that deals 125% (180% if a Dagger is equipped in your Main Hand) weapon damage, increases your chance to dodge by 15% for 7 sec, and causes your next Ambush or Garrote cast within 7 sec to not require Stealth. Awards 1 combo point."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14278
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105754
+          }
+        },
+        {
+          "id": "wh-110867",
+          "name": "Quick Getaway",
+          "row": 3,
+          "col": 3,
+          "maxRank": 2,
+          "icon": "ability_rogue_blackjack",
+          "iconSource": "wowhead",
+          "description": "Increases the maximum number of targets you may have Sapped by 1, and increases your movement speed by 15% for 3 sec after Sapping a target.",
+          "ranks": [
+            "Increases the maximum number of targets you may have Sapped by 1, and increases your movement speed by 15% for 3 sec after Sapping a target.",
+            "Increases the maximum number of targets you may have Sapped by 1, and increases your movement speed by 30% for 3 sec after Sapping a target."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1310728,
+            1310728
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 110867
+          },
+          "requires": [
+            {
+              "talent": "wh-105757",
+              "rank": 2
+            }
+          ]
+        },
+        {
+          "id": "wh-105747",
+          "name": "Heightened Senses",
+          "row": 4,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "ability_ambush",
+          "iconSource": "wowhead",
+          "description": "Increases your Stealth detection as if you were 1 levels higher and reduces your chance to be hit by spells and ranged attacks by 2%.",
+          "ranks": [
+            "Increases your Stealth detection as if you were 1 levels higher and reduces your chance to be hit by spells and ranged attacks by 2%.",
+            "Increases your Stealth detection as if you were 3 levels higher and reduces your chance to be hit by spells and ranged attacks by 4%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            30894,
+            30894
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105747
+          }
+        },
+        {
+          "id": "wh-105746",
+          "name": "Preparation",
+          "row": 4,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_shadow_antishadow",
+          "iconSource": "wowhead",
+          "description": "When activated, this ability immediately finishes the cooldown on your other Rogue abilities.",
+          "ranks": [
+            "When activated, this ability immediately finishes the cooldown on your other Rogue abilities."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            14185
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105746
+          }
+        },
+        {
+          "id": "wh-105748",
+          "name": "Hemorrhage",
+          "row": 4,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "spell_shadow_lifedrain",
+          "iconSource": "wowhead",
+          "description": "An instant strike that deals 100% weapon damage (145% if a Dagger is equipped) and causes the target to take 15% increased Rupture and Garrote damage from the Rogue. Lasts 15 sec. Awards 1 Combo Point.",
+          "ranks": [
+            "An instant strike that deals 100% weapon damage (145% if a Dagger is equipped) and causes the target to take 15% increased Rupture and Garrote damage from the Rogue. Lasts 15 sec. Awards 1 Combo Point."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16511
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105748
+          },
+          "requires": [
+            {
+              "talent": "wh-105752",
+              "rank": 3
+            }
+          ]
+        },
+        {
+          "id": "wh-105750",
+          "name": "Boot Knife",
+          "row": 5,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "inv_sword_32",
+          "iconSource": "wowhead",
+          "description": "Grants your Shank ability a 20% chance to add 2 Combo Points to the target.",
+          "ranks": [
+            "Grants your Shank ability a 20% chance to add 2 Combo Points to the target.",
+            "Grants your Shank ability a 40% chance to add 2 Combo Points to the target.",
+            "Grants your Shank ability a 60% chance to add 2 Combo Points to the target.",
+            "Grants your Shank ability a 80% chance to add 2 Combo Points to the target.",
+            "Grants your Shank ability a 100% chance to add 2 Combo Points to the target."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1329286,
+            1329286,
+            1329286,
+            1329286,
+            1329286
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105750
+          }
+        },
+        {
+          "id": "wh-110866",
+          "name": "Death Mark",
+          "row": 6,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "ability_creature_cursed_02",
+          "iconSource": "wowhead",
+          "description": "Finishing move that marks the target, storing a portion of the damage dealt by your attacks per Combo Point. Garrote and Rupture damage is stored at twice the rate. After 6 sec, the stored damage is dealt, up to a maximum increased by Attack Power and Critical Strike chance: 1 point : 12% stored, (((63 + 102 + 0.04 * Attack Power) * ($mcrit / 100 + 1)) * 1) damage cap 2 points: 24% stored, (((63 + (204) + 2 * 0.04 * Attack Power) * ($mcrit / 100 + 1)) * 1) damage cap 3 points: 36% stored, (((63 + (306) + 3 * 0.04 * Attack Power) * ($mcrit / 100 + 1)) * 1) damage cap 4 points: 48% stored, (((63 + (408) + 4 * 0.04 * Attack Power) * ($mcrit / 100 + 1)) * 1) damage cap 5 points: 60% stored, (((63 + (510) + 5 * 0.04 * Attack Power) * ($mcrit / 100 + 1)) * 1) damage cap",
+          "ranks": [
+            "Finishing move that marks the target, storing a portion of the damage dealt by your attacks per Combo Point. Garrote and Rupture damage is stored at twice the rate. After 6 sec, the stored damage is dealt, up to a maximum increased by Attack Power and Critical Strike chance: 1 point : 12% stored, (((63 + 102 + 0.04 * Attack Power) * ($mcrit / 100 + 1)) * 1) damage cap 2 points: 24% stored, (((63 + (204) + 2 * 0.04 * Attack Power) * ($mcrit / 100 + 1)) * 1) damage cap 3 points: 36% stored, (((63 + (306) + 3 * 0.04 * Attack Power) * ($mcrit / 100 + 1)) * 1) damage cap 4 points: 48% stored, (((63 + (408) + 4 * 0.04 * Attack Power) * ($mcrit / 100 + 1)) * 1) damage cap 5 points: 60% stored, (((63 + (510) + 5 * 0.04 * Attack Power) * ($mcrit / 100 + 1)) * 1) damage cap"
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1316709
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 110866,
+            "unresolved": [
+              "$mcrit"
+            ],
+            "note": "Unresolved publisher formula; retained verbatim without inventing values."
+          },
+          "requires": [
+            {
+              "talent": "wh-105746",
+              "rank": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Published by Wowhead for Forever. May lag hotfixes; not independently verified in game."
+  ]
+}

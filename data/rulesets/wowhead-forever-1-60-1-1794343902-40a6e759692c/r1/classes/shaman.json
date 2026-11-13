@@ -1,0 +1,1846 @@
+{
+  "$schema": "../../../../schema/class.schema.json",
+  "schemaVersion": 1,
+  "class": "shaman",
+  "className": "Shaman",
+  "dataVersion": 1,
+  "dataSource": "wowhead",
+  "generatedAt": "2026-11-13T14:42:00Z",
+  "rules": {
+    "pointsPerRow": 5,
+    "maxPoints": 51,
+    "firstPointLevel": 10,
+    "maxLevel": 60,
+    "rulesSource": "assumed"
+  },
+  "pages": [
+    {
+      "id": "primary",
+      "name": "Talents"
+    }
+  ],
+  "trees": [
+    {
+      "id": "elemental-combat",
+      "name": "Elemental Combat",
+      "page": "primary",
+      "order": 0,
+      "icon": "spell_nature_wispsplode",
+      "rows": 7,
+      "cols": 4,
+      "talents": [
+        {
+          "id": "wh-104773",
+          "name": "Convection",
+          "row": 0,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "spell_nature_wispsplode",
+          "iconSource": "wowhead",
+          "description": "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 2%.",
+          "ranks": [
+            "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 2%.",
+            "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 4%.",
+            "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 6%.",
+            "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 8%.",
+            "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16039,
+            16039,
+            16039,
+            16039,
+            16039
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104773
+          }
+        },
+        {
+          "id": "wh-104772",
+          "name": "Concussion",
+          "row": 0,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_nature_earthshock",
+          "iconSource": "wowhead",
+          "description": "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 1%.",
+          "ranks": [
+            "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 1%.",
+            "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 2%.",
+            "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 3%.",
+            "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 4%.",
+            "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 5%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16035,
+            16035,
+            16035,
+            16035,
+            16035
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104772
+          }
+        },
+        {
+          "id": "wh-104769",
+          "name": "Elemental Devastation",
+          "row": 1,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "spell_fire_elementaldevastation",
+          "iconSource": "wowhead",
+          "description": "Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 3% for 10 sec.",
+          "ranks": [
+            "Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 3% for 10 sec.",
+            "Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 6% for 10 sec.",
+            "Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 9% for 10 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            30160,
+            30160,
+            30160
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104769
+          }
+        },
+        {
+          "id": "wh-104767",
+          "name": "Reverberation",
+          "row": 1,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "spell_frost_frostward",
+          "iconSource": "wowhead",
+          "description": "Reduces the cooldown of your Shock spells by 0.2 sec.",
+          "ranks": [
+            "Reduces the cooldown of your Shock spells by 0.2 sec.",
+            "Reduces the cooldown of your Shock spells by 0.4 sec.",
+            "Reduces the cooldown of your Shock spells by 0.6 sec.",
+            "Reduces the cooldown of your Shock spells by 0.8 sec.",
+            "Reduces the cooldown of your Shock spells by 1.0 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16040,
+            16040,
+            16040,
+            16040,
+            16040
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104767
+          }
+        },
+        {
+          "id": "wh-104771",
+          "name": "Elemental Alacrity",
+          "row": 1,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_lightning_lightningbolt01",
+          "iconSource": "wowhead",
+          "description": "Reduces the cast time of your Lightning Bolt and Chain Lightning spells by 0.17 sec.",
+          "ranks": [
+            "Reduces the cast time of your Lightning Bolt and Chain Lightning spells by 0.17 sec.",
+            "Reduces the cast time of your Lightning Bolt and Chain Lightning spells by 0.33 sec.",
+            "Reduces the cast time of your Lightning Bolt and Chain Lightning spells by 0.50 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16578,
+            16578,
+            16578
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104771
+          }
+        },
+        {
+          "id": "wh-104770",
+          "name": "Call of Flame",
+          "row": 1,
+          "col": 3,
+          "maxRank": 3,
+          "icon": "spell_fire_immolation",
+          "iconSource": "wowhead",
+          "description": "Increases the damage done by your Fire Totems and by your Flame Shock and Fire Nova spells by 5%, as well as increases the duration of your Flame Shock spell by 3 sec.",
+          "ranks": [
+            "Increases the damage done by your Fire Totems and by your Flame Shock and Fire Nova spells by 5%, as well as increases the duration of your Flame Shock spell by 3 sec.",
+            "Increases the damage done by your Fire Totems and by your Flame Shock and Fire Nova spells by 10%, as well as increases the duration of your Flame Shock spell by 6 sec.",
+            "Increases the damage done by your Fire Totems and by your Flame Shock and Fire Nova spells by 15%, as well as increases the duration of your Flame Shock spell by 9 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16038,
+            16038,
+            16038
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104770
+          }
+        },
+        {
+          "id": "wh-104768",
+          "name": "Elemental Focus",
+          "row": 2,
+          "col": 0,
+          "maxRank": 1,
+          "icon": "spell_shadow_manaburn",
+          "iconSource": "wowhead",
+          "description": "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+          "ranks": [
+            "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16164
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104768
+          }
+        },
+        {
+          "id": "wh-104765",
+          "name": "Elemental Warding",
+          "row": 2,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_nature_spiritarmor",
+          "iconSource": "wowhead",
+          "description": "Reduces damage taken from Fire, Frost, and Nature effects by 3%.",
+          "ranks": [
+            "Reduces damage taken from Fire, Frost, and Nature effects by 3%.",
+            "Reduces damage taken from Fire, Frost, and Nature effects by 7%.",
+            "Reduces damage taken from Fire, Frost, and Nature effects by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            28996,
+            28996,
+            28996
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104765
+          }
+        },
+        {
+          "id": "wh-104764",
+          "name": "Trial by Fire",
+          "row": 3,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_fire_sealoffire",
+          "iconSource": "wowhead",
+          "description": "Increases the damage done by your Fire Nova spell by 10% and reduces its cooldown by 2 sec, and increases the duration of your Magma Totem by 10 sec.",
+          "ranks": [
+            "Increases the damage done by your Fire Nova spell by 10% and reduces its cooldown by 2 sec, and increases the duration of your Magma Totem by 10 sec.",
+            "Increases the damage done by your Fire Nova spell by 20% and reduces its cooldown by 4 sec, and increases the duration of your Magma Totem by 20 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16086,
+            16086
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104764
+          }
+        },
+        {
+          "id": "wh-104763",
+          "name": "Eye of the Storm",
+          "row": 3,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_nature_eyeofthestorm",
+          "iconSource": "wowhead",
+          "description": "Gives your Lightning Bolt and Chain Lightning spells a 23% chance to not lose casting time when you take damage.",
+          "ranks": [
+            "Gives your Lightning Bolt and Chain Lightning spells a 23% chance to not lose casting time when you take damage.",
+            "Gives your Lightning Bolt and Chain Lightning spells a 47% chance to not lose casting time when you take damage.",
+            "Gives your Lightning Bolt and Chain Lightning spells a 70% chance to not lose casting time when you take damage."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            29062,
+            29062,
+            29062
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104763
+          }
+        },
+        {
+          "id": "wh-104762",
+          "name": "Earthbound",
+          "row": 3,
+          "col": 3,
+          "maxRank": 1,
+          "icon": "spell_nature_stranglevines",
+          "iconSource": "wowhead",
+          "description": "Your Earthbind Totem Immobilizes nearby targets for 5 sec when cast.",
+          "ranks": [
+            "Your Earthbind Totem Immobilizes nearby targets for 5 sec when cast."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1222988
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104762
+          }
+        },
+        {
+          "id": "wh-104761",
+          "name": "Elemental Reach",
+          "row": 4,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_nature_stormreach",
+          "iconSource": "wowhead",
+          "description": "Increases the range of your Lightning Bolt, Chain Lightning, and Fire Nova spells by 3 yards.",
+          "ranks": [
+            "Increases the range of your Lightning Bolt, Chain Lightning, and Fire Nova spells by 3 yards.",
+            "Increases the range of your Lightning Bolt, Chain Lightning, and Fire Nova spells by 6 yards."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            28999,
+            28999
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104761
+          }
+        },
+        {
+          "id": "wh-104760",
+          "name": "Call of Thunder",
+          "row": 4,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_nature_callstorm",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by 5%.",
+          "ranks": [
+            "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by 5%."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16120
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104760
+          }
+        },
+        {
+          "id": "wh-104759",
+          "name": "Lightning Overload",
+          "row": 4,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_nature_lightningoverload",
+          "iconSource": "wowhead",
+          "description": "Gives your Lightning Bolt and Chain Lightning spells a 10% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+          "ranks": [
+            "Gives your Lightning Bolt and Chain Lightning spells a 10% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+            "Gives your Lightning Bolt and Chain Lightning spells a 20% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+            "Gives your Lightning Bolt and Chain Lightning spells a 30% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            408438,
+            408438,
+            408438
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104759
+          },
+          "requires": [
+            {
+              "talent": "wh-104771",
+              "rank": 3
+            }
+          ]
+        },
+        {
+          "id": "wh-104766",
+          "name": "Elemental Fury",
+          "row": 5,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_fire_volcano",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 20%.",
+          "ranks": [
+            "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 20%.",
+            "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 40%.",
+            "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 60%.",
+            "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 80%.",
+            "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 100%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16089,
+            16089,
+            16089,
+            16089,
+            16089
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104766
+          },
+          "requires": [
+            {
+              "talent": "wh-104759",
+              "rank": 3
+            }
+          ]
+        },
+        {
+          "id": "wh-104758",
+          "name": "Lightning Mastery",
+          "row": 6,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_nature_unrelentingstorm",
+          "iconSource": "wowhead",
+          "description": "Gain mastery over Lightning, reducing the cast time of your Lightning Bolt spell by 0.5 sec, and removing the cooldown from your Chain Lightning spell. Lasts 15 sec.",
+          "ranks": [
+            "Gain mastery over Lightning, reducing the cast time of your Lightning Bolt spell by 0.5 sec, and removing the cooldown from your Chain Lightning spell. Lasts 15 sec."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16166
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104758
+          },
+          "requires": [
+            {
+              "talent": "wh-104760",
+              "rank": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "enhancement",
+      "name": "Enhancement",
+      "page": "primary",
+      "order": 1,
+      "icon": "spell_nature_stoneclawtotem",
+      "rows": 7,
+      "cols": 4,
+      "talents": [
+        {
+          "id": "wh-104757",
+          "name": "Earth's Grasp",
+          "row": 0,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_nature_stoneclawtotem",
+          "iconSource": "wowhead",
+          "description": "Increases the health of your Stoneclaw Totem by 25% and the radius of your Earthbind Totem by 10%.",
+          "ranks": [
+            "Increases the health of your Stoneclaw Totem by 25% and the radius of your Earthbind Totem by 10%.",
+            "Increases the health of your Stoneclaw Totem by 50% and the radius of your Earthbind Totem by 20%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16043,
+            16043
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104757
+          }
+        },
+        {
+          "id": "wh-104753",
+          "name": "Thundering Strikes",
+          "row": 0,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "ability_thunderbolt",
+          "iconSource": "wowhead",
+          "description": "Improves your chance to get a critical strike with all spells and attacks by 1%.",
+          "ranks": [
+            "Improves your chance to get a critical strike with all spells and attacks by 1%.",
+            "Improves your chance to get a critical strike with all spells and attacks by 2%.",
+            "Improves your chance to get a critical strike with all spells and attacks by 3%.",
+            "Improves your chance to get a critical strike with all spells and attacks by 4%.",
+            "Improves your chance to get a critical strike with all spells and attacks by 5%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16255,
+            16255,
+            16255,
+            16255,
+            16255
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104753
+          }
+        },
+        {
+          "id": "wh-104756",
+          "name": "Ancestral Knowledge",
+          "row": 0,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_shadow_grimward",
+          "iconSource": "wowhead",
+          "description": "Increases your Intellect by 2%.",
+          "ranks": [
+            "Increases your Intellect by 2%.",
+            "Increases your Intellect by 4%.",
+            "Increases your Intellect by 6%.",
+            "Increases your Intellect by 8%.",
+            "Increases your Intellect by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17485,
+            17485,
+            17485,
+            17485,
+            17485
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104756
+          }
+        },
+        {
+          "id": "wh-104754",
+          "name": "Guardian Totems",
+          "row": 1,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_nature_stoneskintotem",
+          "iconSource": "wowhead",
+          "description": "Increases the amount of damage reduced by your Stoneskin Totem and Windwall Totem by 10% and reduces the cooldown of your Grounding Totem by 1 sec.",
+          "ranks": [
+            "Increases the amount of damage reduced by your Stoneskin Totem and Windwall Totem by 10% and reduces the cooldown of your Grounding Totem by 1 sec.",
+            "Increases the amount of damage reduced by your Stoneskin Totem and Windwall Totem by 20% and reduces the cooldown of your Grounding Totem by 2 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16258,
+            16258
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104754
+          }
+        },
+        {
+          "id": "wh-104755",
+          "name": "Mental Dexterity",
+          "row": 1,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_nature_mentalquickness",
+          "iconSource": "wowhead",
+          "description": "Increases your Attack Power by an amount equal to 50% of your Intellect.",
+          "ranks": [
+            "Increases your Attack Power by an amount equal to 50% of your Intellect.",
+            "Increases your Attack Power by an amount equal to 100% of your Intellect.",
+            "Increases your Attack Power by an amount equal to 150% of your Intellect."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            415140,
+            415140,
+            415140
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104755
+          }
+        },
+        {
+          "id": "wh-104751",
+          "name": "Improved Lightning Shield",
+          "row": 1,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_nature_lightningshield",
+          "iconSource": "wowhead",
+          "description": "Increases the damage done by your Lightning Shield orbs by 5%.",
+          "ranks": [
+            "Increases the damage done by your Lightning Shield orbs by 5%.",
+            "Increases the damage done by your Lightning Shield orbs by 10%.",
+            "Increases the damage done by your Lightning Shield orbs by 15%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16261,
+            16261,
+            16261
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104751
+          }
+        },
+        {
+          "id": "wh-104750",
+          "name": "Elemental Weapons",
+          "row": 2,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "spell_fire_flametounge",
+          "iconSource": "wowhead",
+          "description": "Increases the melee attack power bonus of your Rockbiter Weapon by 7%, your Windfury Weapon effect by 13% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 5%.",
+          "ranks": [
+            "Increases the melee attack power bonus of your Rockbiter Weapon by 7%, your Windfury Weapon effect by 13% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 5%.",
+            "Increases the melee attack power bonus of your Rockbiter Weapon by 13%, your Windfury Weapon effect by 27% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 10%.",
+            "Increases the melee attack power bonus of your Rockbiter Weapon by 20%, your Windfury Weapon effect by 40% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 15%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16266,
+            16266,
+            16266
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104750
+          }
+        },
+        {
+          "id": "wh-104749",
+          "name": "Shamanistic Focus",
+          "row": 2,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "spell_nature_elementalabsorption",
+          "iconSource": "wowhead",
+          "description": "Reduces the mana cost of your Shock and Lightning Shield spells by 45%.",
+          "ranks": [
+            "Reduces the mana cost of your Shock and Lightning Shield spells by 45%."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1223030
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104749
+          }
+        },
+        {
+          "id": "wh-104748",
+          "name": "Anticipation",
+          "row": 2,
+          "col": 3,
+          "maxRank": 3,
+          "icon": "spell_nature_mirrorimage",
+          "iconSource": "wowhead",
+          "description": "Increases your chance to dodge by an additional 2%.",
+          "ranks": [
+            "Increases your chance to dodge by an additional 2%.",
+            "Increases your chance to dodge by an additional 4%.",
+            "Increases your chance to dodge by an additional 6%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16254,
+            16254,
+            16254
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104748
+          }
+        },
+        {
+          "id": "wh-104746",
+          "name": "Toughness",
+          "row": 3,
+          "col": 0,
+          "maxRank": 5,
+          "icon": "spell_holy_devotion",
+          "iconSource": "wowhead",
+          "description": "Increases your Stamina by 2%.",
+          "ranks": [
+            "Increases your Stamina by 2%.",
+            "Increases your Stamina by 4%.",
+            "Increases your Stamina by 6%.",
+            "Increases your Stamina by 8%.",
+            "Increases your Stamina by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16252,
+            16252,
+            16252,
+            16252,
+            16252
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104746
+          }
+        },
+        {
+          "id": "wh-104747",
+          "name": "Flurry",
+          "row": 3,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "ability_ghoulfrenzy",
+          "iconSource": "wowhead",
+          "description": "Increases your attack speed by 6% for your next 3 swings after dealing a melee critical strike.",
+          "ranks": [
+            "Increases your attack speed by 6% for your next 3 swings after dealing a melee critical strike.",
+            "Increases your attack speed by 12% for your next 3 swings after dealing a melee critical strike.",
+            "Increases your attack speed by 18% for your next 3 swings after dealing a melee critical strike.",
+            "Increases your attack speed by 24% for your next 3 swings after dealing a melee critical strike.",
+            "Increases your attack speed by 30% for your next 3 swings after dealing a melee critical strike."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16256,
+            16256,
+            16256,
+            16256,
+            16256
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104747
+          },
+          "requires": [
+            {
+              "talent": "wh-104755",
+              "rank": 3
+            }
+          ]
+        },
+        {
+          "id": "wh-104743",
+          "name": "Stormstrike",
+          "row": 3,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "ability_shaman_stormstrike",
+          "iconSource": "wowhead",
+          "description": "Instantly strike for 150% weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec.",
+          "ranks": [
+            "Instantly strike for 150% weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17364
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104743
+          }
+        },
+        {
+          "id": "wh-104752",
+          "name": "Improved Ghost Wolf",
+          "row": 3,
+          "col": 3,
+          "maxRank": 2,
+          "icon": "spell_nature_spiritwolf",
+          "iconSource": "wowhead",
+          "description": "Reduces the cast time of your Ghost Wolf spell by 1.0 sec, and Ghost Wolf may be used indoors.",
+          "ranks": [
+            "Reduces the cast time of your Ghost Wolf spell by 1.0 sec, and Ghost Wolf may be used indoors.",
+            "Reduces the cast time of your Ghost Wolf spell by 3.0 sec, and Ghost Wolf may be used indoors."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16262,
+            16262
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104752
+          }
+        },
+        {
+          "id": "wh-104745",
+          "name": "Spirit Weapons",
+          "row": 4,
+          "col": 0,
+          "maxRank": 1,
+          "icon": "ability_parry",
+          "iconSource": "wowhead",
+          "description": "Gives a chance to parry enemy melee attacks, reduces all threat generated by your attacks by 30% while Rockbiter Weapon is not active, and increases all threat generated by 30% while Rockbiter Weapon is active.",
+          "ranks": [
+            "Gives a chance to parry enemy melee attacks, reduces all threat generated by your attacks by 30% while Rockbiter Weapon is not active, and increases all threat generated by 30% while Rockbiter Weapon is active."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16268
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104745
+          }
+        },
+        {
+          "id": "wh-104744",
+          "name": "Mental Quickness",
+          "row": 4,
+          "col": 1,
+          "maxRank": 2,
+          "icon": "spell_nature_sleep",
+          "iconSource": "wowhead",
+          "description": "Increases your spell damage and healing by up to 15% of your Intellect.",
+          "ranks": [
+            "Increases your spell damage and healing by up to 15% of your Intellect.",
+            "Increases your spell damage and healing by up to 30% of your Intellect."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            30812,
+            30812
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104744
+          }
+        },
+        {
+          "id": "wh-104742",
+          "name": "Improved Stormstrike",
+          "row": 4,
+          "col": 2,
+          "maxRank": 2,
+          "icon": "spell_shaman_improvedstormstrike",
+          "iconSource": "wowhead",
+          "description": "When you Stormstrike, you have a 50% chance to gain 50% mana regeneration while casting spells for 15 sec, and Stormstrike's cooldown has a 50% chance to reset each time you Dodge or Parry.",
+          "ranks": [
+            "When you Stormstrike, you have a 50% chance to gain 50% mana regeneration while casting spells for 15 sec, and Stormstrike's cooldown has a 50% chance to reset each time you Dodge or Parry.",
+            "When you Stormstrike, you have a 100% chance to gain 50% mana regeneration while casting spells for 15 sec, and Stormstrike's cooldown has a 100% chance to reset each time you Dodge or Parry."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1223031,
+            1223031
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104742
+          },
+          "requires": [
+            {
+              "talent": "wh-104743",
+              "rank": 1
+            }
+          ]
+        },
+        {
+          "id": "wh-104741",
+          "name": "Maelstrom Weapon",
+          "row": 5,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_shaman_maelstromweapon",
+          "iconSource": "wowhead",
+          "description": "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 4%. Stacks up to 5 times. Lasts 30 sec.",
+          "ranks": [
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 4%. Stacks up to 5 times. Lasts 30 sec.",
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 8%. Stacks up to 5 times. Lasts 30 sec.",
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 12%. Stacks up to 5 times. Lasts 30 sec.",
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 16%. Stacks up to 5 times. Lasts 30 sec.",
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            408498,
+            408498,
+            408498,
+            408498,
+            408498
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104741
+          }
+        },
+        {
+          "id": "wh-104740",
+          "name": "Rage of the Farseer",
+          "row": 6,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_nature_bloodlust",
+          "iconSource": "wowhead",
+          "description": "Increases your attack speed by 30% for 25 sec.",
+          "ranks": [
+            "Increases your attack speed by 30% for 25 sec."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            425336
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104740
+          },
+          "requires": [
+            {
+              "talent": "wh-104744",
+              "rank": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "restoration",
+      "name": "Restoration",
+      "page": "primary",
+      "order": 2,
+      "icon": "spell_nature_magicimmunity",
+      "rows": 7,
+      "cols": 4,
+      "talents": [
+        {
+          "id": "wh-104739",
+          "name": "Improved Healing Wave",
+          "row": 0,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "spell_nature_magicimmunity",
+          "iconSource": "wowhead",
+          "description": "Reduces the casting time of your Healing Wave spell by 0.1 sec.",
+          "ranks": [
+            "Reduces the casting time of your Healing Wave spell by 0.1 sec.",
+            "Reduces the casting time of your Healing Wave spell by 0.2 sec.",
+            "Reduces the casting time of your Healing Wave spell by 0.3 sec.",
+            "Reduces the casting time of your Healing Wave spell by 0.4 sec.",
+            "Reduces the casting time of your Healing Wave spell by 0.5 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16182,
+            16182,
+            16182,
+            16182,
+            16182
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104739
+          }
+        },
+        {
+          "id": "wh-104729",
+          "name": "Tidal Focus",
+          "row": 0,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_frost_manarecharge",
+          "iconSource": "wowhead",
+          "description": "Reduces the Mana cost of your healing spells by 1% and improves your chance to hit by 1%.",
+          "ranks": [
+            "Reduces the Mana cost of your healing spells by 1% and improves your chance to hit by 1%.",
+            "Reduces the Mana cost of your healing spells by 2% and improves your chance to hit by 2%.",
+            "Reduces the Mana cost of your healing spells by 3% and improves your chance to hit by 3%.",
+            "Reduces the Mana cost of your healing spells by 4% and improves your chance to hit by 4%.",
+            "Reduces the Mana cost of your healing spells by 5% and improves your chance to hit by 5%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16179,
+            16179,
+            16179,
+            16179,
+            16179
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104729
+          }
+        },
+        {
+          "id": "wh-104734",
+          "name": "Mindfulness",
+          "row": 1,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "spell_nature_sleep",
+          "iconSource": "wowhead",
+          "description": "Allows 17% of your Mana regeneration to continue while casting.",
+          "ranks": [
+            "Allows 17% of your Mana regeneration to continue while casting.",
+            "Allows 33% of your Mana regeneration to continue while casting.",
+            "Allows 50% of your Mana regeneration to continue while casting."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1223033,
+            1223033,
+            1223033
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104734
+          }
+        },
+        {
+          "id": "wh-104736",
+          "name": "Natural Grace",
+          "row": 1,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_nature_healingtouch",
+          "iconSource": "wowhead",
+          "description": "Reduces the threat generated by your spells by 5%.",
+          "ranks": [
+            "Reduces the threat generated by your spells by 5%.",
+            "Reduces the threat generated by your spells by 10%.",
+            "Reduces the threat generated by your spells by 15%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            29187,
+            29187,
+            29187
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104736
+          }
+        },
+        {
+          "id": "wh-104735",
+          "name": "Totemic Focus",
+          "row": 1,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_nature_moonglow",
+          "iconSource": "wowhead",
+          "description": "Reduces the Mana cost of your totems and any spells that summon or move them by 5%.",
+          "ranks": [
+            "Reduces the Mana cost of your totems and any spells that summon or move them by 5%.",
+            "Reduces the Mana cost of your totems and any spells that summon or move them by 10%.",
+            "Reduces the Mana cost of your totems and any spells that summon or move them by 15%.",
+            "Reduces the Mana cost of your totems and any spells that summon or move them by 20%.",
+            "Reduces the Mana cost of your totems and any spells that summon or move them by 25%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16173,
+            16173,
+            16173,
+            16173,
+            16173
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104735
+          }
+        },
+        {
+          "id": "wh-104737",
+          "name": "Improved Reincarnation",
+          "row": 1,
+          "col": 3,
+          "maxRank": 2,
+          "icon": "spell_nature_reincarnation",
+          "iconSource": "wowhead",
+          "description": "Reduces the cooldown of your Reincarnation spell by 10 min, increases your maximum health by 2%, and increases the amount of health and Mana you reincarnate with by an additional 10%.",
+          "ranks": [
+            "Reduces the cooldown of your Reincarnation spell by 10 min, increases your maximum health by 2%, and increases the amount of health and Mana you reincarnate with by an additional 10%.",
+            "Reduces the cooldown of your Reincarnation spell by 20 min, increases your maximum health by 4%, and increases the amount of health and Mana you reincarnate with by an additional 20%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16184,
+            16184
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104737
+          }
+        },
+        {
+          "id": "wh-104731",
+          "name": "Ancestral Healing",
+          "row": 2,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "spell_nature_undyingstrength",
+          "iconSource": "wowhead",
+          "description": "Increases your target's armor value by 8% for 15 sec after getting a critical effect from one of your healing spells.",
+          "ranks": [
+            "Increases your target's armor value by 8% for 15 sec after getting a critical effect from one of your healing spells.",
+            "Increases your target's armor value by 17% for 15 sec after getting a critical effect from one of your healing spells.",
+            "Increases your target's armor value by 25% for 15 sec after getting a critical effect from one of your healing spells."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16176,
+            16176,
+            16176
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104731
+          }
+        },
+        {
+          "id": "wh-104733",
+          "name": "Healing Focus",
+          "row": 2,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_nature_healingwavelesser",
+          "iconSource": "wowhead",
+          "description": "Gives your healing spells a 23% chance to not lose casting time when you take damage.",
+          "ranks": [
+            "Gives your healing spells a 23% chance to not lose casting time when you take damage.",
+            "Gives your healing spells a 47% chance to not lose casting time when you take damage.",
+            "Gives your healing spells a 70% chance to not lose casting time when you take damage."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16181,
+            16181,
+            16181
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104733
+          }
+        },
+        {
+          "id": "wh-104732",
+          "name": "Water Shield",
+          "row": 2,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "ability_shaman_watershield",
+          "iconSource": "wowhead",
+          "description": "The caster is surrounded by 3 globes of water. When a spell, melee, or ranged attack hits the caster or when one of the caster's spells gets a critical result, 2% of maximum mana is restored to the caster, expending one water globe. Only one globe will activate every few seconds. Lasts 10 min. Only one Elemental Shield can be active on the Shaman at any one time.",
+          "ranks": [
+            "The caster is surrounded by 3 globes of water. When a spell, melee, or ranged attack hits the caster or when one of the caster's spells gets a critical result, 2% of maximum mana is restored to the caster, expending one water globe. Only one globe will activate every few seconds. Lasts 10 min. Only one Elemental Shield can be active on the Shaman at any one time."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            408510
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104732
+          }
+        },
+        {
+          "id": "wh-104738",
+          "name": "Tidal Mastery",
+          "row": 3,
+          "col": 0,
+          "maxRank": 5,
+          "icon": "spell_nature_tranquility",
+          "iconSource": "wowhead",
+          "description": "Increases the critical effect chance of your healing spells by 1%.",
+          "ranks": [
+            "Increases the critical effect chance of your healing spells by 1%.",
+            "Increases the critical effect chance of your healing spells by 2%.",
+            "Increases the critical effect chance of your healing spells by 3%.",
+            "Increases the critical effect chance of your healing spells by 4%.",
+            "Increases the critical effect chance of your healing spells by 5%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16194,
+            16194,
+            16194,
+            16194,
+            16194
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104738
+          }
+        },
+        {
+          "id": "wh-104730",
+          "name": "Restorative Totems",
+          "row": 3,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "spell_nature_manaregentotem",
+          "iconSource": "wowhead",
+          "description": "Increases the effect of your Mana Spring Totem by 5% and increases the effect of your Healing Stream Totem by 10%.",
+          "ranks": [
+            "Increases the effect of your Mana Spring Totem by 5% and increases the effect of your Healing Stream Totem by 10%.",
+            "Increases the effect of your Mana Spring Totem by 10% and increases the effect of your Healing Stream Totem by 20%.",
+            "Increases the effect of your Mana Spring Totem by 15% and increases the effect of your Healing Stream Totem by 30%.",
+            "Increases the effect of your Mana Spring Totem by 20% and increases the effect of your Healing Stream Totem by 40%.",
+            "Increases the effect of your Mana Spring Totem by 25% and increases the effect of your Healing Stream Totem by 50%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16187,
+            16187,
+            16187,
+            16187,
+            16187
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104730
+          }
+        },
+        {
+          "id": "wh-104728",
+          "name": "Mana Tide Totem",
+          "row": 3,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "spell_frost_summonwaterelemental",
+          "iconSource": "wowhead",
+          "description": "Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 88 mana every 3 seconds to group members within 30 yards.",
+          "ranks": [
+            "Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 88 mana every 3 seconds to group members within 30 yards."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16190
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104728
+          }
+        },
+        {
+          "id": "wh-104727",
+          "name": "Healing Way",
+          "row": 4,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_nature_healingway",
+          "iconSource": "wowhead",
+          "description": "Increases the amount healed by your Healing Wave spell by 8%.",
+          "ranks": [
+            "Increases the amount healed by your Healing Wave spell by 8%.",
+            "Increases the amount healed by your Healing Wave spell by 17%.",
+            "Increases the amount healed by your Healing Wave spell by 25%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            29206,
+            29206,
+            29206
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104727
+          }
+        },
+        {
+          "id": "wh-104726",
+          "name": "Nature's Swiftness",
+          "row": 4,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "spell_nature_ravenform",
+          "iconSource": "wowhead",
+          "description": "When activated, your next Nature spell with a casting time less than 10 sec. becomes an instant cast spell.",
+          "ranks": [
+            "When activated, your next Nature spell with a casting time less than 10 sec. becomes an instant cast spell."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16188
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104726
+          }
+        },
+        {
+          "id": "wh-104725",
+          "name": "Purification",
+          "row": 5,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_frost_wizardmark",
+          "iconSource": "wowhead",
+          "description": "Increases the effectiveness of your healing spells by 2%.",
+          "ranks": [
+            "Increases the effectiveness of your healing spells by 2%.",
+            "Increases the effectiveness of your healing spells by 4%.",
+            "Increases the effectiveness of your healing spells by 6%.",
+            "Increases the effectiveness of your healing spells by 8%.",
+            "Increases the effectiveness of your healing spells by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            16178,
+            16178,
+            16178,
+            16178,
+            16178
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104725
+          }
+        },
+        {
+          "id": "wh-104724",
+          "name": "Riptide",
+          "row": 6,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_nature_riptide",
+          "iconSource": "wowhead",
+          "description": "Heals a friendly target for 445 over 15 sec, and increases the effectiveness of your Chain Heal casts directly on that target by 25%.",
+          "ranks": [
+            "Heals a friendly target for 445 over 15 sec, and increases the effectiveness of your Chain Heal casts directly on that target by 25%."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            408521
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 104724
+          },
+          "requires": [
+            {
+              "talent": "wh-104727",
+              "rank": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Published by Wowhead for Forever. May lag hotfixes; not independently verified in game."
+  ]
+}
