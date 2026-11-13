@@ -1224,7 +1224,7 @@ def diff_class(new: dict, old: dict) -> dict:
     """Compare a datamined class document with the canonical one, matching by talent name."""
     a, b = _by_name(new), _by_name(old)
     res: dict[str, Any] = {
-        "class": new["class"], "build": new["trees"][0]["datamined"]["build"] if new["trees"] else None,
+        "class": new["class"], "build": new["trees"][0].get("datamined", {}).get("build") if new["trees"] else None,
         "counts": {"datamined": len(a), "current": len(b)},
         "new": [], "gone": [], "position": [], "maxRank": [], "ranks": [], "requires": [], "icons": [], "tree": [],
     }

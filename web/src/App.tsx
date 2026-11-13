@@ -137,7 +137,7 @@ export default function App() {
       </main>
       <footer className="app-footer mt-8 text-xs text-[var(--text-dim)]">
         Not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft, talent names, descriptions, icons
-        and screenshots are property of Blizzard Entertainment. Reference snapshot: {SOURCE_LINE}{' '}
+        and screenshots are property of Blizzard Entertainment. Original footage snapshot: {SOURCE_LINE}{' '}
         {checkedLine(facts.talents, 'talents')} Code MIT,{' '}
         <a href={REPO_URL} target="_blank" rel="noreferrer">
           source on GitHub

@@ -86,6 +86,7 @@ export function ClassPage({ classId, ruleset, revision, version, buildString, se
   const cls = context?.cls
   const identity = ruleset ? { ruleset, revision: revision! } : undefined
   const experimental = context?.manifest.kind === 'experiment'
+  const publishedReference = Boolean(context?.manifest.source)
   const [error, setError] = useState<string>()
   const registry = context?.registry ?? loadRegistry()
   const coarse = useCoarsePointer()
@@ -341,6 +342,7 @@ export function ClassPage({ classId, ruleset, revision, version, buildString, se
         {!embed && (
           <Header
             experimental={experimental}
+            referenceIdentity={publishedReference ? identity : undefined}
             cls={cls}
             classId={classId}
             build={build}
@@ -418,9 +420,11 @@ export function ClassPage({ classId, ruleset, revision, version, buildString, se
                 the fact in a player's words and prints only the notes that
                 survive the guard (UX review round two, finding 6). */}
                 <div data-testid="class-ranks-line">
-                  {experimental
-                    ? 'Custom designs are authored proposals. Rank effects and tradeoffs are not balance predictions.'
-                    : RANKS_LINE}
+                  {publishedReference
+                    ? 'Rank text is published by Wowhead. Level-dependent values and hotfixes may differ in game; unresolved formulas are marked.'
+                    : experimental
+                      ? 'Custom designs are authored proposals. Rank effects and tradeoffs are not balance predictions.'
+                      : RANKS_LINE}
                 </div>
                 {(!experimental ? playerNotes(cls.notes) : []).map((n) => (
                   <div key={n}>{n}</div>

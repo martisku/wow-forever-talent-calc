@@ -39,7 +39,7 @@
     },
     "dataSource": {
       "type": "string",
-      "enum": ["video", "datamined", "mixed", "manual"]
+      "enum": ["video", "datamined", "mixed", "manual", "wowhead"]
     },
     "generatedAt": {
       "$ref": "#/$defs/rfc3339"
@@ -217,7 +217,13 @@
       "additionalProperties": false,
       "required": ["kind", "reviewed"],
       "properties": {
-        "kind": { "type": "string", "enum": ["video", "datamined", "manual"] },
+        "kind": { "type": "string", "enum": ["video", "datamined", "manual", "wowhead"] },
+        "url": {"type": "string", "pattern": "^https://nether\\.wowhead\\.com/forever/data/talents-classic\\?"},
+        "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+        "dataRevision": {"type": "string", "pattern": "^[0-9]+$"},
+        "retrievedAt": {"$ref": "#/$defs/rfc3339"},
+        "upstreamTalentId": {"type": "integer", "minimum": 1},
+        "unresolved": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^\\$[a-zA-Z0-9]+$"}},
         "video": { "type": "string", "pattern": "^[A-Za-z0-9_-]{11}$" },
         "t": { "type": "number", "minimum": 0 },
         "frame": { "type": "integer", "minimum": 0 },
@@ -255,7 +261,8 @@
           "if": { "required": ["reviewed"], "properties": { "reviewed": { "const": true } } },
           "then": { "required": ["reviewedBy", "reviewedAt"] },
           "else": { "properties": { "reviewedBy": false, "reviewedAt": false } }
-        }
+        },
+        {"if": {"properties": {"kind": {"const": "wowhead"}}}, "then": {"required": ["url", "version", "dataRevision", "retrievedAt"]}, "else": {"properties": {"url": false, "version": false, "dataRevision": false, "retrievedAt": false, "upstreamTalentId": false, "unresolved": false}}}
       ]
     },
     "talent": {
@@ -272,7 +279,7 @@
         "col": { "type": "integer", "minimum": 0 },
         "maxRank": { "type": "integer", "minimum": 1, "maximum": 9 },
         "icon": { "$ref": "#/$defs/icon" },
-        "iconSource": { "type": "string", "enum": ["classic", "crop", "datamined", "manual"] },
+        "iconSource": { "type": "string", "enum": ["classic", "crop", "datamined", "manual", "wowhead"] },
         "iconCrop": { "$ref": "#/$defs/repoPath" },
         "description": {
           "type": "string",

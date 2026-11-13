@@ -20,7 +20,13 @@ const slug = z.string().min(1).max(64).regex(SLUG)
 export const PageIdSchema = z.enum(['primary', 'secondary'])
 
 export const SourceSchema = z.looseObject({
-  kind: z.enum(['video', 'datamined', 'manual']),
+  kind: z.enum(['video', 'datamined', 'manual', 'wowhead']),
+  url: z.string().optional(),
+  version: z.string().optional(),
+  dataRevision: z.string().optional(),
+  retrievedAt: z.string().optional(),
+  upstreamTalentId: z.int().min(1).optional(),
+  unresolved: z.array(z.string()).optional(),
   video: z.string().optional(),
   t: z.number().min(0).optional(),
   frame: z.int().min(0).optional(),
@@ -69,7 +75,7 @@ export const TalentSchema = z.looseObject({
   /** One decimal digit per talent in build links; the schema caps this at 9. */
   maxRank: z.int().min(1).max(9),
   icon: z.string().min(1),
-  iconSource: z.enum(['classic', 'crop', 'datamined', 'manual']),
+  iconSource: z.enum(['classic', 'crop', 'datamined', 'manual', 'wowhead']),
   iconCrop: z.string().optional(),
   description: z.string(),
   ranks: z.array(RankSchema).min(1),
@@ -110,11 +116,15 @@ const TreeObject = z.looseObject({
 export const TreeSchema = TreeObject.superRefine((tree, ctx) => {
   const byId = new Map(tree.talents.map((t) => [t.id, t]))
   tree.talents.forEach((t, i) => {
-    (t.requires ?? []).forEach((req, r) => {
+    ;(t.requires ?? []).forEach((req, r) => {
       const path = ['talents', i, 'requires', r, 'talent']
       const target = byId.get(req.talent)
       if (!target) {
-        ctx.addIssue({ code: 'custom', path, message: `${t.id} requires ${req.talent}, which is not in tree ${tree.id}` })
+        ctx.addIssue({
+          code: 'custom',
+          path,
+          message: `${t.id} requires ${req.talent}, which is not in tree ${tree.id}`,
+        })
         return
       }
       if (target.id === t.id || (target.row === t.row && target.col === t.col)) {
@@ -187,7 +197,7 @@ export const ClassSchema = z.looseObject({
   class: slug,
   className: z.string().min(1),
   dataVersion: z.int().min(1),
-  dataSource: z.enum(['video', 'datamined', 'mixed', 'manual']),
+  dataSource: z.enum(['video', 'datamined', 'mixed', 'manual', 'wowhead']),
   generatedAt: z.string(),
   rules: RulesSchema,
   pages: z.array(PageSchema).min(1),
@@ -206,9 +216,7 @@ export type _InferredMatchesTypes = Assert<z.infer<typeof ClassSchema> extends C
 export function parseClass(raw: unknown, label = 'class file'): ClassData {
   const result = ClassSchema.safeParse(raw)
   if (!result.success) {
-    const issues = result.error.issues
-      .map((i) => `  ${i.path.join('.') || '(root)'}: ${i.message}`)
-      .join('\n')
+    const issues = result.error.issues.map((i) => `  ${i.path.join('.') || '(root)'}: ${i.message}`).join('\n')
     throw new Error(`Invalid ${label}:\n${issues}`)
   }
   return result.data

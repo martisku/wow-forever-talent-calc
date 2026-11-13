@@ -23,6 +23,7 @@ unless explicitly requested.
   `src/ui/` renders; `tests/` contains Playwright tests.
 - `pipeline/`: Python 3.12 + uv; `src/wowtalents/`, `stages/`, `tests/`, standalone
   validators. Large generated artifacts belong in ignored `pipeline/work/`.
+- Refresh the reference with [.agents/skills/update-reference/SKILL.md](.agents/skills/update-reference/SKILL.md); see [source/update contract](docs/REFERENCE-UPDATES.md).
 - `data/rulesets/`: retained baselines and experiments (append-only revisions).
 - `data/talents/`: reference class data; `data/encoding/`: link orders/migrations;
   `data/overrides/`: reference corrections; `data/review/`: evidence crops.

@@ -1,12 +1,20 @@
+import { LEGACY_BASELINE, type RulesetIdentity } from './rulesetIdentity'
+export { LEGACY_BASELINE, currentReference } from './rulesetIdentity'
+export type { RulesetIdentity } from './rulesetIdentity'
 /** Immutable ruleset contexts. Encoding version numbers are local to a revision. */
 import type { ClassData, Talent } from './schema'
 import { buildRegistry, type EncodingFile, type EncodingRegistry, type MigrationFile } from './encoding'
 import { hasClass, loadClass } from './load'
 import { loadRegistry } from './encoding'
 
-export interface RulesetIdentity {
-  ruleset: string
-  revision: number
+export interface ReferenceSource {
+  provider: 'wowhead'
+  pageUrl: string
+  dataUrl: string
+  version: string
+  dataRevision: string
+  retrievedAt: string
+  dataSha256: string
 }
 export interface RulesetManifest {
   schemaVersion: 1
@@ -16,10 +24,10 @@ export interface RulesetManifest {
   name: string
   classes: string[]
   intent: string
+  source?: ReferenceSource
   baseline?: { id: string; revision: number }
   changes?: Record<string, Record<string, string>>
 }
-export const LEGACY_BASELINE = { ruleset: 'reference-2026-11-10', revision: 1 }
 const manifests = import.meta.glob('../../../data/rulesets/*/r*/manifest.json', {
   eager: true,
   import: 'default',
@@ -89,7 +97,12 @@ export function compareTalents(
     else {
       if (old.tree.id !== next.tree.id || old.t.row !== next.t.row || old.t.col !== next.t.col) kinds.push('Moved')
       const content = (t: Talent) =>
-        Object.fromEntries(Object.entries(t).filter(([key]) => !['source', 'ranksSource', 'ranksObserved', 'ranksPrior', 'ranksNote', 'row', 'col'].includes(key)))
+        Object.fromEntries(
+          Object.entries(t).filter(
+            ([key]) =>
+              !['source', 'ranksSource', 'ranksObserved', 'ranksPrior', 'ranksNote', 'row', 'col'].includes(key),
+          ),
+        )
       if (stable(content(old.t)) !== stable(content(next.t))) kinds.push('Modified')
     }
     if (kinds.length)

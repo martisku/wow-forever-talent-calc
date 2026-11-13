@@ -1,3 +1,4 @@
+import { currentReference, LEGACY_BASELINE } from '../data/rulesetIdentity'
 import { useState } from 'react'
 import classesIndex from '../data/classes-index.json'
 import facts from '../data/facts.json'
@@ -37,6 +38,7 @@ const classes: IndexEntry[] = (classesIndex as IndexEntry[]).filter((c) => inclu
 export function ClassPicker() {
   useTitle(SITE_TITLE)
   const [last, setLast] = useState(() => readLastBuild())
+  const published = currentReference.source
 
   return (
     <div>
@@ -71,12 +73,18 @@ export function ClassPicker() {
         <h1 className="serif mb-2 text-lg text-[var(--gold)]">Choose a class</h1>
         {/* The one place the caveat is stated: tooltips and class pages must not repeat it. */}
         <p className="mb-2 text-sm text-[var(--text-dim)]" data-testid="landing-caveat">
-          {SOURCE_LINE} {checkedLine(facts.talents, 'talents')} Expect wrong names and numbers. {RANKS_LINE}
+          {published ? (
+            `Current reference: Wowhead Forever ${published.version}, retrieved ${published.retrievedAt.slice(0, 10)}. Publisher data may lag hotfixes and has not been independently verified in game.`
+          ) : (
+            <>
+              {SOURCE_LINE} {checkedLine(facts.talents, 'talents')} Expect wrong names and numbers. {RANKS_LINE}
+            </>
+          )}
         </p>
         {/* The one thing this calculator has that Wowhead cannot: the diff. */}
         <p className="mb-2 text-sm">
           <a href={changesHash()} data-testid="landing-changes-link">
-            What changed against Classic Era
+            Original snapshot vs Classic Era
           </a>
           <span className="text-[var(--text-dim)]">
             {' '}
@@ -136,7 +144,15 @@ function ClassCard({ entry }: { entry: IndexEntry }) {
   // above states the data source once, and `#/review/<class>` stays reachable by URL.
   return (
     <li className="class-card">
-      <a href={`#/${entry.id}`} className="block no-underline" data-testid={`class-${entry.id}`}>
+      <a
+        href={
+          entry.origin === 'talents' && currentReference.ruleset !== LEGACY_BASELINE.ruleset
+            ? classHash(entry.id, undefined, '', currentReference)
+            : `#/${entry.id}`
+        }
+        className="block no-underline"
+        data-testid={`class-${entry.id}`}
+      >
         <div className="flex items-center gap-3">
           <ClassIcon classId={entry.id} className={entry.className} size={40} />
           <span className="serif text-lg text-[var(--gold)]">{entry.className}</span>

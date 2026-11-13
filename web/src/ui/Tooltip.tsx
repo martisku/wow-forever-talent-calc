@@ -206,6 +206,11 @@ export function TooltipContent({
             <p>{custom.intent}</p>
           </div>
         )}
+        {talent.source.unresolved?.length ? (
+          <p className="req" data-testid={`source-warning-${talent.id}`}>
+            This publisher formula is not fully resolved. It is copied as published, without guessed values.
+          </p>
+        ) : null}
         {hasNext && (
           <div className={`next${nextObserved ? '' : ' dim'}`}>
             <div className="text-white">Next rank:</div>
