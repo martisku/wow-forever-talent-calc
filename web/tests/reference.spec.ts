@@ -11,6 +11,7 @@ test('current reference cards open a versioned snapshot and class switching pres
   await expect(page.getByTestId('reference-source')).toContainText('retrieved')
   await expect(page.getByTestId('class-ranks-line')).toContainText('published by Wowhead')
   await expect(page.getByTestId('changes-link')).toHaveCount(0)
+  await expect(page.getByTestId('summary-hints')).not.toContainText('Highlight changes')
   await page.getByTestId('class-chip-mage').click()
   await expect(page).toHaveURL(new RegExp(`ruleset=${current.ruleset}&rev=${current.revision}`))
   await expect(page.getByTestId('reference-source')).toBeVisible()

@@ -127,7 +127,7 @@ export function BuildSummary({
               <kbd>Ctrl</kbd>+<kbd>Z</kbd> undoes and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd> redoes - a Reset
               too.
             </li>
-            {!rulesetName && (
+            {!identity && (
               <li>
                 <strong className="text-[var(--text)]">Highlight changes</strong> in the header dims everything Classic
                 already had.
