@@ -1,3 +1,8 @@
+> 2026-11-13: [reference updates](REFERENCE-UPDATES.md) add a source-verified
+> Wowhead adapter, retained source evidence and a small current-reference pointer.
+> The landing page imports only identity/label metadata, keeping class data and
+> encoding registries lazy. Legacy routes and experiments remain pinned.
+
 # Current ruleset architecture
 
 The calculator resolves `(ruleset ID, revision, class)` in

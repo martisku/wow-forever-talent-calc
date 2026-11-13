@@ -1,0 +1,1898 @@
+{
+  "$schema": "../../../../schema/class.schema.json",
+  "schemaVersion": 1,
+  "class": "warlock",
+  "className": "Warlock",
+  "dataVersion": 1,
+  "dataSource": "wowhead",
+  "generatedAt": "2026-11-13T14:42:00Z",
+  "rules": {
+    "pointsPerRow": 5,
+    "maxPoints": 51,
+    "firstPointLevel": 10,
+    "maxLevel": 60,
+    "rulesSource": "assumed"
+  },
+  "pages": [
+    {
+      "id": "primary",
+      "name": "Talents"
+    }
+  ],
+  "trees": [
+    {
+      "id": "curses",
+      "name": "Curses",
+      "page": "primary",
+      "order": 0,
+      "icon": "spell_shadow_burningspirit",
+      "rows": 7,
+      "cols": 4,
+      "talents": [
+        {
+          "id": "wh-105921",
+          "name": "Improved Life Tap",
+          "row": 0,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_shadow_burningspirit",
+          "iconSource": "wowhead",
+          "description": "Increases the amount of Mana awarded by your Life Tap spell by 10%.",
+          "ranks": [
+            "Increases the amount of Mana awarded by your Life Tap spell by 10%.",
+            "Increases the amount of Mana awarded by your Life Tap spell by 20%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18182,
+            18182
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105921
+          }
+        },
+        {
+          "id": "wh-105925",
+          "name": "Suppression",
+          "row": 0,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "spell_shadow_unsummonbuilding",
+          "iconSource": "wowhead",
+          "description": "Improves your chance to hit by 1% and reduces all threat you generate by 4%.",
+          "ranks": [
+            "Improves your chance to hit by 1% and reduces all threat you generate by 4%.",
+            "Improves your chance to hit by 2% and reduces all threat you generate by 8%.",
+            "Improves your chance to hit by 3% and reduces all threat you generate by 12%.",
+            "Improves your chance to hit by 4% and reduces all threat you generate by 16%.",
+            "Improves your chance to hit by 5% and reduces all threat you generate by 20%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18174,
+            18174,
+            18174,
+            18174,
+            18174
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105925
+          }
+        },
+        {
+          "id": "wh-105924",
+          "name": "Improved Corruption",
+          "row": 0,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_shadow_abominationexplosion",
+          "iconSource": "wowhead",
+          "description": "Reduces the casting time of your Corruption spell by 0.4 sec and increases the damage it deals by 2%.",
+          "ranks": [
+            "Reduces the casting time of your Corruption spell by 0.4 sec and increases the damage it deals by 2%.",
+            "Reduces the casting time of your Corruption spell by 0.8 sec and increases the damage it deals by 4%.",
+            "Reduces the casting time of your Corruption spell by 1.2 sec and increases the damage it deals by 6%.",
+            "Reduces the casting time of your Corruption spell by 1.6 sec and increases the damage it deals by 8%.",
+            "Reduces the casting time of your Corruption spell by 2 sec and increases the damage it deals by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17810,
+            17810,
+            17810,
+            17810,
+            17810
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105924
+          }
+        },
+        {
+          "id": "wh-105923",
+          "name": "Grim Reach",
+          "row": 1,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_shadow_callofbone",
+          "iconSource": "wowhead",
+          "description": "Increases the range of your Affliction spells by 10%.",
+          "ranks": [
+            "Increases the range of your Affliction spells by 10%.",
+            "Increases the range of your Affliction spells by 20%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18218,
+            18218
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105923
+          }
+        },
+        {
+          "id": "wh-105922",
+          "name": "Soul Harvest",
+          "row": 1,
+          "col": 1,
+          "maxRank": 2,
+          "icon": "inv_elemental_primal_shadow",
+          "iconSource": "wowhead",
+          "description": "Killing a non-trivial target afflicted by your Drain Soul increases your Mana regeneration by 50% for 10 sec and allows 50% of normal Mana regeneration to continue while casting.",
+          "ranks": [
+            "Killing a non-trivial target afflicted by your Drain Soul increases your Mana regeneration by 50% for 10 sec and allows 50% of normal Mana regeneration to continue while casting.",
+            "Killing a non-trivial target afflicted by your Drain Soul increases your Mana regeneration by 100% for 10 sec and allows 100% of normal Mana regeneration to continue while casting."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            437032,
+            437032
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105922
+          }
+        },
+        {
+          "id": "wh-105920",
+          "name": "Improved Drains",
+          "row": 1,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_shadow_haunting",
+          "iconSource": "wowhead",
+          "description": "Increases Health drained, damage done, or Mana drained by your Drain Life, Drain Soul, and Drain Mana spells by 7%.",
+          "ranks": [
+            "Increases Health drained, damage done, or Mana drained by your Drain Life, Drain Soul, and Drain Mana spells by 7%.",
+            "Increases Health drained, damage done, or Mana drained by your Drain Life, Drain Soul, and Drain Mana spells by 13%.",
+            "Increases Health drained, damage done, or Mana drained by your Drain Life, Drain Soul, and Drain Mana spells by 20%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            403511,
+            403511,
+            403511
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105920
+          }
+        },
+        {
+          "id": "wh-105919",
+          "name": "Improved Bane of Agony",
+          "row": 2,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_shadow_curseofsargeras",
+          "iconSource": "wowhead",
+          "description": "Increases the damage done by your Bane of Agony by 5%.",
+          "ranks": [
+            "Increases the damage done by your Bane of Agony by 5%.",
+            "Increases the damage done by your Bane of Agony by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18827,
+            18827
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105919
+          }
+        },
+        {
+          "id": "wh-105918",
+          "name": "Fel Concentration",
+          "row": 2,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_shadow_fingerofdeath",
+          "iconSource": "wowhead",
+          "description": "Gives your Drain Life, Drain Mana, Drain Soul, and Wrack spells a 23% chance to not lose casting time when you take damage.",
+          "ranks": [
+            "Gives your Drain Life, Drain Mana, Drain Soul, and Wrack spells a 23% chance to not lose casting time when you take damage.",
+            "Gives your Drain Life, Drain Mana, Drain Soul, and Wrack spells a 47% chance to not lose casting time when you take damage.",
+            "Gives your Drain Life, Drain Mana, Drain Soul, and Wrack spells a 70% chance to not lose casting time when you take damage."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17783,
+            17783,
+            17783
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105918
+          }
+        },
+        {
+          "id": "wh-105916",
+          "name": "Amplify Curse",
+          "row": 2,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "spell_shadow_contagion",
+          "iconSource": "wowhead",
+          "description": "Increases the effect of your next Curse of Weakness or Bane of Agony by 50%, or your next Curse of Exhaustion by 20%. Lasts 30 sec.",
+          "ranks": [
+            "Increases the effect of your next Curse of Weakness or Bane of Agony by 50%, or your next Curse of Exhaustion by 20%. Lasts 30 sec."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18288
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105916
+          }
+        },
+        {
+          "id": "wh-105917",
+          "name": "Pandemic",
+          "row": 2,
+          "col": 3,
+          "maxRank": 3,
+          "icon": "spell_shadow_unstableaffliction_2",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike damage bonus of your Corruption, Bane of Agony, Bane of Doom, Drain Soul, Drain Life, Siphon Life, and Wrack spells by 33%.",
+          "ranks": [
+            "Increases the critical strike damage bonus of your Corruption, Bane of Agony, Bane of Doom, Drain Soul, Drain Life, Siphon Life, and Wrack spells by 33%.",
+            "Increases the critical strike damage bonus of your Corruption, Bane of Agony, Bane of Doom, Drain Soul, Drain Life, Siphon Life, and Wrack spells by 67%.",
+            "Increases the critical strike damage bonus of your Corruption, Bane of Agony, Bane of Doom, Drain Soul, Drain Life, Siphon Life, and Wrack spells by 100%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            427712,
+            427712,
+            427712
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105917
+          }
+        },
+        {
+          "id": "wh-110876",
+          "name": "Malevolence",
+          "row": 3,
+          "col": 0,
+          "maxRank": 5,
+          "icon": "spell_shadow_focusedpower",
+          "iconSource": "wowhead",
+          "description": "Increases the critical effect chance of your Shadow spells by 1%.",
+          "ranks": [
+            "Increases the critical effect chance of your Shadow spells by 1%.",
+            "Increases the critical effect chance of your Shadow spells by 2%.",
+            "Increases the critical effect chance of your Shadow spells by 3%.",
+            "Increases the critical effect chance of your Shadow spells by 4%.",
+            "Increases the critical effect chance of your Shadow spells by 5%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1310949,
+            1310949,
+            1310949,
+            1310949,
+            1310949
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 110876
+          }
+        },
+        {
+          "id": "wh-105914",
+          "name": "Nightfall",
+          "row": 3,
+          "col": 1,
+          "maxRank": 2,
+          "icon": "spell_shadow_twilight",
+          "iconSource": "wowhead",
+          "description": "Gives your Corruption, Drain Soul, Drain Life, and Wrack spells a 2% chance to cause you to enter a Shadow Trance after damaging the opponent. The Shadow Trance reduces the casting time of your next Shadow Bolt spell by 100%.",
+          "ranks": [
+            "Gives your Corruption, Drain Soul, Drain Life, and Wrack spells a 2% chance to cause you to enter a Shadow Trance after damaging the opponent. The Shadow Trance reduces the casting time of your next Shadow Bolt spell by 100%.",
+            "Gives your Corruption, Drain Soul, Drain Life, and Wrack spells a 4% chance to cause you to enter a Shadow Trance after damaging the opponent. The Shadow Trance reduces the casting time of your next Shadow Bolt spell by 100%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18094,
+            18094
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105914
+          }
+        },
+        {
+          "id": "wh-105913",
+          "name": "Curse of Exhaustion",
+          "row": 3,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "spell_shadow_grimward",
+          "iconSource": "wowhead",
+          "description": "Reduces the target's movement speed by 30% for 12 sec. Only one Curse per Warlock can be active on any one target.",
+          "ranks": [
+            "Reduces the target's movement speed by 30% for 12 sec. Only one Curse per Warlock can be active on any one target."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18223
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105913
+          },
+          "requires": [
+            {
+              "talent": "wh-105916",
+              "rank": 1
+            }
+          ]
+        },
+        {
+          "id": "wh-105912",
+          "name": "Siphon Life",
+          "row": 4,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_shadow_requiem",
+          "iconSource": "wowhead",
+          "description": "Transfers 11 health from the target to the caster every 3 sec. Lasts 30 sec.",
+          "ranks": [
+            "Transfers 11 health from the target to the caster every 3 sec. Lasts 30 sec."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18265
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105912
+          }
+        },
+        {
+          "id": "wh-105911",
+          "name": "Soul Siphon",
+          "row": 4,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_shadow_lifedrain02",
+          "iconSource": "wowhead",
+          "description": "Increases the damage done or health drained by your Drain Life, Drain Soul, and Wrack spells by 4% per each of your Corruption, Siphon Life, and Bane of Agony effects active on the target, up to a maximum increase of 12%.",
+          "ranks": [
+            "Increases the damage done or health drained by your Drain Life, Drain Soul, and Wrack spells by 4% per each of your Corruption, Siphon Life, and Bane of Agony effects active on the target, up to a maximum increase of 12%.",
+            "Increases the damage done or health drained by your Drain Life, Drain Soul, and Wrack spells by 8% per each of your Corruption, Siphon Life, and Bane of Agony effects active on the target, up to a maximum increase of 24%.",
+            "Increases the damage done or health drained by your Drain Life, Drain Soul, and Wrack spells by 12% per each of your Corruption, Siphon Life, and Bane of Agony effects active on the target, up to a maximum increase of 36%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17804,
+            17804,
+            17804
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105911
+          }
+        },
+        {
+          "id": "wh-105910",
+          "name": "Shadow Mastery",
+          "row": 5,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_shadow_shadetruesight",
+          "iconSource": "wowhead",
+          "description": "Increases the damage dealt or life drained by your Shadow spells by 2%.",
+          "ranks": [
+            "Increases the damage dealt or life drained by your Shadow spells by 2%.",
+            "Increases the damage dealt or life drained by your Shadow spells by 4%.",
+            "Increases the damage dealt or life drained by your Shadow spells by 6%.",
+            "Increases the damage dealt or life drained by your Shadow spells by 8%.",
+            "Increases the damage dealt or life drained by your Shadow spells by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18271,
+            18271,
+            18271,
+            18271,
+            18271
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105910
+          }
+        },
+        {
+          "id": "wh-105909",
+          "name": "Wrack",
+          "row": 6,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "ability_deathknight_hemorrhagicfever",
+          "iconSource": "wowhead",
+          "description": "Tears the target apart from within for 6 sec, inflicting 60 Shadow damage every 1 sec. While channeling, your Siphon Life, Corruption, and Bane of Agony effects on the target deal their periodic damage 100% faster.",
+          "ranks": [
+            "Tears the target apart from within for 6 sec, inflicting 60 Shadow damage every 1 sec. While channeling, your Siphon Life, Corruption, and Bane of Agony effects on the target deal their periodic damage 100% faster."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1316697
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105909
+          },
+          "requires": [
+            {
+              "talent": "wh-105912",
+              "rank": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "summoning",
+      "name": "Summoning",
+      "page": "primary",
+      "order": 1,
+      "icon": "spell_shadow_lifedrain",
+      "rows": 7,
+      "cols": 4,
+      "talents": [
+        {
+          "id": "wh-105905",
+          "name": "Improved Health Funnel",
+          "row": 0,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_shadow_lifedrain",
+          "iconSource": "wowhead",
+          "description": "Increases the amount of health transferred by your Health Funnel spell by 20%, reduces its health cost by 15%, and reduces all threat your Health Funnel generates by 50%. Allows Health Funnel to be used regardless of your demon's health.",
+          "ranks": [
+            "Increases the amount of health transferred by your Health Funnel spell by 20%, reduces its health cost by 15%, and reduces all threat your Health Funnel generates by 50%. Allows Health Funnel to be used regardless of your demon's health.",
+            "Increases the amount of health transferred by your Health Funnel spell by 40%, reduces its health cost by 30%, and reduces all threat your Health Funnel generates by 100%. Allows Health Funnel to be used regardless of your demon's health."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18703,
+            18703
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105905
+          }
+        },
+        {
+          "id": "wh-105908",
+          "name": "Improved Imp",
+          "row": 0,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_shadow_summonimp",
+          "iconSource": "wowhead",
+          "description": "Increases the damage of your Imp's Firebolt spell by 10% and the effect of its Fire Shield spell by 10%.",
+          "ranks": [
+            "Increases the damage of your Imp's Firebolt spell by 10% and the effect of its Fire Shield spell by 10%.",
+            "Increases the damage of your Imp's Firebolt spell by 20% and the effect of its Fire Shield spell by 20%.",
+            "Increases the damage of your Imp's Firebolt spell by 30% and the effect of its Fire Shield spell by 30%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18694,
+            18694,
+            18694
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105908
+          }
+        },
+        {
+          "id": "wh-105907",
+          "name": "Demonic Embrace",
+          "row": 0,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_shadow_metamorphosis",
+          "iconSource": "wowhead",
+          "description": "Increases your total Stamina by 3%.",
+          "ranks": [
+            "Increases your total Stamina by 3%.",
+            "Increases your total Stamina by 6%.",
+            "Increases your total Stamina by 9%.",
+            "Increases your total Stamina by 12%.",
+            "Increases your total Stamina by 15%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18697,
+            18697,
+            18697,
+            18697,
+            18697
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105907
+          }
+        },
+        {
+          "id": "wh-105906",
+          "name": "Unholy Power",
+          "row": 0,
+          "col": 3,
+          "maxRank": 5,
+          "icon": "spell_shadow_shadowworddominate",
+          "iconSource": "wowhead",
+          "description": "Increases all damage done by your Imp, Voidwalker, Succubus, Incubus, and Felhunter pets by 2%.",
+          "ranks": [
+            "Increases all damage done by your Imp, Voidwalker, Succubus, Incubus, and Felhunter pets by 2%.",
+            "Increases all damage done by your Imp, Voidwalker, Succubus, Incubus, and Felhunter pets by 4%.",
+            "Increases all damage done by your Imp, Voidwalker, Succubus, Incubus, and Felhunter pets by 6%.",
+            "Increases all damage done by your Imp, Voidwalker, Succubus, Incubus, and Felhunter pets by 8%.",
+            "Increases all damage done by your Imp, Voidwalker, Succubus, Incubus, and Felhunter pets by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18769,
+            18769,
+            18769,
+            18769,
+            18769
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105906
+          }
+        },
+        {
+          "id": "wh-105902",
+          "name": "Demonic Aegis",
+          "row": 1,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_shadow_ragingscream",
+          "iconSource": "wowhead",
+          "description": "Increases the effectiveness of your Demon Skin and Demon Armor spells by 15%.",
+          "ranks": [
+            "Increases the effectiveness of your Demon Skin and Demon Armor spells by 15%.",
+            "Increases the effectiveness of your Demon Skin and Demon Armor spells by 30%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1235316,
+            1235316
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105902
+          }
+        },
+        {
+          "id": "wh-105904",
+          "name": "Improved Voidwalker",
+          "row": 1,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_shadow_summonvoidwalker",
+          "iconSource": "wowhead",
+          "description": "Increases the effectiveness of your Voidwalker's Torment, Consume Shadows, Sacrifice, and Suffering spells by 10%.",
+          "ranks": [
+            "Increases the effectiveness of your Voidwalker's Torment, Consume Shadows, Sacrifice, and Suffering spells by 10%.",
+            "Increases the effectiveness of your Voidwalker's Torment, Consume Shadows, Sacrifice, and Suffering spells by 20%.",
+            "Increases the effectiveness of your Voidwalker's Torment, Consume Shadows, Sacrifice, and Suffering spells by 30%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18705,
+            18705,
+            18705
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105904
+          }
+        },
+        {
+          "id": "wh-105903",
+          "name": "Fel Vitality",
+          "row": 1,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_shadow_demonictactics",
+          "iconSource": "wowhead",
+          "description": "Increases the maximum health and Mana of your Imp, Voidwalker, Succubus, Incubus, and Felhunter by 5%, and increases your maximum Mana by 5%.",
+          "ranks": [
+            "Increases the maximum health and Mana of your Imp, Voidwalker, Succubus, Incubus, and Felhunter by 5%, and increases your maximum Mana by 5%.",
+            "Increases the maximum health and Mana of your Imp, Voidwalker, Succubus, Incubus, and Felhunter by 10%, and increases your maximum Mana by 10%.",
+            "Increases the maximum health and Mana of your Imp, Voidwalker, Succubus, Incubus, and Felhunter by 15%, and increases your maximum Mana by 15%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18731,
+            18731,
+            18731
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105903
+          }
+        },
+        {
+          "id": "wh-105899",
+          "name": "Demonic Energies",
+          "row": 1,
+          "col": 3,
+          "maxRank": 2,
+          "icon": "spell_shadow_felmending",
+          "iconSource": "wowhead",
+          "description": "You heal your pet for 8% of all spell damage you deal. When you gain Mana from Life Tap, your summoned demon gains 50% of the Mana you gain.",
+          "ranks": [
+            "You heal your pet for 8% of all spell damage you deal. When you gain Mana from Life Tap, your summoned demon gains 50% of the Mana you gain.",
+            "You heal your pet for 15% of all spell damage you deal. When you gain Mana from Life Tap, your summoned demon gains 100% of the Mana you gain."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1225214,
+            1225214
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105899
+          }
+        },
+        {
+          "id": "wh-105901",
+          "name": "Improved Sayaad",
+          "row": 2,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "ability_warlock_randomizesuccubusincubus",
+          "iconSource": "wowhead",
+          "description": "Increases the effect of your Succubus' and Incubus' Lash of Pain and Soothing Kiss spells by 10%, and increases the duration of your Succubus' and Incubus' Seduction and Lesser Invisibility spells by 10%.",
+          "ranks": [
+            "Increases the effect of your Succubus' and Incubus' Lash of Pain and Soothing Kiss spells by 10%, and increases the duration of your Succubus' and Incubus' Seduction and Lesser Invisibility spells by 10%.",
+            "Increases the effect of your Succubus' and Incubus' Lash of Pain and Soothing Kiss spells by 20%, and increases the duration of your Succubus' and Incubus' Seduction and Lesser Invisibility spells by 20%.",
+            "Increases the effect of your Succubus' and Incubus' Lash of Pain and Soothing Kiss spells by 30%, and increases the duration of your Succubus' and Incubus' Seduction and Lesser Invisibility spells by 30%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18754,
+            18754,
+            18754
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105901
+          }
+        },
+        {
+          "id": "wh-105900",
+          "name": "Demonic Sacrifice",
+          "row": 2,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_shadow_psychicscream",
+          "iconSource": "wowhead",
+          "description": "When activated, sacrifices your summoned Demon to enhance the opposing aspect of your power, granting you an effect that lasts 2 hrs. The effect is canceled if any Demon is summoned. Imp: Increases your Shadow damage by 15%. Voidwalker: Restores 2% of your total Mana every 4 sec. Succubus/Incubus: Increases your Fire damage by 15%. Felhunter: Restores 3% of your total Health every 4 sec.",
+          "ranks": [
+            "When activated, sacrifices your summoned Demon to enhance the opposing aspect of your power, granting you an effect that lasts 2 hrs. The effect is canceled if any Demon is summoned. Imp: Increases your Shadow damage by 15%. Voidwalker: Restores 2% of your total Mana every 4 sec. Succubus/Incubus: Increases your Fire damage by 15%. Felhunter: Restores 3% of your total Health every 4 sec."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18788
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105900
+          }
+        },
+        {
+          "id": "wh-105898",
+          "name": "Master Summoner",
+          "row": 2,
+          "col": 2,
+          "maxRank": 2,
+          "icon": "spell_shadow_impphaseshift",
+          "iconSource": "wowhead",
+          "description": "Reduces the casting time of your Imp, Voidwalker, Succubus, Incubus, and Felhunter Summoning spells by 2 sec and the Mana cost by 20%.",
+          "ranks": [
+            "Reduces the casting time of your Imp, Voidwalker, Succubus, Incubus, and Felhunter Summoning spells by 2 sec and the Mana cost by 20%.",
+            "Reduces the casting time of your Imp, Voidwalker, Succubus, Incubus, and Felhunter Summoning spells by 4 sec and the Mana cost by 40%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18709,
+            18709
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105898
+          }
+        },
+        {
+          "id": "wh-105897",
+          "name": "Decimation",
+          "row": 3,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_fire_fireball02",
+          "iconSource": "wowhead",
+          "description": "Reduces the cooldown of your Soul Fire spell by 45%. When you cast Shadow Bolt or Searing Pain on an enemy below 35% health, they deal 3% increased damage, and for the next 10 sec your Soul Fire spell has its cast time reduced by 20% and costs no Soul Shards.",
+          "ranks": [
+            "Reduces the cooldown of your Soul Fire spell by 45%. When you cast Shadow Bolt or Searing Pain on an enemy below 35% health, they deal 3% increased damage, and for the next 10 sec your Soul Fire spell has its cast time reduced by 20% and costs no Soul Shards.",
+            "Reduces the cooldown of your Soul Fire spell by 90%. When you cast Shadow Bolt or Searing Pain on an enemy below 35% health, they deal 6% increased damage, and for the next 10 sec your Soul Fire spell has its cast time reduced by 40% and costs no Soul Shards."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            440870,
+            440870
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105897
+          }
+        },
+        {
+          "id": "wh-105895",
+          "name": "Fel Domination",
+          "row": 3,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "spell_nature_removecurse",
+          "iconSource": "wowhead",
+          "description": "Your next Imp, Voidwalker, Succubus, Incubus, or Felhunter Summon spell has its casting time reduced by 6 sec and its Mana cost reduced by 50%.",
+          "ranks": [
+            "Your next Imp, Voidwalker, Succubus, Incubus, or Felhunter Summon spell has its casting time reduced by 6 sec and its Mana cost reduced by 50%."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18708
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105895
+          },
+          "requires": [
+            {
+              "talent": "wh-105898",
+              "rank": 2
+            }
+          ]
+        },
+        {
+          "id": "wh-105896",
+          "name": "Demonic Brand",
+          "row": 3,
+          "col": 3,
+          "maxRank": 3,
+          "icon": "ability_demonhunter_chaoticimprint_fire",
+          "iconSource": "wowhead",
+          "description": "Your Searing Pain generates 17% less threat and brands the target for 10 sec. Your pet's next 2 attacks against the target deal ((((60 - 26) * 1.5) + 14 + (0.078 * ((Shadow spell power)))) * (1 * 1 * 1)) to ((((60 - 26) * 1.5) + 17 + (0.078 * ((Shadow spell power)))) * (1 * 1 * 1)) Fire or Shadow damage based on the pet. If Shadow damage is dealt, it has high threat.",
+          "ranks": [
+            "Your Searing Pain generates 17% less threat and brands the target for 10 sec. Your pet's next 2 attacks against the target deal ((((60 - 26) * 1.5) + 14 + (0.078 * ((Shadow spell power)))) * (1 * 1 * 1)) to ((((60 - 26) * 1.5) + 17 + (0.078 * ((Shadow spell power)))) * (1 * 1 * 1)) Fire or Shadow damage based on the pet. If Shadow damage is dealt, it has high threat.",
+            "Your Searing Pain generates 33% less threat and brands the target for 10 sec. Your pet's next 4 attacks against the target deal ((((60 - 26) * 1.5) + 14 + (0.078 * ((Shadow spell power)))) * (1 * 1 * 1)) to ((((60 - 26) * 1.5) + 17 + (0.078 * ((Shadow spell power)))) * (1 * 1 * 1)) Fire or Shadow damage based on the pet. If Shadow damage is dealt, it has high threat.",
+            "Your Searing Pain generates 50% less threat and brands the target for 10 sec. Your pet's next 6 attacks against the target deal ((((60 - 26) * 1.5) + 14 + (0.078 * ((Shadow spell power)))) * (1 * 1 * 1)) to ((((60 - 26) * 1.5) + 17 + (0.078 * ((Shadow spell power)))) * (1 * 1 * 1)) Fire or Shadow damage based on the pet. If Shadow damage is dealt, it has high threat."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1293695,
+            1293695,
+            1293695
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105896
+          }
+        },
+        {
+          "id": "wh-105894",
+          "name": "Improved Felhunter",
+          "row": 4,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "spell_shadow_summonfelhunter",
+          "iconSource": "wowhead",
+          "description": "Increases the Attack Power reduction of your Felhunter's Tainted Blood, the healing of its Devour Magic, and the detection level of its Paranoia by 10%, and reduces the cooldown of its Spell Lock by 2 sec.",
+          "ranks": [
+            "Increases the Attack Power reduction of your Felhunter's Tainted Blood, the healing of its Devour Magic, and the detection level of its Paranoia by 10%, and reduces the cooldown of its Spell Lock by 2 sec.",
+            "Increases the Attack Power reduction of your Felhunter's Tainted Blood, the healing of its Devour Magic, and the detection level of its Paranoia by 20%, and reduces the cooldown of its Spell Lock by 4 sec.",
+            "Increases the Attack Power reduction of your Felhunter's Tainted Blood, the healing of its Devour Magic, and the detection level of its Paranoia by 30%, and reduces the cooldown of its Spell Lock by 6 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1225217,
+            1225217,
+            1225217
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105894
+          }
+        },
+        {
+          "id": "wh-105892",
+          "name": "Soul Link",
+          "row": 4,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_shadow_gathershadows",
+          "iconSource": "wowhead",
+          "description": "When active, 30% of all damage taken by the caster is taken by your Imp, Voidwalker, Succubus, Incubus, or Felhunter Demon instead. In addition, both the Demon and the master will inflict 3% more damage. Lasts as long as the Demon is active.",
+          "ranks": [
+            "When active, 30% of all damage taken by the caster is taken by your Imp, Voidwalker, Succubus, Incubus, or Felhunter Demon instead. In addition, both the Demon and the master will inflict 3% more damage. Lasts as long as the Demon is active."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            19028
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105892
+          },
+          "requires": [
+            {
+              "talent": "wh-105900",
+              "rank": 1
+            }
+          ]
+        },
+        {
+          "id": "wh-105893",
+          "name": "Demonic Knowledge",
+          "row": 4,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_shadow_improvedvampiricembrace",
+          "iconSource": "wowhead",
+          "description": "Increases your spell damage and your Demon pet's spell damage by up to 33% of your level while you have a summoned Demon pet active.",
+          "ranks": [
+            "Increases your spell damage and your Demon pet's spell damage by up to 33% of your level while you have a summoned Demon pet active.",
+            "Increases your spell damage and your Demon pet's spell damage by up to 67% of your level while you have a summoned Demon pet active.",
+            "Increases your spell damage and your Demon pet's spell damage by up to 100% of your level while you have a summoned Demon pet active."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            412732,
+            412732,
+            412732
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105893
+          }
+        },
+        {
+          "id": "wh-105891",
+          "name": "Master Demonologist",
+          "row": 5,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_shadow_shadowpact",
+          "iconSource": "wowhead",
+          "description": "Grants both the Warlock and the summoned demon an effect as long as that demon is active. Imp - Increases Fire damage done by 2%. Voidwalker - Reduces Physical damage taken by 2%. Succubus/Incubus - Increases Shadow damage done by 2%. Felhunter - Reduces Magic damage taken by 2%.",
+          "ranks": [
+            "Grants both the Warlock and the summoned demon an effect as long as that demon is active. Imp - Increases Fire damage done by 2%. Voidwalker - Reduces Physical damage taken by 2%. Succubus/Incubus - Increases Shadow damage done by 2%. Felhunter - Reduces Magic damage taken by 2%.",
+            "Grants both the Warlock and the summoned demon an effect as long as that demon is active. Imp - Increases Fire damage done by 4%. Voidwalker - Reduces Physical damage taken by 4%. Succubus/Incubus - Increases Shadow damage done by 4%. Felhunter - Reduces Magic damage taken by 4%.",
+            "Grants both the Warlock and the summoned demon an effect as long as that demon is active. Imp - Increases Fire damage done by 6%. Voidwalker - Reduces Physical damage taken by 6%. Succubus/Incubus - Increases Shadow damage done by 6%. Felhunter - Reduces Magic damage taken by 6%.",
+            "Grants both the Warlock and the summoned demon an effect as long as that demon is active. Imp - Increases Fire damage done by 8%. Voidwalker - Reduces Physical damage taken by 8%. Succubus/Incubus - Increases Shadow damage done by 8%. Felhunter - Reduces Magic damage taken by 8%.",
+            "Grants both the Warlock and the summoned demon an effect as long as that demon is active. Imp - Increases Fire damage done by 10%. Voidwalker - Reduces Physical damage taken by 10%. Succubus/Incubus - Increases Shadow damage done by 10%. Felhunter - Reduces Magic damage taken by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            23785,
+            23785,
+            23785,
+            23785,
+            23785
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105891
+          }
+        },
+        {
+          "id": "wh-105890",
+          "name": "Demonic Pact",
+          "row": 6,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "inv_ability_soulharvesterwarlock_demonicsoul",
+          "iconSource": "wowhead",
+          "description": "Your Demonic Sacrifice effect is no longer cancelled by summoning a different Demon pet. Resummoning the sacrificed pet will still cancel the effect.",
+          "ranks": [
+            "Your Demonic Sacrifice effect is no longer cancelled by summoning a different Demon pet. Resummoning the sacrificed pet will still cancel the effect."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            425464
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105890
+          },
+          "requires": [
+            {
+              "talent": "wh-105892",
+              "rank": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "destruction",
+      "name": "Destruction",
+      "page": "primary",
+      "order": 2,
+      "icon": "spell_shadow_corpseexplode",
+      "rows": 7,
+      "cols": 4,
+      "talents": [
+        {
+          "id": "wh-105881",
+          "name": "Destructive Reach",
+          "row": 0,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_shadow_corpseexplode",
+          "iconSource": "wowhead",
+          "description": "Increases the range of your Destruction spells by 10%.",
+          "ranks": [
+            "Increases the range of your Destruction spells by 10%.",
+            "Increases the range of your Destruction spells by 20%."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17917,
+            17917
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105881
+          }
+        },
+        {
+          "id": "wh-105889",
+          "name": "Improved Shadow Bolt",
+          "row": 0,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "spell_shadow_shadowbolt",
+          "iconSource": "wowhead",
+          "description": "Your Shadow Bolt critical strikes increase Shadow damage taken by the target from your attacks by 4% for 12 sec.",
+          "ranks": [
+            "Your Shadow Bolt critical strikes increase Shadow damage taken by the target from your attacks by 4% for 12 sec.",
+            "Your Shadow Bolt critical strikes increase Shadow damage taken by the target from your attacks by 8% for 12 sec.",
+            "Your Shadow Bolt critical strikes increase Shadow damage taken by the target from your attacks by 12% for 12 sec.",
+            "Your Shadow Bolt critical strikes increase Shadow damage taken by the target from your attacks by 16% for 12 sec.",
+            "Your Shadow Bolt critical strikes increase Shadow damage taken by the target from your attacks by 20% for 12 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17793,
+            17793,
+            17793,
+            17793,
+            17793
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105889
+          }
+        },
+        {
+          "id": "wh-105888",
+          "name": "Bane",
+          "row": 0,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_shadow_deathpact",
+          "iconSource": "wowhead",
+          "description": "Reduces the casting time of your Shadow Bolt, Immolate, and Incinerate spells by 0.1 sec and your Soul Fire spell by 0.4 sec.",
+          "ranks": [
+            "Reduces the casting time of your Shadow Bolt, Immolate, and Incinerate spells by 0.1 sec and your Soul Fire spell by 0.4 sec.",
+            "Reduces the casting time of your Shadow Bolt, Immolate, and Incinerate spells by 0.2 sec and your Soul Fire spell by 0.8 sec.",
+            "Reduces the casting time of your Shadow Bolt, Immolate, and Incinerate spells by 0.3 sec and your Soul Fire spell by 1.2 sec.",
+            "Reduces the casting time of your Shadow Bolt, Immolate, and Incinerate spells by 0.4 sec and your Soul Fire spell by 1.6 sec.",
+            "Reduces the casting time of your Shadow Bolt, Immolate, and Incinerate spells by 0.5 sec and your Soul Fire spell by 2 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17788,
+            17788,
+            17788,
+            17788,
+            17788
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105888
+          }
+        },
+        {
+          "id": "wh-105885",
+          "name": "Molten Skin",
+          "row": 1,
+          "col": 0,
+          "maxRank": 5,
+          "icon": "ability_mage_moltenarmor",
+          "iconSource": "wowhead",
+          "description": "Reduces all damage taken by 2%.",
+          "ranks": [
+            "Reduces all damage taken by 2%.",
+            "Reduces all damage taken by 4%.",
+            "Reduces all damage taken by 6%.",
+            "Reduces all damage taken by 8%.",
+            "Reduces all damage taken by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1225220,
+            1225220,
+            1225220,
+            1225220,
+            1225220
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105885
+          }
+        },
+        {
+          "id": "wh-105887",
+          "name": "Cataclysm",
+          "row": 1,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_fire_windsofwoe",
+          "iconSource": "wowhead",
+          "description": "Reduces the Mana cost of your Destruction spells by 3%.",
+          "ranks": [
+            "Reduces the Mana cost of your Destruction spells by 3%.",
+            "Reduces the Mana cost of your Destruction spells by 6%.",
+            "Reduces the Mana cost of your Destruction spells by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17778,
+            17778,
+            17778
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105887
+          }
+        },
+        {
+          "id": "wh-105886",
+          "name": "Aftermath",
+          "row": 1,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_fire_fire",
+          "iconSource": "wowhead",
+          "description": "Increases the initial damage of your Immolate spell by 10% and your Conflagrate spell has a 20% chance to Daze the target, reducing the target's movement speed by 50% for 5 sec.",
+          "ranks": [
+            "Increases the initial damage of your Immolate spell by 10% and your Conflagrate spell has a 20% chance to Daze the target, reducing the target's movement speed by 50% for 5 sec.",
+            "Increases the initial damage of your Immolate spell by 20% and your Conflagrate spell has a 40% chance to Daze the target, reducing the target's movement speed by 50% for 5 sec.",
+            "Increases the initial damage of your Immolate spell by 30% and your Conflagrate spell has a 60% chance to Daze the target, reducing the target's movement speed by 50% for 5 sec.",
+            "Increases the initial damage of your Immolate spell by 40% and your Conflagrate spell has a 80% chance to Daze the target, reducing the target's movement speed by 50% for 5 sec.",
+            "Increases the initial damage of your Immolate spell by 50% and your Conflagrate spell has a 100% chance to Daze the target, reducing the target's movement speed by 50% for 5 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18119,
+            18119,
+            18119,
+            18119,
+            18119
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105886
+          }
+        },
+        {
+          "id": "wh-105883",
+          "name": "Ruin",
+          "row": 2,
+          "col": 1,
+          "maxRank": 5,
+          "icon": "spell_shadow_shadowwordpain",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike damage bonus of your Destruction spells by 20%.",
+          "ranks": [
+            "Increases the critical strike damage bonus of your Destruction spells by 20%.",
+            "Increases the critical strike damage bonus of your Destruction spells by 40%.",
+            "Increases the critical strike damage bonus of your Destruction spells by 60%.",
+            "Increases the critical strike damage bonus of your Destruction spells by 80%.",
+            "Increases the critical strike damage bonus of your Destruction spells by 100%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17959,
+            17959,
+            17959,
+            17959,
+            17959
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105883
+          }
+        },
+        {
+          "id": "wh-105884",
+          "name": "Shadowburn",
+          "row": 2,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "spell_shadow_scourgebuild",
+          "iconSource": "wowhead",
+          "description": "Instantly blasts the target for 65 to 74 Shadow damage. If a non-trivial target dies within 8 sec of being hit with Shadowburn, the caster gains a Soul Shard.",
+          "ranks": [
+            "Instantly blasts the target for 65 to 74 Shadow damage. If a non-trivial target dies within 8 sec of being hit with Shadowburn, the caster gains a Soul Shard."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17877
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105884
+          }
+        },
+        {
+          "id": "wh-105882",
+          "name": "Intensity",
+          "row": 3,
+          "col": 0,
+          "maxRank": 3,
+          "icon": "spell_fire_lavaspawn",
+          "iconSource": "wowhead",
+          "description": "Gives your Destruction spells a 23% chance to not lose casting time when you take damage.",
+          "ranks": [
+            "Gives your Destruction spells a 23% chance to not lose casting time when you take damage.",
+            "Gives your Destruction spells a 47% chance to not lose casting time when you take damage.",
+            "Gives your Destruction spells a 70% chance to not lose casting time when you take damage."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18135,
+            18135,
+            18135
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105882
+          }
+        },
+        {
+          "id": "wh-105879",
+          "name": "Agonizing Flames",
+          "row": 3,
+          "col": 1,
+          "maxRank": 3,
+          "icon": "spell_fire_soulburn",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike chance of your Searing Pain spell by 3% and the damage done by all your Destruction spells by 3%.",
+          "ranks": [
+            "Increases the critical strike chance of your Searing Pain spell by 3% and the damage done by all your Destruction spells by 3%.",
+            "Increases the critical strike chance of your Searing Pain spell by 7% and the damage done by all your Destruction spells by 7%.",
+            "Increases the critical strike chance of your Searing Pain spell by 10% and the damage done by all your Destruction spells by 10%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            17927,
+            17927,
+            17927
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105879
+          }
+        },
+        {
+          "id": "wh-105880",
+          "name": "Conflagrate",
+          "row": 3,
+          "col": 2,
+          "maxRank": 1,
+          "icon": "spell_fire_fireball",
+          "iconSource": "wowhead",
+          "description": "Ignites a target that is already afflicted by your Immolate spell, dealing 88 to 111 Fire damage and consuming your Immolate effect.",
+          "ranks": [
+            "Ignites a target that is already afflicted by your Immolate spell, dealing 88 to 111 Fire damage and consuming your Immolate effect."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1293817
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105880
+          }
+        },
+        {
+          "id": "wh-105878",
+          "name": "Pyroclasm",
+          "row": 4,
+          "col": 0,
+          "maxRank": 2,
+          "icon": "spell_fire_volcano",
+          "iconSource": "wowhead",
+          "description": "Gives your Soul Fire spell a 13% chance to Stun the target for 3 sec, and your Rain of Fire and Hellfire spells a 13% chance over their duration to Stun targets they damage for 3 sec.",
+          "ranks": [
+            "Gives your Soul Fire spell a 13% chance to Stun the target for 3 sec, and your Rain of Fire and Hellfire spells a 13% chance over their duration to Stun targets they damage for 3 sec.",
+            "Gives your Soul Fire spell a 26% chance to Stun the target for 3 sec, and your Rain of Fire and Hellfire spells a 26% chance over their duration to Stun targets they damage for 3 sec."
+          ],
+          "ranksObserved": [
+            1,
+            2
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            18073,
+            18073
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105878
+          },
+          "requires": [
+            {
+              "talent": "wh-105882",
+              "rank": 3
+            }
+          ]
+        },
+        {
+          "id": "wh-105876",
+          "name": "Bane of Havoc",
+          "row": 4,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "ability_warlock_baneofhavoc",
+          "iconSource": "wowhead",
+          "description": "Afflicts the target for 5 min, causing 15% of all damage done by the Warlock to other targets to also be dealt to the cursed target. Bane of Havoc is limited to 1 target, and only one Bane per Warlock can be active on any one target.",
+          "ranks": [
+            "Afflicts the target for 5 min, causing 15% of all damage done by the Warlock to other targets to also be dealt to the cursed target. Bane of Havoc is limited to 1 target, and only one Bane per Warlock can be active on any one target."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            1225228
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105876
+          }
+        },
+        {
+          "id": "wh-105877",
+          "name": "Fire and Brimstone",
+          "row": 4,
+          "col": 2,
+          "maxRank": 3,
+          "icon": "spell_fire_meteorstorm",
+          "iconSource": "wowhead",
+          "description": "Increases the critical strike chance of your Conflagrate spell by 8%.",
+          "ranks": [
+            "Increases the critical strike chance of your Conflagrate spell by 8%.",
+            "Increases the critical strike chance of your Conflagrate spell by 17%.",
+            "Increases the critical strike chance of your Conflagrate spell by 25%."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            412751,
+            412751,
+            412751
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105877
+          },
+          "requires": [
+            {
+              "talent": "wh-105880",
+              "rank": 1
+            }
+          ]
+        },
+        {
+          "id": "wh-105875",
+          "name": "Shadow and Flame",
+          "row": 5,
+          "col": 2,
+          "maxRank": 5,
+          "icon": "spell_fire_playingwithfire",
+          "iconSource": "wowhead",
+          "description": "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 4% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 4% for 20 sec. In addition, Conflagrate has a 20% chance not to consume Immolate, and Shadowburn has a 20% chance to instantly refund a Soul Shard.",
+          "ranks": [
+            "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 4% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 4% for 20 sec. In addition, Conflagrate has a 20% chance not to consume Immolate, and Shadowburn has a 20% chance to instantly refund a Soul Shard.",
+            "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 8% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 8% for 20 sec. In addition, Conflagrate has a 40% chance not to consume Immolate, and Shadowburn has a 40% chance to instantly refund a Soul Shard.",
+            "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 12% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 12% for 20 sec. In addition, Conflagrate has a 60% chance not to consume Immolate, and Shadowburn has a 60% chance to instantly refund a Soul Shard.",
+            "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 16% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 16% for 20 sec. In addition, Conflagrate has a 80% chance not to consume Immolate, and Shadowburn has a 80% chance to instantly refund a Soul Shard.",
+            "Hitting an enemy with Conflagrate increases all Shadow damage you deal by 20% for 20 sec, and hitting an enemy with Shadowburn increases all Fire damage you deal by 20% for 20 sec. In addition, Conflagrate has a 100% chance not to consume Immolate, and Shadowburn has a 100% chance to instantly refund a Soul Shard."
+          ],
+          "ranksObserved": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            426316,
+            426316,
+            426316,
+            426316,
+            426316
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105875
+          }
+        },
+        {
+          "id": "wh-105874",
+          "name": "Incinerate",
+          "row": 6,
+          "col": 1,
+          "maxRank": 1,
+          "icon": "spell_fire_burnout",
+          "iconSource": "wowhead",
+          "description": "Deals 100 to 114 Fire damage to your target and an additional 25% damage if the target is afflicted by Immolate.",
+          "ranks": [
+            "Deals 100 to 114 Fire damage to your target and an additional 25% damage if the target is afflicted by Immolate."
+          ],
+          "ranksObserved": [
+            1
+          ],
+          "ranksSource": "observed",
+          "spellIds": [
+            412758
+          ],
+          "source": {
+            "kind": "wowhead",
+            "url": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+            "version": "1.60.1",
+            "dataRevision": "1794343902",
+            "retrievedAt": "2026-11-13T14:42:00Z",
+            "reviewed": false,
+            "upstreamTalentId": 105874
+          },
+          "requires": [
+            {
+              "talent": "wh-105876",
+              "rank": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Published by Wowhead for Forever. May lag hotfixes; not independently verified in game."
+  ]
+}

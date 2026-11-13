@@ -1,3 +1,5 @@
+import type { RulesetIdentity } from '../data/rulesets'
+import { classHash } from '../url/route'
 import { useEffect, useMemo, useRef } from 'react'
 import type { ClassData } from '../data/schema'
 import { pointsInTree, requiredLevel, totalPoints, type Build } from '../rules'
@@ -8,6 +10,7 @@ import { matchesTalent } from './interaction'
 interface Props {
   cls: ClassData
   experimental?: boolean
+  referenceIdentity?: RulesetIdentity
   classId: string
   build: Build
   query: string
@@ -25,6 +28,7 @@ import { HighlightNewToggle } from './HighlightNewToggle'
 
 export function Header({
   experimental,
+  referenceIdentity,
   cls,
   classId,
   build,
@@ -92,7 +96,14 @@ export function Header({
         </div>
       </div>
 
-      {experimental ? <a href="#/">Choose another reference class</a> : <ClassSwitcher current={classId} />}
+      {experimental ? (
+        <a href="#/">Choose another reference class</a>
+      ) : (
+        <ClassSwitcher
+          current={classId}
+          hrefFor={referenceIdentity ? (id) => classHash(id, undefined, '', referenceIdentity) : undefined}
+        />
+      )}
 
       {/* One class-level control row, left to right: search, What's new, Reset
           - all three act on the whole class, all three are the same height, and
@@ -121,10 +132,10 @@ export function Header({
             {query.trim() ? `${results.length} match${results.length === 1 ? '' : 'es'}` : ''}
           </span>
         </div>
-        {!experimental && <HighlightNewToggle classId={classId} />}
+        {!experimental && !referenceIdentity && <HighlightNewToggle classId={classId} />}
         {/* The switch dims what Classic already had; this is the same question
             answered as a list, with the old wording beside the new. */}
-        {!experimental && (
+        {!experimental && !referenceIdentity && (
           <a className="btn" href={changesHash(classId)} data-testid="changes-link">
             What changed vs Classic
           </a>
@@ -145,7 +156,7 @@ export function Header({
             diamond are the two most frequent glyphs on the grid - 21 stars on
             paladin alone - and neither was in the legend (UX review round two,
             finding 10). */}
-        {!experimental && (
+        {!experimental && !referenceIdentity && (
           <p className="control-legend" data-testid="badge-legend">
             <span className="legend-flag" aria-hidden="true">
               ?

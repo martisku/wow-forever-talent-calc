@@ -357,6 +357,11 @@ export function TalentCell({
             {custom.kinds.join(' + ')}
           </span>
         )}
+        {talent.source.unresolved?.length ? (
+          <span className="source-flag" aria-hidden="true">
+            Formula
+          </span>
+        ) : null}
         <span className="badge">
           {rank}/{talent.maxRank}
         </span>
@@ -473,6 +478,7 @@ function cellLabel(
     } else if (addVerdict.reason === 'no-points') parts.push('no talent points left')
     else if (addVerdict.reason === 'page-full') parts.push(`page full: ${addVerdict.detail ?? 'budget reached'}`)
   }
+  if (talent.source.unresolved?.length) parts.push('publisher formula not fully resolved')
   if (marker === 'new') parts.push('new in Forever')
   else if (marker === 'reworked') parts.push('reworked in Forever')
   if (flagged) parts.push('uncertain reading, check it')

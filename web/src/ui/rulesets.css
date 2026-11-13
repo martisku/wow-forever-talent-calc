@@ -32,7 +32,8 @@
 .ruleset-panel li {
   margin: 12px 0;
 }
-.custom-flag {
+.custom-flag,
+.source-flag {
   position: absolute;
   top: -10px;
   left: -4px;
@@ -62,7 +63,8 @@
     padding: 0;
     color: #000;
   }
-  .custom-flag {
+  .custom-flag,
+  .source-flag {
     color: #000;
     background: #fff;
     border-color: #555;

@@ -8,6 +8,12 @@ export function RulesetPanel({ context, compact = false }: { context: RulesetCon
   return (
     <section className="panel ruleset-panel" aria-label="Ruleset" data-testid="ruleset-panel">
       <strong data-testid="ruleset-name">{rulesetLabel(m)}</strong>
+      {m.source && (
+        <p data-testid="reference-source">
+          Published by <a href={m.source.pageUrl}>Wowhead Forever</a> · version {m.source.version} · retrieved{' '}
+          {m.source.retrievedAt.slice(0, 10)}. May lag hotfixes; not independently verified in game.
+        </p>
+      )}
       {m.kind === 'experiment' && (
         <p>Experimental design · 51 shared points · structural legality, not proof of balance.</p>
       )}

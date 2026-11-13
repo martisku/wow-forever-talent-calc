@@ -131,7 +131,10 @@ export function readingLine(source: Source): string | undefined {
   if (source.kind === 'video') {
     return `Read from the stream at ${streamStamp(source.t ?? 0)}.`
   }
-  if (source.kind === 'datamined') return source.build ? `Datamined from build ${source.build}.` : 'Datamined from the client.'
+  if (source.kind === 'wowhead')
+    return `Published by Wowhead for Forever ${source.version}; retrieved ${source.retrievedAt?.slice(0, 10)}. Not independently verified in game.`
+  if (source.kind === 'datamined')
+    return source.build ? `Datamined from build ${source.build}.` : 'Datamined from the client.'
   return 'Entered by hand.'
 }
 

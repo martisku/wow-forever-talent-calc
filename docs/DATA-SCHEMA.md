@@ -809,3 +809,32 @@ Notes on the example:
 - The `secondary` page is given its own 10-point pool via
   `rules.pointsPerPage` purely to show the field; delete `pointsPerPage`
   for a shared pool.
+
+
+## 12. Imported Wowhead reference provenance (2026-11-13)
+
+Source schema v1 now also supports `dataSource: "wowhead"` and
+`source.kind: "wowhead"`. Its required fields are `url` (the discovered Forever
+calculator data script), `version` (the publisher's three-part client version),
+`dataRevision` and `retrievedAt` (UTC RFC3339). `upstreamTalentId` retains the
+publisher ID. No game-client build number, video confidence or human review is
+invented. These fields are forbidden for other source kinds.
+
+`iconSource: "wowhead"` identifies the supplied icon slug; already-retained icon
+files are reused without replacement. All published rank descriptions are kept
+as complete string-form `ranks`; `ranksObserved` covers ranks available in that
+source, analogous to DB2 import, and does not claim independent in-game testing.
+Per-rank `spellIds` preserve the publisher array, including repetitions. Stable
+talent slugs are `wh-<upstream-id>`; renaming text does not change identity.
+
+The optional `source.unresolved` array explicitly records retained symbolic
+variables. The initial adapter recognizes `$mcrit`, copies it without numerical
+substitution, and marks the affected talent and report. Unknown variables are
+errors requiring an adapter change. See [reference updates](REFERENCE-UPDATES.md)
+for the source contract, caveats and commands.
+
+New data goes to a new retained baseline, not into original video exports or
+existing experiments. `data/current-reference.json` contains `ruleset`, positive
+integer `revision`, and, for publisher snapshots, a checked source-label preview
+(`version`, `retrievedAt`) equal to the selected manifest. The class picker uses
+explicit snapshot links; all old implicit routes retain the legacy interpretation.

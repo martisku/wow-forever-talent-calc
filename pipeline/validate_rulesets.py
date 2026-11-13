@@ -62,6 +62,14 @@ def validate_revision(root, path, m, catalog):
             errors.append(f'retained content changed: {file}')
     if not required <= m['hashes'].keys():
         errors.append('hashes do not cover all revision files')
+    if m.get('source'):
+        source = m['source']
+        raw = folder/'source/talents.js'
+        if not raw.is_file() or hashlib.sha256(raw.read_bytes()).hexdigest() != source['dataSha256']:
+            errors.append('publisher source hash does not match retained data')
+        discovery = folder/'source/discovery.json'
+        if not discovery.is_file() or any(read(discovery).get(k) != v for k, v in source.items()):
+            errors.append('publisher provenance does not match discovery evidence')
     baseline = None
     if m['kind'] == 'experiment':
         pin = m['baseline']
@@ -85,6 +93,13 @@ def validate_revision(root, path, m, catalog):
         errors.extend(f'{class_id}: {e}' for e in class_errors)
         if class_errors:
             continue
+        if m.get('source'):
+            for tree in c['trees']:
+                for talent in tree['talents']:
+                    src = talent['source']
+                    expected = {'kind':'wowhead','url':m['source']['dataUrl'], **{key:m['source'][key] for key in ('version','dataRevision','retrievedAt')}}
+                    if any(src.get(key) != value for key,value in expected.items()):
+                        errors.append(f'{class_id}: publisher provenance mismatch')
         if c['rules']['maxPoints'] != 51:
             errors.append(f'{class_id}: v1 requires a 51-point budget')
         e = orders.get(c['dataVersion'], {}).get('classes', {}).get(class_id)
@@ -144,6 +159,27 @@ def retained_changes(root, base):
     return errors
 
 
+def validate_current_reference(root, catalog):
+    path = root/'data/current-reference.json'
+    if not path.is_file():
+        return ['current reference pointer is missing']
+    current = read(path)
+    if (not {'ruleset','revision'} <= set(current) or not set(current) <= {'ruleset','revision','source'} or not isinstance(current['ruleset'], str)
+            or type(current['revision']) is not int or current['revision'] < 1):
+        return ['invalid current reference pointer']
+    entry = catalog.get((current['ruleset'],current['revision']))
+    if not entry or entry[1]['kind'] != 'baseline':
+        return ['current reference must name a retained baseline']
+    source = entry[1].get('source')
+    preview = {key:source[key] for key in ('version','retrievedAt')} if source else None
+    if current.get('source') != preview:
+        return ['current reference source label does not match the retained baseline']
+    classes = {p.stem for p in (root/'data/talents').glob('*.json')}
+    if not classes <= set(entry[1]['classes']):
+        return ['current reference does not cover all reference classes']
+    return []
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--base', help='Git base ref for append-only verification')
@@ -160,6 +196,7 @@ def main():
         errors.append('legacy baseline is missing')
     for path, m in catalog.values():
         errors.extend(f'{path.relative_to(ROOT)}: {e}' for e in validate_revision(ROOT, path, m, catalog))
+    errors.extend(validate_current_reference(ROOT, catalog))
     if args.base:
         errors.extend(retained_changes(ROOT, args.base))
     for error in errors:

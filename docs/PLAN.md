@@ -1,3 +1,7 @@
+> Fork status (2026-11-13): implemented a Wowhead Forever reference importer and
+> update skill, with immutable source snapshots and current-reference navigation.
+> See [update workflow](REFERENCE-UPDATES.md) and [implementation plan](plans/reference-updates.md).
+
 > Fork status (2026-11-12): first-release ruleset infrastructure and Shaman
 > investment study implemented. Owner authorized autonomous development, PRs and
 > merges. See [authoring](RULESETS.md) and the [release plan](plans/experimental-rulesets-v1.md).

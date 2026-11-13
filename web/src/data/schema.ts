@@ -25,7 +25,13 @@ export interface Reading {
 }
 
 export interface Source {
-  kind: 'video' | 'datamined' | 'manual'
+  kind: 'video' | 'datamined' | 'manual' | 'wowhead'
+  url?: string
+  version?: string
+  dataRevision?: string
+  retrievedAt?: string
+  upstreamTalentId?: number
+  unresolved?: string[]
   video?: string
   t?: number
   frame?: number
@@ -64,7 +70,7 @@ export interface Talent {
   /** One decimal digit per talent in build links; the schema caps this at 9. */
   maxRank: number
   icon: string
-  iconSource: 'classic' | 'crop' | 'datamined' | 'manual'
+  iconSource: 'classic' | 'crop' | 'datamined' | 'manual' | 'wowhead'
   iconCrop?: string
   description: string
   ranks: Rank[]
@@ -115,7 +121,7 @@ export interface ClassData {
   class: string
   className: string
   dataVersion: number
-  dataSource: 'video' | 'datamined' | 'mixed' | 'manual'
+  dataSource: 'video' | 'datamined' | 'mixed' | 'manual' | 'wowhead'
   generatedAt: string
   rules: Rules
   pages: Page[]

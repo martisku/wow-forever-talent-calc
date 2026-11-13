@@ -127,7 +127,7 @@ export function BuildSummary({
               <kbd>Ctrl</kbd>+<kbd>Z</kbd> undoes and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd> redoes - a Reset
               too.
             </li>
-            {!rulesetName && (
+            {!identity && (
               <li>
                 <strong className="text-[var(--text)]">Highlight changes</strong> in the header dims everything Classic
                 already had.
@@ -179,8 +179,8 @@ export function BuildSummary({
           data-testid="copy-code"
           data-code={code}
           onClick={() => copyCode(code)}
-          disabled={code === '' || Boolean(rulesetName)}
-          title={rulesetName ? 'Use a full link to preserve the ruleset revision.' : undefined}
+          disabled={code === '' || Boolean(identity)}
+          title={identity ? 'Use a full link to preserve the ruleset revision.' : undefined}
         >
           {label(codeCopy, 'Copy build code')}
         </button>

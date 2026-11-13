@@ -86,6 +86,10 @@ rewritten/deleted revision files or assets retained by older revisions.
 
 ## Updating reference data
 
+For the current automated Wowhead import, see [reference updates](REFERENCE-UPDATES.md)
+and the repository [update-reference skill](../.agents/skills/update-reference/SKILL.md).
+The class picker follows `data/current-reference.json`; legacy routes stay pinned.
+
 `data/talents/`, extraction, overrides and promotion remain the reference
 correction workflow. They do not write into retained snapshots. Legacy calculator
 links resolve to `reference-2026-11-10` revision 1, captured from commit

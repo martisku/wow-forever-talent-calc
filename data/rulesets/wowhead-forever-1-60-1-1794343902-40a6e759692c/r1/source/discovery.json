@@ -1,0 +1,11 @@
+{
+  "provider": "wowhead",
+  "pageUrl": "https://www.wowhead.com/forever/talent-calc/shaman",
+  "dataUrl": "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1794343902",
+  "version": "1.60.1",
+  "dataRevision": "1794343902",
+  "environment": 16,
+  "retrievedAt": "2026-11-13T14:42:00Z",
+  "dataSha256": "40a6e759692ca1c14d0e12b46194d3c4d0478ff358816c6fc6e063cc5bf3ca98",
+  "pageSha256": "4e46cad3c54ae49278950f3833fdaf802b91f581a89a9fb4d3ae481d77aca733"
+}
