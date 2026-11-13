@@ -203,3 +203,29 @@ def test_same_source_after_fresh_fetch_retains_original_import_date(tmp_path,pay
     (folder/'source.json').write_text(json.dumps(source))
     assert U.publish(folder,root)==target
     assert (root/'data/current-reference.json').read_bytes()==original_pointer
+
+
+def test_source_label_is_checked_against_selected_manifest(tmp_path,payload):
+    root,_=project(tmp_path,payload)
+    source={'version':'1.60.1','retrievedAt':'2026-11-13T12:00:00Z'}
+    entries={('reference',1):(None,{'kind':'baseline','classes':list(W.TREES),'source':source})}
+    assert 'label' in V.validate_current_reference(root,entries)[0]
+    (root/'data/current-reference.json').write_text(json.dumps({'ruleset':'reference','revision':1,'source':source}))
+    assert V.validate_current_reference(root,entries)==[]
+
+
+def test_failed_publish_removes_new_icon_but_preserves_existing_assets(tmp_path,payload,monkeypatch):
+    root,folder=project(tmp_path,payload)
+    previous=(root/'data/current-reference.json').read_bytes()
+    retained=(root/'web/public/icons/ability_test.jpg').read_bytes()
+    payload['talents']['261']['2610']['icon']='ability_new'
+    raw=javascript(payload)
+    (folder/'talents.js').write_bytes(raw)
+    source=V.read(folder/'source.json');source['dataSha256']=W.digest(raw)
+    (folder/'source.json').write_text(json.dumps(source))
+    W.prepare_icons(W.convert(payload,source),folder,root,lambda *args:jpeg(),delay=0)
+    monkeypatch.setattr(V,'validate_revision',lambda *args:['invalid candidate'])
+    with pytest.raises(ValueError,match='invalid candidate'):U.publish(folder,root)
+    assert (root/'data/current-reference.json').read_bytes()==previous
+    assert (root/'web/public/icons/ability_test.jpg').read_bytes()==retained
+    assert not (root/'web/public/icons/ability_new.jpg').exists()

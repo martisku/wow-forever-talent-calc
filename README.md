@@ -12,6 +12,18 @@ The calculator assesses legal allocations and investment requirements. It is
 not a combat simulator and cannot prove balance. The current dataset is a
 **reference snapshot**, not a claim about the latest game or approved custom designs.
 
+## Current reference updates
+
+The class picker opens the latest imported Wowhead Forever reference, with its
+source/version/retrieval date visible. Old builds and experiments retain their
+original snapshots. Publisher data may lag hotfixes; this is not independent
+verification of live game behavior.
+
+Use the repository [update-reference skill](.agents/skills/update-reference/SKILL.md)
+or the [fetch → prepare → publish commands](docs/REFERENCE-UPDATES.md) to check
+for updates, review differences and create a new retained snapshot. No API key
+or browser-time data fetch is required. There is no automatic update schedule.
+
 ## Implemented and planned
 
 Today this fork retains the upstream static calculator: reference class trees,
@@ -52,7 +64,7 @@ the fork's proposed sandbox.
 
 ## Existing reference-calculator functionality
 
-- **All nine classes**, 469 of 470 talents, with the Classic-style rules:
+- **Original footage snapshot:** all nine classes, 469 of 470 talents, with the Classic-style rules:
   51 points, five per row, prerequisite arrows, tier gating.
 - **Shareable builds.** `#/warrior?v=1&t=...` is the whole build; also a short
   build code, a Discord-ready text summary, a print view and `embed=1` for
@@ -137,8 +149,9 @@ uv run python validate.py --check ../data/talents/*.json   # must exit 0
 uv run stages/08_export.py --help                          # extract / promote
 ```
 
-`data/talents/<class>.json` is the reference talent source of truth; the app
+`data/talents/<class>.json` remains the original video-reference source of truth; the app
 also reads encoding orders, generated indexes, crops and the race/spell datasets.
+`data/current-reference.json` selects the imported reference for the class picker.
 Retained baseline snapshots and complete experimental datasets live under
 `data/rulesets/`; see [authoring](docs/RULESETS.md).
 Stage by stage: `pipeline/README.md`. Web details: `web/README.md`. The data contract: `docs/DATA-SCHEMA.md`. Plan and history: `docs/PLAN.md`.

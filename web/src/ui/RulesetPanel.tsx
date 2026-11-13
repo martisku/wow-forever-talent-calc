@@ -40,12 +40,6 @@ export function RulesetPanel({ context, compact = false }: { context: RulesetCon
                 </option>
               ))}
             </select>
-            {m.source && (
-              <p data-testid="reference-source">
-                Published by <a href={m.source.pageUrl}>Wowhead Forever</a> · version {m.source.version} · retrieved{' '}
-                {m.source.retrievedAt.slice(0, 10)}. May lag hotfixes; not independently verified in game.
-              </p>
-            )}
             {m.kind === 'experiment' && (
               <a className="btn" href={classHash(cls.class, 1, '', LEGACY_BASELINE)}>
                 Reference snapshot

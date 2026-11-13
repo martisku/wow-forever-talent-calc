@@ -1,3 +1,4 @@
+import currentReference from '../../data/current-reference.json' with { type: 'json' }
 import { expect, test } from '@playwright/test'
 
 /**
@@ -46,9 +47,7 @@ test.describe('a link that does not fit the current trees', () => {
 
   test('garbage in the build string gets the friendly unreadable sentence', async ({ page }) => {
     await page.goto('/#/warrior?v=1&t=not-a-build')
-    await expect(page.getByTestId('notice-message')).toHaveText(
-      'This link could not be read; showing an empty build.',
-    )
+    await expect(page.getByTestId('notice-message')).toHaveText('This link could not be read; showing an empty build.')
     await expect(page.getByTestId('points-left')).toHaveText('51')
   })
 })
@@ -175,7 +174,13 @@ test.describe('the review wording is one fact from the build index', () => {
   test('the landing page and the footer count the checked talents', async ({ page }) => {
     await page.goto('/#/')
     const caveat = page.getByTestId('landing-caveat')
-    await expect(caveat).toContainText(/\d+ of \d+ talents have been checked by hand/)
+    if ('source' in currentReference) {
+      await expect(caveat).toContainText(`Current reference: Wowhead Forever ${currentReference.source.version}`)
+      await expect(caveat).toContainText(currentReference.source.retrievedAt.slice(0, 10))
+      await expect(caveat).not.toContainText('checked by hand')
+    } else {
+      await expect(caveat).toContainText(/\d+ of \d+ talents have been checked by hand/)
+    }
     await expect(page.locator('footer')).toContainText(/\d+ of \d+ talents have been checked by hand/)
   })
 
@@ -205,9 +210,9 @@ test.describe('the Classic diff is two sentences, never one interleaved run', ()
     await expect(classic.locator('.diff-add')).toHaveCount(0)
     await expect(forever.locator('.diff-del')).toHaveCount(0)
     // Both carry at least one mark between them, or there would be no diff.
-    expect(
-      (await classic.locator('.diff-del').count()) + (await forever.locator('.diff-add').count()),
-    ).toBeGreaterThan(0)
+    expect((await classic.locator('.diff-del').count()) + (await forever.locator('.diff-add').count())).toBeGreaterThan(
+      0,
+    )
   })
 
   test('the nested tooltip card draws the same two lines', async ({ page }) => {
@@ -246,7 +251,11 @@ test.describe('markers and highlight rings say the same thing', () => {
     await page.goto('/#/paladin')
     await page.getByTestId('highlight-new').click()
 
-    const shadow = (sel: string) => page.locator(sel).first().evaluate((el) => getComputedStyle(el).boxShadow)
+    const shadow = (sel: string) =>
+      page
+        .locator(sel)
+        .first()
+        .evaluate((el) => getComputedStyle(el).boxShadow)
 
     // New: blue star, blue ring.
     const newCell = page.locator('[data-change="new"]').first()

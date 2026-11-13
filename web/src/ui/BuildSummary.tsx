@@ -179,8 +179,8 @@ export function BuildSummary({
           data-testid="copy-code"
           data-code={code}
           onClick={() => copyCode(code)}
-          disabled={code === '' || Boolean(rulesetName)}
-          title={rulesetName ? 'Use a full link to preserve the ruleset revision.' : undefined}
+          disabled={code === '' || Boolean(identity)}
+          title={identity ? 'Use a full link to preserve the ruleset revision.' : undefined}
         >
           {label(codeCopy, 'Copy build code')}
         </button>
